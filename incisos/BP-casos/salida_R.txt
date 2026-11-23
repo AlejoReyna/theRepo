@@ -1,0 +1,19 @@
+
+	studentized Breusch-Pagan test
+
+data:  modelo
+BP = 0.0041189203, df = 1, p-value = 0.9488278
+
+old: waiting ~ eruptions -> no se rechaza H0: homocedasticidad 
+
+
+	studentized Breusch-Pagan test
+
+data:  modelo
+BP = 106.4196, df = 3, p-value < 2.2204e-16
+
+BR: precio ~ m2_construcción + recamaras + condición -> se rechaza H0: hay heterocedasticidad 
+
+                                               modelo              BP gl               p predictores                              decision
+                             old: waiting ~ eruptions 4.118920331e-03  1 9.488278456e-01           1    no se rechaza H0: homocedasticidad
+ BR: precio ~ m2_construcción + recamaras + condición 1.064196018e+02  3 6.467745173e-23           3 se rechaza H0: hay heterocedasticidad

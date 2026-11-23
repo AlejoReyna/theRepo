@@ -1,0 +1,69 @@
+
+Call:
+glm(formula = precio_alto ~ recamaras + baños + m2_construcción + 
+    m2_terreno, family = binomial, data = df)
+
+Coefficients:
+                     Estimate    Std. Error  z value Pr(>|z|)    
+(Intercept)     -2.972323e+00  3.286133e-01 -9.04505  < 2e-16 ***
+recamaras       -2.895394e-01  1.139095e-01 -2.54184 0.011027 *  
+baños            1.654401e-01  1.559947e-01  1.06055 0.288895    
+m2_construcción  6.043798e-03  6.046501e-04  9.99553  < 2e-16 ***
+m2_terreno      -5.869593e-06  1.068825e-05 -0.54916 0.582893    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1386.2944  on 999  degrees of freedom
+Residual deviance: 1085.2488  on 995  degrees of freedom
+AIC: 1095.2488
+
+Number of Fisher Scoring iterations: 5
+
+Analysis of Deviance Table (Type II tests)
+
+Response: precio_alto
+                  LR Chisq Df Pr(>Chisq)    
+recamaras         6.501740  1   0.010777 *  
+baños             1.123730  1   0.289117    
+m2_construcción 125.760491  1    < 2e-16 ***
+m2_terreno        0.319123  1   0.572135    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+      recamaras           baños m2_construcción      m2_terreno 
+    1.595600145     1.779811240     2.114300172     1.012812005 
+P(precio_alto = 1 | nuevos) = 0.05808653356 
+
+ bajo medio  alto 
+  327   333   340 
+# weights:  18 (10 variable)
+initial  value 1098.612289 
+iter  10 value 938.753474
+iter  20 value 896.583301
+iter  20 value 896.583300
+iter  20 value 896.583300
+final  value 896.583300 
+converged
+Call:
+multinom(formula = categoria_precio ~ recamaras + baños + m2_construcción + 
+    m2_terreno, data = df)
+
+Coefficients:
+       (Intercept)     recamaras        baños m2_construcción       m2_terreno
+medio -1.264105889 -0.1900473410 0.2864973536  0.002754327227 -2.066202346e-05
+alto  -4.672192716 -0.2960704765 0.3567981967  0.008117321376 -8.669525235e-06
+
+Std. Errors:
+         (Intercept)     recamaras         baños m2_construcción      m2_terreno
+medio 0.011768880119 0.04763113290 0.01669802536 0.0003842539887 1.415798521e-05
+alto  0.007949293594 0.03625044813 0.01382014156 0.0002776927865 1.331116153e-05
+
+Residual Deviance: 1793.166599 
+AIC: 1813.166599 
+       (Intercept)     recamaras        baños m2_construcción       m2_terreno
+medio -1.264105889 -0.1900473410 0.2864973536  0.002754327227 -2.066202346e-05
+alto  -4.672192716 -0.2960704765 0.3567981967  0.008117321376 -8.669525235e-06
+[1] 0 0 0
+         bajo         medio          alto 
+0.70751188171 0.27779629160 0.01469182668 

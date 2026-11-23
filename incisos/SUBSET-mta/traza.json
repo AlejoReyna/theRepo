@@ -1,0 +1,47 @@
+{
+ "problema": "SUBSET.pdf p.16-17: MTA Metro-North",
+ "objetivo": "Subconjuntos de las láminas",
+ "archivo": "MTA_Metro-North_Delay_Verification__Beginning_2012.csv",
+ "bitacora": [
+  {
+   "paso": "P0",
+   "operacion": "Carga del archivo original",
+   "filas": 141110,
+   "columnas": 10
+  },
+  {
+   "paso": "M1",
+   "operacion": "data[data[,8] == Off-Peak, ] (p.16)",
+   "filas": 90157,
+   "columnas": 10
+  },
+  {
+   "paso": "M2",
+   "operacion": "subset(op, Status == Cancelled) (p.16)",
+   "filas": 1913,
+   "columnas": 10
+  },
+  {
+   "paso": "M3",
+   "operacion": "Fecha > 2024-01-01, 10 < retraso <= 20, Grand Central (p.17)",
+   "filas": 374,
+   "columnas": 10
+  }
+ ],
+ "perfil": null,
+ "final": {
+  "filas": 374,
+  "columnas": [
+   "Service Date",
+   "Train",
+   "Branch",
+   "Depart Station",
+   "Depart Time",
+   "Arrive Station",
+   "Arrive Time",
+   "Period",
+   "Status",
+   "Minutes Late"
+  ]
+ }
+}

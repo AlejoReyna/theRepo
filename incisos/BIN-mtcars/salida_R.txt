@@ -1,0 +1,39 @@
+
+Call:
+lm(formula = mpg ~ am, data = mtcars)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-9.3923077 -3.0923077 -0.2973684  3.2439271  9.5076923 
+
+Coefficients:
+             Estimate Std. Error  t value   Pr(>|t|)    
+(Intercept) 17.147368   1.124603 15.24749  1.134e-15 ***
+am           7.244939   1.764422  4.10613 0.00028502 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.902029 on 30 degrees of freedom
+Multiple R-squared:  0.3597989,	Adjusted R-squared:  0.3384589 
+F-statistic: 16.86028 on 1 and 30 DF,  p-value: 0.0002850207
+
+
+	Two Sample t-test
+
+data:  mpg by am
+t = -4.106127, df = 30, p-value = 0.0002850207
+alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
+95 percent confidence interval:
+ -10.848368971  -3.641509572
+sample estimates:
+mean in group 0 mean in group 1 
+    17.14736842     24.39230769 
+
+
+Call:
+lm(formula = mpg ~ factor(automatic), data = mtcars)
+
+Coefficients:
+         (Intercept)  factor(automatic)yes  
+           24.392308             -7.244939  
+

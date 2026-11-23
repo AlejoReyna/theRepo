@@ -1,0 +1,78 @@
+
+Call:
+lm(formula = as.formula(paste0("`", Y, "` ~ .")), data = data)
+
+Residuals:
+        Min          1Q      Median          3Q         Max 
+-15.5944739  -2.7297159  -0.5180489   1.7770506  26.1992710 
+
+Coefficients:
+                 Estimate    Std. Error   t value   Pr(>|t|)    
+(Intercept)  3.645949e+01  5.103459e+00   7.14407 3.2834e-12 ***
+crim        -1.080114e-01  3.286499e-02  -3.28652 0.00108681 ** 
+zn           4.642046e-02  1.372746e-02   3.38158 0.00077811 ***
+indus        2.055863e-02  6.149569e-02   0.33431 0.73828807    
+chas         2.686734e+00  8.615798e-01   3.11838 0.00192503 ** 
+nox         -1.776661e+01  3.819744e+00  -4.65126 4.2456e-06 ***
+rm           3.809865e+00  4.179253e-01   9.11614 < 2.22e-16 ***
+age          6.922246e-04  1.320978e-02   0.05240 0.95822931    
+dis         -1.475567e+00  1.994547e-01  -7.39800 6.0135e-13 ***
+rad          3.060495e-01  6.634644e-02   4.61290 5.0705e-06 ***
+tax         -1.233459e-02  3.760536e-03  -3.28001 0.00111164 ** 
+ptratio     -9.527472e-01  1.308268e-01  -7.28251 1.3088e-12 ***
+black        9.311683e-03  2.685965e-03   3.46679 0.00057286 ***
+lstat       -5.247584e-01  5.071528e-02 -10.34715 < 2.22e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.745298 on 492 degrees of freedom
+Multiple R-squared:  0.7406427,	Adjusted R-squared:  0.7337897 
+F-statistic: 108.0767 on 13 and 492 DF,  p-value: < 2.2204e-16
+
+Stepwise Model Path 
+Analysis of Deviance Table
+
+Initial Model:
+medv ~ crim + zn + indus + chas + nox + rm + age + dis + rad + 
+    tax + ptratio + black + lstat
+
+Final Model:
+medv ~ crim + zn + chas + nox + rm + dis + rad + tax + ptratio + 
+    black + lstat
+
+
+     Step Df      Deviance Resid. Df  Resid. Dev         AIC
+1                                492 11078.78458 1589.642798
+2   - age  1 0.06183435337       493 11078.84641 1587.645623
+3 - indus  1 2.51754012627       494 11081.36395 1585.760592
+
+Call:
+lm(formula = medv ~ crim + zn + chas + nox + rm + dis + rad + 
+    tax + ptratio + black + lstat, data = data)
+
+Residuals:
+        Min          1Q      Median          3Q         Max 
+-15.5983503  -2.7386201  -0.5046307   1.7272604  26.2372994 
+
+Coefficients:
+                 Estimate    Std. Error   t value   Pr(>|t|)    
+(Intercept)  36.341145004   5.067492203   7.17143 2.7273e-12 ***
+crim         -0.108413345   0.032779445  -3.30736 0.00101044 ** 
+zn            0.045844929   0.013522670   3.39023 0.00075428 ***
+chas          2.718716303   0.854239823   3.18261 0.00155147 ** 
+nox         -17.376023429   3.535243066  -4.91509 1.2094e-06 ***
+rm            3.801578840   0.406315906   9.35621 < 2.22e-16 ***
+dis          -1.492711460   0.185730779  -8.03696 6.8370e-15 ***
+rad           0.299608454   0.063402104   4.72553 2.9968e-06 ***
+tax          -0.011777973   0.003372332  -3.49253 0.00052142 ***
+ptratio      -0.946524570   0.129065618  -7.33367 9.2351e-13 ***
+black         0.009290845   0.002673905   3.47464 0.00055657 ***
+lstat        -0.522553457   0.047424359 -11.01867 < 2.22e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.736234 on 494 degrees of freedom
+Multiple R-squared:  0.7405823,	Adjusted R-squared:  0.7348058 
+F-statistic: 128.2059 on 11 and 494 DF,  p-value: < 2.2204e-16
+
+Modelo final: 12 parametros, extractAIC = 1585.760592, AIC() = 2k - 2 ln L = 3023.726388

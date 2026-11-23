@@ -1,0 +1,1 @@
+{"problema": "OD/AM R.pdf p.24 con OD/BR (2).csv: stepAIC(lm(precio ~ .), direction = \"both\")", "archivo": "BR.csv", "y": "precio", "direccion": "both"}

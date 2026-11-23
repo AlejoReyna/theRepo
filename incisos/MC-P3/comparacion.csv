@@ -1,0 +1,5 @@
+Modelo,Criterio,Raiz,Hojas,Profundidad,Clases_que_predice,Exactitud,Coincidencia_con_ID3
+ID3 (mínima entropía),"menor E(A) (ganancia de información), una rama por valor",Model Name,165,2,Electric Heat Pump; Gas Storage; Gas Storage-type Instantaneous; Gas Tankless,0.9946,1.0000
+rpart,indice de Gini + poda por cp,Vent Type,11,7,Electric Heat Pump; Gas Storage; Gas Storage-type Instantaneous; Gas Tankless,0.9281,0.9322
+rpart (information),entropia + poda por cp,Vent Type,11,7,Electric Heat Pump; Gas Storage; Gas Storage-type Instantaneous; Gas Tankless,0.9281,0.9322
+ctree,pruebas de independencia (p-valor),Vent Type,10,5,Electric Heat Pump; Gas Storage; Gas Tankless,0.8942,0.8996

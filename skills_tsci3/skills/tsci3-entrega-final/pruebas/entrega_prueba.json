@@ -1,0 +1,35 @@
+{
+ "alumno": {
+  "nombre": "Alexis Alberto Reyna Sánchez",
+  "matricula": "1851265"
+ },
+ "color": "Amarillo",
+ "hora": "N4",
+ "tarea": "AF3",
+ "fecha": "13 de noviembre de 2026",
+ "problemas": [
+  {
+   "n": 1,
+   "inciso": "/Users/alexis/theCode/newSkills/TSCI3/incisos/KM-dolly"
+  },
+  {
+   "n": 2,
+   "inciso": "/Users/alexis/theCode/newSkills/TSCI3/incisos/AP-clase"
+  }
+ ],
+ "teoria": {
+  "titulo": "Prueba de la parte teórica",
+  "preguntas": [
+   {
+    "pregunta": "¿Qué mide el lift de una regla?",
+    "respuesta": [
+     "El lift compara la confianza de la regla con la frecuencia del consecuente: L = NX∧Y·N/(NX·NY) (OD/AP (1).xlsx O4)."
+    ],
+    "vinetas": [
+     "L > 1: X y Y aparecen juntos más de lo esperado.",
+     "L = 1: independencia."
+    ]
+   }
+  ]
+ }
+}

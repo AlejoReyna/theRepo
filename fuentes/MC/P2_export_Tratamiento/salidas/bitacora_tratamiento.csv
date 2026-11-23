@@ -1,0 +1,15 @@
+"paso","operacion","subsetting","filas","columnas"
+"P0","Carga del archivo original","-",118580,33
+"P1","Eliminar columnas constantes, duplicadas, dispersas y codigos","d[, -which(names %in% fuera)]",118580,13
+"P2","Conversion de tipos y variables derivadas","d$col <- ...",118580,15
+"P3","Quitar filas sin valor (suprimidas por muestra insuficiente)","subset(d, !is.na(Data_Value))",104119,14
+"P4","Solo 50 estados + DC","d[!(LocationAbbr %in% excluir), ]",98673,14
+"P5","Quitar estimaciones imprecisas (IC > 20)","d[-which(Ancho_IC > 20), ]",90650,14
+"P6","Estrato 'Total' (nivel estatal)","d[StratificationCategory1 == 'Total', ]",3881,14
+"P7","Preguntas de obesidad (Q036) y actividad fisica (Q043-Q047)","grepl('Obesity|Physical Activity', Class) & QuestionID != 'Q037'",2726,14
+"P8","Anos con todas las preguntas","tot[Anio %in% anos_pa, ]",1818,14
+"P9","Pivoteo largo -> ancho (reshape)","reshape(direction = 'wide')",303,9
+"P10","Eliminar estado-ano incompletos","ancho[complete.cases(ancho), ]",303,9
+"P11","Obesidad 2025, todos los estratos","subset(d, QuestionID=='Q036' & Anio==ultimo, select=...)",1113,5
+"P12","Muestra de entrenamiento (70 %)","ancho[sample(n, 0.7n), ]",212,10
+"P13","Muestra de prueba (30 %)","ancho[-idx, ]",91,10

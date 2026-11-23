@@ -1,0 +1,53 @@
+EVALUACION DE MEDIO CURSO (PRACTICA) - TOPICOS SELECTOS DE CIENCIAS DE LA INGENIERIA III
+Alexis Reyna - Matricula 1851265
+
+Asignacion por matricula (termina en 5, impar):
+  * Problema 1: hoja "Registro 05" de REGEVEN, red de Petri + BPMN + arbol de proceso.
+
+Respuestas completas (con figuras y tablas):
+    Respuestas_MC_TSCI3_1851265.pdf   (y .docx editable)
+
+Cada problema incluye su programa y su libro de Excel con formulas vivas: al hacer
+clic en un resultado, la barra de formulas muestra la operacion y las celdas de origen.
+Colores en Excel: azul = dato de entrada, negro = formula, verde = formula que trae
+datos de otra hoja.
+
+
+CONTENIDO
+---------
+P1_REGEVEN_Procesos/
+    Problema_1.py        descubrimiento (DFG, footprint, Heuristics Miner), red de Petri,
+                         verificacion (red WF, segura, solida, libre eleccion), replay y
+                         exportacion de modelos. Solo Python 3 (sin librerias externas).
+    Problema_1.xlsx      registro, trazas, variantes, DFG/footprint, red, replay, recursos
+    red_petri*.png/svg, bpmn.png/svg, arbol_proceso.png/svg   diagramas
+    Problema_1.pnml      red de Petri para WoPeD / ProM
+    Problema_1.bpmn      BPMN 2.0 para Camunda Modeler / demo.bpmn.io
+    reporte_P1.txt       salida completa del programa
+
+P2_export_Tratamiento/
+    Problema_2.R         tratamiento de export.csv con subsettings variados (R base + rpart)
+    Problema_2.xlsx      parametros, bitacora, perfil, vista minable (clase y normalizacion
+                         por formula), analisis y estratos 2025
+    salidas/             vista_minable.csv, export_limpio_largo.csv, perfil, bitacora,
+                         estratos y figuras
+    reporte_P2.txt       salida completa del programa
+
+P3_gastank_Arbol/
+    Problema_3.R         arbol ID3 de minima entropia + rpart + ctree + comparacion
+    Problema_3.xlsx      entropias, ganancias, segundo nivel, reglas y comparacion (COUNTIFS)
+    arbol_ID3.png, arbol_rpart.png, arbol_ctree.png, comparacion_arboles.csv
+    reporte_P3.txt       salida completa del programa
+
+
+COMO EJECUTAR
+-------------
+    python3 P1_REGEVEN_Procesos/Problema_1.py
+    python3 P1_REGEVEN_Procesos/Problema_1.py --registro 03      (otro registro, para comparar)
+    Rscript P2_export_Tratamiento/Problema_2.R /ruta/export.csv
+    Rscript P3_gastank_Arbol/Problema_3.R
+
+    Paquetes de R:  install.packages(c("partykit", "rpart.plot"))   (rpart ya viene con R)
+    Graphviz (dot) y rsvg-convert son opcionales: solo sirven para regenerar las imagenes.
+    export.csv (50 MB) no se incluye; Problema_2.R lo busca junto al script o en ~/Downloads
+    si no se pasa la ruta.

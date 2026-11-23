@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2848" height="960" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="f" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<rect x="0" y="0" width="2848" height="960" fill="white"/>
+<text x="10" y="22" font-size="16" font-weight="bold">Proceso del Registro 05</text>
+<rect x="0" y="34" width="2838" height="112" fill="#F6F9FC" stroke="#555"/>
+<rect x="0" y="34" width="60" height="112" fill="#ECECEC" stroke="#555"/>
+<text x="30" y="86" font-size="11" text-anchor="middle">Luis, Ana,</text><text x="30" y="100" font-size="11" text-anchor="middle">Nora</text>
+<rect x="0" y="146" width="2838" height="112" fill="white" stroke="#555"/>
+<rect x="0" y="146" width="60" height="112" fill="#ECECEC" stroke="#555"/>
+<text x="30" y="205" font-size="11" text-anchor="middle">Julia, Raúl</text>
+<rect x="0" y="258" width="2838" height="224" fill="#F6F9FC" stroke="#555"/>
+<rect x="0" y="258" width="60" height="224" fill="#ECECEC" stroke="#555"/>
+<text x="30" y="359" font-size="11" text-anchor="middle">Pilar,</text><text x="30" y="373" font-size="11" text-anchor="middle">Elena,</text><text x="30" y="387" font-size="11" text-anchor="middle">Marco</text>
+<rect x="0" y="482" width="2838" height="224" fill="white" stroke="#555"/>
+<rect x="0" y="482" width="60" height="224" fill="#ECECEC" stroke="#555"/>
+<text x="30" y="590" font-size="11" text-anchor="middle">Óscar,</text><text x="30" y="604" font-size="11" text-anchor="middle">Celia</text>
+<rect x="0" y="706" width="2838" height="112" fill="#F6F9FC" stroke="#555"/>
+<rect x="0" y="706" width="60" height="112" fill="#ECECEC" stroke="#555"/>
+<text x="30" y="765" font-size="11" text-anchor="middle">Marta, Iván</text>
+<rect x="0" y="818" width="2838" height="112" fill="white" stroke="#555"/>
+<rect x="0" y="818" width="60" height="112" fill="#ECECEC" stroke="#555"/>
+<text x="30" y="877" font-size="11" text-anchor="middle">Sofía</text>
+<polyline points="197,90 278,90" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="414,90 514,90 514,178" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="538,202 614,202" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="514,226 514,426 614,426" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="750,202 850,202 850,402" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="750,426 826,426" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="874,426 994,426" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="1042,426 1162,426" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="1186,402 1186,123" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<text x="1194" y="394" font-size="12" font-weight="bold" font-style="italic">Sí</text>
+<polyline points="1118,90 1018,90 1018,281" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="1018,347 1018,402" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="1210,426 1286,426" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<text x="1218" y="420" font-size="12" font-weight="bold" font-style="italic">No</text>
+<polyline points="1422,426 1522,426 1522,617" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="1590,650 1666,650" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="1690,626 1690,538 1790,538" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<text x="1698" y="618" font-size="12" font-weight="bold" font-style="italic">Sí</text>
+<polyline points="1926,538 2026,538 2026,626" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="1714,650 2002,650" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<text x="1722" y="644" font-size="12" font-weight="bold" font-style="italic">No</text>
+<polyline points="2026,674 2026,762 2126,762" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="2262,762 2362,762 2362,841" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="2430,874 2530,874 2530,795" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<polyline points="2598,762 2679,762" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#f)"/>
+<circle cx="178" cy="90" r="19" fill="white" stroke="#222" stroke-width="1.6"/>
+<text x="178" y="121" font-size="11" text-anchor="middle">Inicio del</text><text x="178" y="135" font-size="11" text-anchor="middle">caso</text>
+<rect x="278" y="57" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="346" y="86" font-size="13" text-anchor="middle">Solicitud</text><text x="346" y="102" font-size="13" text-anchor="middle">recibida</text>
+<polygon points="514,178 538,202 514,226 490,202" fill="#FFF4D6" stroke="#9A7B00" stroke-width="1.6"/>
+<text x="514" y="210" font-size="24" text-anchor="middle">+</text>
+<rect x="614" y="169" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="682" y="198" font-size="13" text-anchor="middle">Identidad</text><text x="682" y="214" font-size="13" text-anchor="middle">validada</text>
+<rect x="614" y="393" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="682" y="422" font-size="13" text-anchor="middle">Documentos</text><text x="682" y="438" font-size="13" text-anchor="middle">verificados</text>
+<polygon points="850,402 874,426 850,450 826,426" fill="#FFF4D6" stroke="#9A7B00" stroke-width="1.6"/>
+<text x="850" y="434" font-size="24" text-anchor="middle">+</text>
+<polygon points="1018,402 1042,426 1018,450 994,426" fill="#FFF4D6" stroke="#9A7B00" stroke-width="1.6"/>
+<text x="1018" y="434" font-size="24" text-anchor="middle">✕</text>
+<polygon points="1186,402 1210,426 1186,450 1162,426" fill="#FFF4D6" stroke="#9A7B00" stroke-width="1.6"/>
+<text x="1186" y="434" font-size="24" text-anchor="middle">✕</text>
+<text x="1186" y="468" font-size="11" text-anchor="middle">¿Requiere corrección</text><text x="1186" y="482" font-size="11" text-anchor="middle">solicitada?</text>
+<rect x="1118" y="57" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="1186" y="86" font-size="13" text-anchor="middle">Corrección</text><text x="1186" y="102" font-size="13" text-anchor="middle">solicitada</text>
+<rect x="950" y="281" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="1018" y="302" font-size="13" text-anchor="middle">Documentos</text><text x="1018" y="318" font-size="13" text-anchor="middle">verificados</text><text x="1018" y="334" font-size="13" text-anchor="middle">(repetición)</text>
+<rect x="1286" y="393" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="1354" y="430" font-size="13" text-anchor="middle">Cita programada</text>
+<rect x="1454" y="617" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="1522" y="646" font-size="13" text-anchor="middle">Entrevista</text><text x="1522" y="662" font-size="13" text-anchor="middle">realizada</text>
+<polygon points="1690,626 1714,650 1690,674 1666,650" fill="#FFF4D6" stroke="#9A7B00" stroke-width="1.6"/>
+<text x="1690" y="658" font-size="24" text-anchor="middle">✕</text>
+<text x="1690" y="685" font-size="11" text-anchor="middle">¿Requiere</text><text x="1690" y="699" font-size="11" text-anchor="middle">orientación</text><text x="1690" y="713" font-size="11" text-anchor="middle">brindada?</text>
+<polygon points="2026,626 2050,650 2026,674 2002,650" fill="#FFF4D6" stroke="#9A7B00" stroke-width="1.6"/>
+<text x="2026" y="658" font-size="24" text-anchor="middle">✕</text>
+<rect x="1790" y="505" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="1858" y="534" font-size="13" text-anchor="middle">Orientación</text><text x="1858" y="550" font-size="13" text-anchor="middle">brindada</text>
+<rect x="2126" y="729" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="2194" y="758" font-size="13" text-anchor="middle">Expediente</text><text x="2194" y="774" font-size="13" text-anchor="middle">integrado</text>
+<rect x="2294" y="841" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="2362" y="870" font-size="13" text-anchor="middle">Autorización</text><text x="2362" y="886" font-size="13" text-anchor="middle">emitida</text>
+<rect x="2462" y="729" width="136" height="66" rx="10" fill="#EAF2FB" stroke="#2F5D8A" stroke-width="1.6"/>
+<text x="2530" y="766" font-size="13" text-anchor="middle">Cierre registrado</text>
+<circle cx="2698" cy="762" r="19" fill="white" stroke="#222" stroke-width="4"/>
+<text x="2698" y="800" font-size="11" text-anchor="middle">Caso terminado</text>
+<text x="10" y="950" font-size="11" fill="#555">Carriles = recursos que comparten actividades (atributo Resource). Compuertas: + paralela (AND), ✕ exclusiva (XOR).</text>
+</svg>

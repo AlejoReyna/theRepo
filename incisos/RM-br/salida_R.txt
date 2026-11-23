@@ -1,0 +1,58 @@
+
+Call:
+lm(formula = precio ~ m2_construcción + recamaras + condición, 
+    data = data)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-599625.67 -139492.01  -20051.83  100316.88 2146929.09 
+
+Coefficients:
+                    Estimate   Std. Error  t value   Pr(>|t|)    
+(Intercept)     -35820.20710  38524.54583 -0.92980     0.3527    
+m2_construcción    995.98108     35.49746 28.05782 < 2.22e-16 ***
+recamaras       -52060.63288  10415.48647 -4.99839 6.8272e-07 ***
+condición        46915.93156  11097.48376  4.22762 2.5789e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 230382.7 on 996 degrees of freedom
+Multiple R-squared:  0.5095032,	Adjusted R-squared:  0.5080258 
+F-statistic: 344.8648 on 3 and 996 DF,  p-value: < 2.2204e-16
+
+predict(model, new_data) = 125139.1611 
+Prueba (20 %): MSE = 58282614228.338646, MAE = 164086.500183, R2 = 0.472590
+
+Call:
+lm(formula = precio ~ m2_construcción + condición + m2_terreno + 
+    baños + recamaras, data = datos)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-874823.75 -134433.33  -21080.47  104343.02 1832651.71 
+
+Coefficients: (1 not defined because of singularities)
+                     Estimate    Std. Error  t value Pr(>|t|)    
+(Intercept)      6.678324e+04  2.260067e+05  0.29549 0.767680    
+m2_construcción  9.719688e+02  4.671782e+01 20.80510  < 2e-16 ***
+condición1      -3.710670e+05  2.952552e+05 -1.25677 0.209136    
+condición2      -3.217489e+05  2.820449e+05 -1.14077 0.254242    
+condición3      -2.982824e+05  2.817844e+05 -1.05855 0.290065    
+condición4      -1.890381e+05  2.826303e+05 -0.66885 0.503746    
+m2_terreno      -1.681283e+00  8.213370e-01 -2.04701 0.040922 *  
+baños            2.000869e+04  1.561835e+04  1.28110 0.200460    
+recamaras1       3.308846e+05  1.936642e+05  1.70855 0.087850 .  
+recamaras2       2.432395e+05  1.651308e+05  1.47301 0.141068    
+recamaras3       1.335204e+05  1.628549e+05  0.81987 0.412487    
+recamaras4       5.885804e+04  1.621217e+05  0.36305 0.716647    
+recamaras5       4.569798e+04  1.636001e+05  0.27933 0.780052    
+recamaras6       3.426319e+05  1.772920e+05  1.93259 0.053574 .  
+recamaras7       1.531786e+05  2.768297e+05  0.55333 0.580162    
+recamaras9                 NA            NA       NA       NA    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 225924.3 on 985 degrees of freedom
+Multiple R-squared:  0.5335137,	Adjusted R-squared:  0.5268834 
+F-statistic: 80.46645 on 14 and 985 DF,  p-value: < 2.2204e-16
+

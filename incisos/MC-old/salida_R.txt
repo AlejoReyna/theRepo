@@ -1,0 +1,21 @@
+
+Call:
+lm(formula = data$waiting ~ data$eruptions, data = data)
+
+Residuals:
+        Min          1Q      Median          3Q         Max 
+-12.0796081  -4.4831025   0.2122485   3.9246270  15.9718581 
+
+Coefficients:
+                 Estimate Std. Error  t value   Pr(>|t|)    
+(Intercept)    33.4743970  1.1548735 28.98534 < 2.22e-16 ***
+data$eruptions 10.7296414  0.3147534 34.08904 < 2.22e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.914009 on 270 degrees of freedom
+Multiple R-squared:  0.8114608,	Adjusted R-squared:  0.8107625 
+F-statistic: 1162.063 on 1 and 270 DF,  p-value: < 2.2204e-16
+
+           b          m        SE_b         SE_m         t_m              p_m          R2  R2_ajustado           F       sigma         RSS         MSE
+ 33.47439702 10.7296414 1.154873515 0.3147534058 34.08903985 8.129958507e-100 0.811460761 0.8107624675 1162.062638 5.914009433 9443.387046 34.71833473

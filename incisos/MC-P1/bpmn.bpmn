@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definiciones" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:collaboration id="Colaboracion"><bpmn:participant id="Participante" name="Proceso del Registro 05" processRef="Proceso"/></bpmn:collaboration>
+  <bpmn:process id="Proceso" isExecutable="false">
+    <bpmn:laneSet id="Carriles">
+      <bpmn:lane id="Carril_1" name="Luis, Ana, Nora">
+        <bpmn:flowNodeRef>Inicio_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Tarea_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Tarea_4</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Carril_2" name="Julia, Raúl">
+        <bpmn:flowNodeRef>Paralela_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Tarea_2</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Carril_3" name="Pilar, Elena, Marco">
+        <bpmn:flowNodeRef>Tarea_3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Paralela_2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Exclusiva_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Exclusiva_2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Tarea_5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Tarea_6</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Carril_4" name="Óscar, Celia">
+        <bpmn:flowNodeRef>Tarea_7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Exclusiva_3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Exclusiva_4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Tarea_8</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Carril_5" name="Marta, Iván">
+        <bpmn:flowNodeRef>Tarea_9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Tarea_11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Fin_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Carril_6" name="Sofía">
+        <bpmn:flowNodeRef>Tarea_10</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Inicio_1" name="Inicio del caso"/>
+    <bpmn:task id="Tarea_1" name="Solicitud recibida"/>
+    <bpmn:parallelGateway id="Paralela_1" name=""/>
+    <bpmn:task id="Tarea_2" name="Identidad validada"/>
+    <bpmn:task id="Tarea_3" name="Documentos verificados"/>
+    <bpmn:parallelGateway id="Paralela_2" name=""/>
+    <bpmn:exclusiveGateway id="Exclusiva_1" name=""/>
+    <bpmn:exclusiveGateway id="Exclusiva_2" name="¿Requiere corrección solicitada?"/>
+    <bpmn:task id="Tarea_4" name="Corrección solicitada"/>
+    <bpmn:task id="Tarea_5" name="Documentos verificados (repetición)"/>
+    <bpmn:task id="Tarea_6" name="Cita programada"/>
+    <bpmn:task id="Tarea_7" name="Entrevista realizada"/>
+    <bpmn:exclusiveGateway id="Exclusiva_3" name="¿Requiere orientación brindada?"/>
+    <bpmn:exclusiveGateway id="Exclusiva_4" name=""/>
+    <bpmn:task id="Tarea_8" name="Orientación brindada"/>
+    <bpmn:task id="Tarea_9" name="Expediente integrado"/>
+    <bpmn:task id="Tarea_10" name="Autorización emitida"/>
+    <bpmn:task id="Tarea_11" name="Cierre registrado"/>
+    <bpmn:endEvent id="Fin_1" name="Caso terminado"/>
+    <bpmn:sequenceFlow id="Flujo_1" sourceRef="Inicio_1" targetRef="Tarea_1"/>
+    <bpmn:sequenceFlow id="Flujo_2" sourceRef="Tarea_1" targetRef="Paralela_1"/>
+    <bpmn:sequenceFlow id="Flujo_3" sourceRef="Paralela_1" targetRef="Tarea_2"/>
+    <bpmn:sequenceFlow id="Flujo_4" sourceRef="Paralela_1" targetRef="Tarea_3"/>
+    <bpmn:sequenceFlow id="Flujo_5" sourceRef="Tarea_2" targetRef="Paralela_2"/>
+    <bpmn:sequenceFlow id="Flujo_6" sourceRef="Tarea_3" targetRef="Paralela_2"/>
+    <bpmn:sequenceFlow id="Flujo_7" sourceRef="Paralela_2" targetRef="Exclusiva_1"/>
+    <bpmn:sequenceFlow id="Flujo_8" sourceRef="Exclusiva_1" targetRef="Exclusiva_2"/>
+    <bpmn:sequenceFlow id="Flujo_9" sourceRef="Exclusiva_2" targetRef="Tarea_4" name="Sí"/>
+    <bpmn:sequenceFlow id="Flujo_10" sourceRef="Tarea_4" targetRef="Tarea_5"/>
+    <bpmn:sequenceFlow id="Flujo_11" sourceRef="Tarea_5" targetRef="Exclusiva_1"/>
+    <bpmn:sequenceFlow id="Flujo_12" sourceRef="Exclusiva_2" targetRef="Tarea_6" name="No"/>
+    <bpmn:sequenceFlow id="Flujo_13" sourceRef="Tarea_6" targetRef="Tarea_7"/>
+    <bpmn:sequenceFlow id="Flujo_14" sourceRef="Tarea_7" targetRef="Exclusiva_3"/>
+    <bpmn:sequenceFlow id="Flujo_15" sourceRef="Exclusiva_3" targetRef="Tarea_8" name="Sí"/>
+    <bpmn:sequenceFlow id="Flujo_16" sourceRef="Tarea_8" targetRef="Exclusiva_4"/>
+    <bpmn:sequenceFlow id="Flujo_17" sourceRef="Exclusiva_3" targetRef="Exclusiva_4" name="No"/>
+    <bpmn:sequenceFlow id="Flujo_18" sourceRef="Exclusiva_4" targetRef="Tarea_9"/>
+    <bpmn:sequenceFlow id="Flujo_19" sourceRef="Tarea_9" targetRef="Tarea_10"/>
+    <bpmn:sequenceFlow id="Flujo_20" sourceRef="Tarea_10" targetRef="Tarea_11"/>
+    <bpmn:sequenceFlow id="Flujo_21" sourceRef="Tarea_11" targetRef="Fin_1"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagrama">
+    <bpmndi:BPMNPlane id="Plano" bpmnElement="Colaboracion">
+      <bpmndi:BPMNShape id="Participante_di" bpmnElement="Participante" isHorizontal="true"><dc:Bounds x="0" y="34" width="2838" height="896"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Carril_1_di" bpmnElement="Carril_1" isHorizontal="true"><dc:Bounds x="30" y="34" width="2808" height="112"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Carril_2_di" bpmnElement="Carril_2" isHorizontal="true"><dc:Bounds x="30" y="146" width="2808" height="112"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Carril_3_di" bpmnElement="Carril_3" isHorizontal="true"><dc:Bounds x="30" y="258" width="2808" height="224"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Carril_4_di" bpmnElement="Carril_4" isHorizontal="true"><dc:Bounds x="30" y="482" width="2808" height="224"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Carril_5_di" bpmnElement="Carril_5" isHorizontal="true"><dc:Bounds x="30" y="706" width="2808" height="112"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Carril_6_di" bpmnElement="Carril_6" isHorizontal="true"><dc:Bounds x="30" y="818" width="2808" height="112"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Inicio_1_di" bpmnElement="Inicio_1"><dc:Bounds x="159" y="71" width="38" height="38"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_1_di" bpmnElement="Tarea_1"><dc:Bounds x="278" y="57" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Paralela_1_di" bpmnElement="Paralela_1"><dc:Bounds x="490" y="178" width="48" height="48"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_2_di" bpmnElement="Tarea_2"><dc:Bounds x="614" y="169" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_3_di" bpmnElement="Tarea_3"><dc:Bounds x="614" y="393" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Paralela_2_di" bpmnElement="Paralela_2"><dc:Bounds x="826" y="402" width="48" height="48"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Exclusiva_1_di" bpmnElement="Exclusiva_1"><dc:Bounds x="994" y="402" width="48" height="48"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Exclusiva_2_di" bpmnElement="Exclusiva_2"><dc:Bounds x="1162" y="402" width="48" height="48"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_4_di" bpmnElement="Tarea_4"><dc:Bounds x="1118" y="57" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_5_di" bpmnElement="Tarea_5"><dc:Bounds x="950" y="281" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_6_di" bpmnElement="Tarea_6"><dc:Bounds x="1286" y="393" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_7_di" bpmnElement="Tarea_7"><dc:Bounds x="1454" y="617" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Exclusiva_3_di" bpmnElement="Exclusiva_3"><dc:Bounds x="1666" y="626" width="48" height="48"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Exclusiva_4_di" bpmnElement="Exclusiva_4"><dc:Bounds x="2002" y="626" width="48" height="48"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_8_di" bpmnElement="Tarea_8"><dc:Bounds x="1790" y="505" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_9_di" bpmnElement="Tarea_9"><dc:Bounds x="2126" y="729" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_10_di" bpmnElement="Tarea_10"><dc:Bounds x="2294" y="841" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Tarea_11_di" bpmnElement="Tarea_11"><dc:Bounds x="2462" y="729" width="136" height="66"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Fin_1_di" bpmnElement="Fin_1"><dc:Bounds x="2679" y="743" width="38" height="38"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flujo_1_di" bpmnElement="Flujo_1"><di:waypoint x="197" y="90"/><di:waypoint x="278" y="90"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_2_di" bpmnElement="Flujo_2"><di:waypoint x="414" y="90"/><di:waypoint x="514" y="90"/><di:waypoint x="514" y="178"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_3_di" bpmnElement="Flujo_3"><di:waypoint x="538" y="202"/><di:waypoint x="614" y="202"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_4_di" bpmnElement="Flujo_4"><di:waypoint x="514" y="226"/><di:waypoint x="514" y="426"/><di:waypoint x="614" y="426"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_5_di" bpmnElement="Flujo_5"><di:waypoint x="750" y="202"/><di:waypoint x="850" y="202"/><di:waypoint x="850" y="402"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_6_di" bpmnElement="Flujo_6"><di:waypoint x="750" y="426"/><di:waypoint x="826" y="426"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_7_di" bpmnElement="Flujo_7"><di:waypoint x="874" y="426"/><di:waypoint x="994" y="426"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_8_di" bpmnElement="Flujo_8"><di:waypoint x="1042" y="426"/><di:waypoint x="1162" y="426"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_9_di" bpmnElement="Flujo_9"><di:waypoint x="1186" y="402"/><di:waypoint x="1186" y="123"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_10_di" bpmnElement="Flujo_10"><di:waypoint x="1118" y="90"/><di:waypoint x="1018" y="90"/><di:waypoint x="1018" y="281"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_11_di" bpmnElement="Flujo_11"><di:waypoint x="1018" y="347"/><di:waypoint x="1018" y="402"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_12_di" bpmnElement="Flujo_12"><di:waypoint x="1210" y="426"/><di:waypoint x="1286" y="426"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_13_di" bpmnElement="Flujo_13"><di:waypoint x="1422" y="426"/><di:waypoint x="1522" y="426"/><di:waypoint x="1522" y="617"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_14_di" bpmnElement="Flujo_14"><di:waypoint x="1590" y="650"/><di:waypoint x="1666" y="650"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_15_di" bpmnElement="Flujo_15"><di:waypoint x="1690" y="626"/><di:waypoint x="1690" y="538"/><di:waypoint x="1790" y="538"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_16_di" bpmnElement="Flujo_16"><di:waypoint x="1926" y="538"/><di:waypoint x="2026" y="538"/><di:waypoint x="2026" y="626"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_17_di" bpmnElement="Flujo_17"><di:waypoint x="1714" y="650"/><di:waypoint x="2002" y="650"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_18_di" bpmnElement="Flujo_18"><di:waypoint x="2026" y="674"/><di:waypoint x="2026" y="762"/><di:waypoint x="2126" y="762"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_19_di" bpmnElement="Flujo_19"><di:waypoint x="2262" y="762"/><di:waypoint x="2362" y="762"/><di:waypoint x="2362" y="841"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_20_di" bpmnElement="Flujo_20"><di:waypoint x="2430" y="874"/><di:waypoint x="2530" y="874"/><di:waypoint x="2530" y="795"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flujo_21_di" bpmnElement="Flujo_21"><di:waypoint x="2598" y="762"/><di:waypoint x="2679" y="762"/></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

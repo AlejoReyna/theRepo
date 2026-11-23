@@ -1,0 +1,3 @@
+"modelo","BP","gl","p","predictores","decision"
+"old: waiting ~ eruptions",0.0041189203306057,1,0.948827845571828,1,"no se rechaza H0: homocedasticidad"
+"BR: precio ~ m2_construcción + recamaras + condición",106.419601807171,3,6.46774517326997e-23,3,"se rechaza H0: hay heterocedasticidad"

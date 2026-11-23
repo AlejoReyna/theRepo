@@ -1,0 +1,4 @@
+"Arbol","Criterio","Tipo_de_corte","Raiz","Hojas","Profundidad","Exactitud_resustitucion","Exactitud_prueba_30"
+"ID3 (minima entropia, a mano)","Ganancia de informacion (entropia)","Multirrama (un hijo por valor)","Ventilacion",12,2,86.7,85.52
+"rpart (CART-Gini)","Indice de Gini + poda por cp","Binario (agrupa categorias)","Ventilacion",3,2,84.67,82.81
+"ctree (partykit)","Pruebas de independencia (p-valor)","Binario (agrupa categorias)","Ventilacion",5,4,84.67,82.81

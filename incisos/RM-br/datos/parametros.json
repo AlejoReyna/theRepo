@@ -1,0 +1,3 @@
+{"problema": "OD/AM R.pdf p.25-28 y p.34-35 con OD/BR (2).csv (T10)", "archivo": "BR.csv", "y": "precio",
+ "predictores": ["m2_construcción", "recamaras", "condición"], "nuevos": {"m2_construcción": 130, "recamaras": 3, "condición": 4},
+ "predictores_factor": ["m2_construcción", "condición", "m2_terreno", "baños", "recamaras"], "factores": ["condición", "recamaras"]}

@@ -1,0 +1,2 @@
+{"problema": "OD/AM R.pdf p.40-41 con OD/BR (2).csv: logística binaria (precio > mediana) y multinomial (percentiles 0.33 y 0.66)", "archivo": "BR.csv", "y": "precio",
+ "predictores": ["recamaras", "baños", "m2_construcción", "m2_terreno"], "nuevos": {"recamaras": 3, "baños": 2, "m2_construcción": 120, "m2_terreno": 200}}

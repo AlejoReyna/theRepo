@@ -1,0 +1,43 @@
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+=== Global Top 15 Episodes ===
+# A tibble: 15 × 3
+   ep                                                             cases_with_ep support
+   <chr>                                                                  <int>   <dbl>
+ 1 TOWED/STORED VEHICLE -> TOWED/STORED VEHICLE                              27 0.0446 
+ 2 TOWED/STORED VEH-14602.6 -> TOWED/STORED VEH-14602.6                      12 0.0198 
+ 3 TOWED/STORED VEH-14602.6 -> TOWED/STORED VEHICLE                          12 0.0198 
+ 4 459 PC  BURGLARY VEHICLE -> 459 PC  BURGLARY VEHICLE                      11 0.0182 
+ 5 TOWED/STORED VEHICLE -> TOWED/STORED VEH-14602.6                          11 0.0182 
+ 6 10851(A)VC TAKE VEH W/O OWNER -> 10851(A)VC TAKE VEH W/O OWNER             7 0.0116 
+ 7 10851 VC AUTO THEFT LOCATE -> 10851 VC AUTO THEFT LOCATE                   4 0.00660
+ 8 459 PC  BURGLARY VEHICLE -> 10851(A)VC TAKE VEH W/O OWNER                  4 0.00660
+ 9 594(B)(2)(A) VANDALISM/ -$400 -> 459 PC  BURGLARY VEHICLE                  3 0.00495
+10 GANG ACTIVITY - I RPT -> GANG ACTIVITY - I RPT                             3 0.00495
+11 MISSING PERSON -> TOWED/STORED VEH-14602.6                                 3 0.00495
+12 TOWED/STORED VEHICLE -> 10851 VC AUTO THEFT LOCATE                         3 0.00495
+13 TRAFFIC-ACCIDENT INJURY -> TOWED/STORED VEH-14602.6                        3 0.00495
+14 TRAFFIC-ACCIDENT INJURY -> TOWED/STORED VEHICLE                            3 0.00495
+15 10851 VC AUTO THEFT LOCATE -> TOWED/STORED VEH-14602.6                     2 0.00330
+
+=== District Top 15 Episodes ===
+# A tibble: 15 × 4
+   district ep                                                             cases_with_ep support
+      <dbl> <chr>                                                                  <int>   <dbl>
+ 1        1 459 PC  BURGLARY VEHICLE -> 459 PC  BURGLARY VEHICLE                       2  0.0227
+ 2        1 10851(A)VC TAKE VEH W/O OWNER -> 10851(A)VC TAKE VEH W/O OWNER             1  0.0114
+ 3        1 10851(A)VC TAKE VEH W/O OWNER -> 459 PC  BURGLARY VEHICLE                  1  0.0114
+ 4        1 10851(A)VC TAKE VEH W/O OWNER -> 5150 WI DANGER SELF/OTHERS                1  0.0114
+ 5        1 10851(A)VC TAKE VEH W/O OWNER -> MISCELLANEOUS I RPT (ZMISC)               1  0.0114
+ 6        1 11357(B)HS POSS -28.5GR MARIJ -> 242 PC  BATTERY CIVILIAN                  1  0.0114
+ 7        1 148.1(A)PC FALSE REPT OF BOMB -> MISCELLANEOUS I RPT (ZMISC)               1  0.0114
+ 8        1 20002(A) HIT/RUN -> 594(B)(2)(A) VANDALISM/ -$400                          1  0.0114
+ 9        1 211 PC  ROBBERY UNSPECIFIED -> 215(A) PC    CARJACKING                     1  0.0114
+10        1 211 PC  ROBBERY UNSPECIFIED -> 594(B)(1)PC  VANDALISM +$400                1  0.0114
+11        1 211 PC ROBBERY-PURSE SNATCH -> 23152(A) VC DUI-ALCOHOL/DRUGS               1  0.0114
+12        1 23152(A) VC DUI-ALCOHOL/DRUGS -> TOWED/STORED VEHICLE                      1  0.0114
+13        1 242 PC  BATTERY CIVILIAN -> BURGLARY - I RPT                               1  0.0114
+14        1 243.2(A)(1) BATT/SCHOOL INJURY -> 308(B) PC MINOR POSS TOBACCO             1  0.0114
+15        1 459 PC  BURGLARY VEHICLE -> 484 PETTY THEFT CLOUT UNLOCKED                 1  0.0114
+
+Eventos: 7584; casos: 606; pares: 726; episodios distintos: 393

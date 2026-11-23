@@ -1,0 +1,86 @@
+{
+ "problema": "SUBSET.pdf p.5-8: ambx (airquality)",
+ "objetivo": "Quitar faltantes",
+ "archivo": "ambx.csv",
+ "bitacora": [
+  {
+   "paso": "P0",
+   "operacion": "Carga del archivo original",
+   "filas": 29,
+   "columnas": 4
+  },
+  {
+   "paso": "A1",
+   "operacion": "Ozone sin NA (p.5-6)",
+   "filas": 23,
+   "columnas": 4
+  },
+  {
+   "paso": "A2",
+   "operacion": "complete.cases(ozone, solar) (p.7-8)",
+   "filas": 22,
+   "columnas": 4
+  },
+  {
+   "paso": "A3",
+   "operacion": "complete.cases(datos) (p.9)",
+   "filas": 21,
+   "columnas": 4
+  }
+ ],
+ "perfil": [
+  {
+   "columna": "Ozone",
+   "tipo": "numérica",
+   "no_na": 23,
+   "na": 6,
+   "distintos": 21,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "32"
+  },
+  {
+   "columna": "Solar.R",
+   "tipo": "numérica",
+   "no_na": 28,
+   "na": 1,
+   "distintos": 26,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "236"
+  },
+  {
+   "columna": "Wind",
+   "tipo": "numérica",
+   "no_na": 29,
+   "na": 0,
+   "distintos": 16,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "9.2"
+  },
+  {
+   "columna": "Temp",
+   "tipo": "numérica",
+   "no_na": 28,
+   "na": 1,
+   "distintos": 14,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "81"
+  }
+ ],
+ "final": {
+  "filas": 21,
+  "columnas": [
+   "Ozone",
+   "Solar.R",
+   "Wind",
+   "Temp"
+  ]
+ }
+}

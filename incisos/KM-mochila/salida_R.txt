@@ -1,0 +1,68 @@
+Registros: 100000   Variables: Peso, Volumen, Beneficio
+Iteracion 1: |C0| = 50044, |C1| = 49956, suma DMIN = 74495.033286, cambios = -
+Iteracion 2: |C0| = 49998, |C1| = 50002, suma DMIN = 41861.296070, cambios = 322
+Iteracion 3: |C0| = 49952, |C1| = 50048, suma DMIN = 41860.095199, cambios = 372
+Iteracion 4: |C0| = 49959, |C1| = 50041, suma DMIN = 41858.685523, cambios = 401
+Iteracion 5: |C0| = 49949, |C1| = 50051, suma DMIN = 41856.853757, cambios = 472
+Iteracion 6: |C0| = 49972, |C1| = 50028, suma DMIN = 41854.299951, cambios = 569
+Iteracion 7: |C0| = 49973, |C1| = 50027, suma DMIN = 41850.671035, cambios = 687
+Iteracion 8: |C0| = 49961, |C1| = 50039, suma DMIN = 41845.751789, cambios = 776
+Iteracion 9: |C0| = 49975, |C1| = 50025, suma DMIN = 41839.135440, cambios = 918
+Iteracion 10: |C0| = 49978, |C1| = 50022, suma DMIN = 41829.121880, cambios = 1153
+Iteracion 11: |C0| = 49977, |C1| = 50023, suma DMIN = 41813.069510, cambios = 1463
+Iteracion 12: |C0| = 49978, |C1| = 50022, suma DMIN = 41785.246828, cambios = 2037
+Iteracion 13: |C0| = 49953, |C1| = 50047, suma DMIN = 41728.584157, cambios = 2835
+Iteracion 14: |C0| = 49914, |C1| = 50086, suma DMIN = 41626.301831, cambios = 3535
+Iteracion 15: |C0| = 49850, |C1| = 50150, suma DMIN = 41492.959534, cambios = 3750
+Iteracion 16: |C0| = 49829, |C1| = 50171, suma DMIN = 41378.403435, cambios = 3253
+Iteracion 17: |C0| = 49802, |C1| = 50198, suma DMIN = 41306.238204, cambios = 2455
+Iteracion 18: |C0| = 49773, |C1| = 50227, suma DMIN = 41268.234995, cambios = 1797
+Iteracion 19: |C0| = 49791, |C1| = 50209, suma DMIN = 41250.273690, cambios = 1128
+Iteracion 20: |C0| = 49839, |C1| = 50161, suma DMIN = 41242.886654, cambios = 730
+Iteracion 21: |C0| = 49895, |C1| = 50105, suma DMIN = 41239.683972, cambios = 488
+Iteracion 22: |C0| = 49901, |C1| = 50099, suma DMIN = 41238.236359, cambios = 342
+Iteracion 23: |C0| = 49952, |C1| = 50048, suma DMIN = 41237.404304, cambios = 219
+Iteracion 24: |C0| = 49954, |C1| = 50046, suma DMIN = 41237.111760, cambios = 74
+Iteracion 25: |C0| = 49944, |C1| = 50056, suma DMIN = 41237.062893, cambios = 44
+Iteracion 26: |C0| = 49948, |C1| = 50052, suma DMIN = 41237.035898, cambios = 32
+Iteracion 27: |C0| = 49962, |C1| = 50038, suma DMIN = 41237.016701, cambios = 30
+Iteracion 28: |C0| = 49970, |C1| = 50030, suma DMIN = 41236.998228, cambios = 28
+Iteracion 29: |C0| = 49976, |C1| = 50024, suma DMIN = 41236.976457, cambios = 32
+Iteracion 30: |C0| = 49994, |C1| = 50006, suma DMIN = 41236.941081, cambios = 48
+Iteracion 31: |C0| = 50000, |C1| = 50000, suma DMIN = 41236.892558, cambios = 38
+Iteracion 32: |C0| = 50003, |C1| = 49997, suma DMIN = 41236.856822, cambios = 39
+Iteracion 33: |C0| = 50005, |C1| = 49995, suma DMIN = 41236.823138, cambios = 28
+Iteracion 34: |C0| = 49997, |C1| = 50003, suma DMIN = 41236.806000, cambios = 18
+Iteracion 35: |C0| = 49991, |C1| = 50009, suma DMIN = 41236.793222, cambios = 16
+Iteracion 36: |C0| = 49987, |C1| = 50013, suma DMIN = 41236.783941, cambios = 10
+Iteracion 37: |C0| = 49984, |C1| = 50016, suma DMIN = 41236.777495, cambios = 11
+Iteracion 38: |C0| = 49985, |C1| = 50015, suma DMIN = 41236.770884, cambios = 5
+Iteracion 39: |C0| = 49988, |C1| = 50012, suma DMIN = 41236.768694, cambios = 3
+Iteracion 40: |C0| = 49988, |C1| = 50012, suma DMIN = 41236.768216, cambios = 0
+Seleccion de k con una muestra de 3000 filas (T21)
+There were 50 or more warnings (use warnings() to see the first 50)
+ Algoritmo Criterio K
+   K-means      WSS 4
+   K-means  Silueta 7
+   K-means      Gap 1
+Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 5000000) 
+2: Quick-TRANSfer stage steps exceeded maximum (= 5000000) 
+3: Quick-TRANSfer stage steps exceeded maximum (= 5000000) 
+4: Quick-TRANSfer stage steps exceeded maximum (= 5000000) 
+5: Quick-TRANSfer stage steps exceeded maximum (= 5000000) 
+6: did not converge in 10 iterations 
+7: Quick-TRANSfer stage steps exceeded maximum (= 5000000) 
+8: Quick-TRANSfer stage steps exceeded maximum (= 5000000) 
+9: Quick-TRANSfer stage steps exceeded maximum (= 5000000) 
+10: did not converge in 10 iterations 
+
+kmeans con k = 7: tamanos 15029, 15277, 15265, 13998, 14208, 14176, 12047; WSS total = 86869.1260; BSS/TSS = 0.7104
+     Peso Volumen Beneficio
+1  0.9622 -0.9612   -0.4947
+2  0.9763  0.4056    0.9720
+3 -0.4979 -0.9650    0.9637
+4 -0.8402 -0.8455   -0.8504
+5  0.8534  0.8503   -0.8178
+6 -0.8207  0.8552    0.8450
+7 -0.8719  0.8808   -0.8783

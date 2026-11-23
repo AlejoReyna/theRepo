@@ -1,0 +1,5 @@
+"paso","operacion","filas","columnas"
+"P0","Carga del archivo original",141110,10
+"M1","data[data[,8] == Off-Peak, ] (p.16)",90157,10
+"M2","subset(op, Status == Cancelled) (p.16)",1913,10
+"M3","Fecha > 2024-01-01, 10 < retraso <= 20, Grand Central (p.17)",374,10

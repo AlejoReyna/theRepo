@@ -1,0 +1,2497 @@
+{
+ "problema": "Ejercicio de clase OD/AP (1).xlsx: reglas entre HeartDisease, Smoking, AlcoholDrinking y Stroke",
+ "archivo": "ap_clase.csv",
+ "n": 50,
+ "columnas": [
+  "HeartDisease",
+  "Smoking",
+  "AlcoholDrinking",
+  "Stroke"
+ ],
+ "soporte_min": 0.01,
+ "confianza_min": 0.1,
+ "niveles": [
+  {
+   "nivel": 1,
+   "itemsets": 8,
+   "muestra": [
+    [
+     [
+      "AlcoholDrinking=No"
+     ],
+     46
+    ],
+    [
+     [
+      "Stroke=No"
+     ],
+     46
+    ],
+    [
+     [
+      "HeartDisease=No"
+     ],
+     44
+    ],
+    [
+     [
+      "Smoking=No"
+     ],
+     25
+    ],
+    [
+     [
+      "Smoking=Yes"
+     ],
+     25
+    ],
+    [
+     [
+      "HeartDisease=Yes"
+     ],
+     6
+    ],
+    [
+     [
+      "Stroke=Yes"
+     ],
+     4
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes"
+     ],
+     3
+    ]
+   ]
+  },
+  {
+   "nivel": 2,
+   "itemsets": 22,
+   "muestra": [
+    [
+     [
+      "AlcoholDrinking=No",
+      "Stroke=No"
+     ],
+     42
+    ],
+    [
+     [
+      "HeartDisease=No",
+      "Stroke=No"
+     ],
+     41
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=No"
+     ],
+     40
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "Smoking=Yes"
+     ],
+     24
+    ],
+    [
+     [
+      "HeartDisease=No",
+      "Smoking=No"
+     ],
+     24
+    ],
+    [
+     [
+      "Smoking=No",
+      "Stroke=No"
+     ],
+     24
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "Smoking=No"
+     ],
+     22
+    ],
+    [
+     [
+      "Smoking=Yes",
+      "Stroke=No"
+     ],
+     22
+    ],
+    [
+     [
+      "HeartDisease=No",
+      "Smoking=Yes"
+     ],
+     20
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=Yes"
+     ],
+     6
+    ],
+    [
+     [
+      "HeartDisease=Yes",
+      "Smoking=Yes"
+     ],
+     5
+    ],
+    [
+     [
+      "HeartDisease=Yes",
+      "Stroke=No"
+     ],
+     5
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "Stroke=Yes"
+     ],
+     4
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "HeartDisease=No"
+     ],
+     3
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "Stroke=No"
+     ],
+     3
+    ],
+    [
+     [
+      "HeartDisease=No",
+      "Stroke=Yes"
+     ],
+     3
+    ],
+    [
+     [
+      "Smoking=Yes",
+      "Stroke=Yes"
+     ],
+     3
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "Smoking=No"
+     ],
+     2
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "Smoking=Yes"
+     ],
+     1
+    ],
+    [
+     [
+      "HeartDisease=Yes",
+      "Smoking=No"
+     ],
+     1
+    ],
+    [
+     [
+      "HeartDisease=Yes",
+      "Stroke=Yes"
+     ],
+     1
+    ],
+    [
+     [
+      "Smoking=No",
+      "Stroke=Yes"
+     ],
+     1
+    ]
+   ]
+  },
+  {
+   "nivel": 3,
+   "itemsets": 24,
+   "muestra": [
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=No",
+      "Stroke=No"
+     ],
+     37
+    ],
+    [
+     [
+      "HeartDisease=No",
+      "Smoking=No",
+      "Stroke=No"
+     ],
+     23
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=No",
+      "Smoking=No"
+     ],
+     21
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "Smoking=No",
+      "Stroke=No"
+     ],
+     21
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "Smoking=Yes",
+      "Stroke=No"
+     ],
+     21
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=No",
+      "Smoking=Yes"
+     ],
+     19
+    ],
+    [
+     [
+      "HeartDisease=No",
+      "Smoking=Yes",
+      "Stroke=No"
+     ],
+     18
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=Yes",
+      "Smoking=Yes"
+     ],
+     5
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=Yes",
+      "Stroke=No"
+     ],
+     5
+    ],
+    [
+     [
+      "HeartDisease=Yes",
+      "Smoking=Yes",
+      "Stroke=No"
+     ],
+     4
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=No",
+      "Stroke=Yes"
+     ],
+     3
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "Smoking=Yes",
+      "Stroke=Yes"
+     ],
+     3
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "HeartDisease=No",
+      "Stroke=No"
+     ],
+     3
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "HeartDisease=No",
+      "Smoking=No"
+     ],
+     2
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "Smoking=No",
+      "Stroke=No"
+     ],
+     2
+    ],
+    [
+     [
+      "HeartDisease=No",
+      "Smoking=Yes",
+      "Stroke=Yes"
+     ],
+     2
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=Yes",
+      "Smoking=No"
+     ],
+     1
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=Yes",
+      "Stroke=Yes"
+     ],
+     1
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "Smoking=No",
+      "Stroke=Yes"
+     ],
+     1
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "HeartDisease=No",
+      "Smoking=Yes"
+     ],
+     1
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "Smoking=Yes",
+      "Stroke=No"
+     ],
+     1
+    ],
+    [
+     [
+      "HeartDisease=No",
+      "Smoking=No",
+      "Stroke=Yes"
+     ],
+     1
+    ],
+    [
+     [
+      "HeartDisease=Yes",
+      "Smoking=No",
+      "Stroke=No"
+     ],
+     1
+    ],
+    [
+     [
+      "HeartDisease=Yes",
+      "Smoking=Yes",
+      "Stroke=Yes"
+     ],
+     1
+    ]
+   ]
+  },
+  {
+   "nivel": 4,
+   "itemsets": 9,
+   "muestra": [
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=No",
+      "Smoking=No",
+      "Stroke=No"
+     ],
+     20
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=No",
+      "Smoking=Yes",
+      "Stroke=No"
+     ],
+     17
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=Yes",
+      "Smoking=Yes",
+      "Stroke=No"
+     ],
+     4
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=No",
+      "Smoking=Yes",
+      "Stroke=Yes"
+     ],
+     2
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "HeartDisease=No",
+      "Smoking=No",
+      "Stroke=No"
+     ],
+     2
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=No",
+      "Smoking=No",
+      "Stroke=Yes"
+     ],
+     1
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=Yes",
+      "Smoking=No",
+      "Stroke=No"
+     ],
+     1
+    ],
+    [
+     [
+      "AlcoholDrinking=No",
+      "HeartDisease=Yes",
+      "Smoking=Yes",
+      "Stroke=Yes"
+     ],
+     1
+    ],
+    [
+     [
+      "AlcoholDrinking=Yes",
+      "HeartDisease=No",
+      "Smoking=Yes",
+      "Stroke=No"
+     ],
+     1
+    ]
+   ]
+  }
+ ],
+ "n_reglas": 136,
+ "reglas": [
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 3,
+   "NY": 6,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.3333333333333333,
+   "cobertura": 0.06,
+   "lift": 2.7777777777777777
+  },
+  {
+   "lhs": [
+    "Smoking=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 3,
+   "NY": 6,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.3333333333333333,
+   "cobertura": 0.06,
+   "lift": 2.7777777777777777
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=Yes",
+   "NX": 5,
+   "NY": 4,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.2,
+   "cobertura": 0.1,
+   "lift": 2.5
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=Yes",
+   "NX": 5,
+   "NY": 4,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.2,
+   "cobertura": 0.1,
+   "lift": 2.5
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 4,
+   "NY": 6,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.25,
+   "cobertura": 0.08,
+   "lift": 2.0833333333333335
+  },
+  {
+   "lhs": [
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 4,
+   "NY": 6,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.25,
+   "cobertura": 0.08,
+   "lift": 2.0833333333333335
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Stroke=Yes",
+   "NX": 6,
+   "NY": 4,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.16666666666666666,
+   "cobertura": 0.12,
+   "lift": 2.0833333333333335
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Stroke=Yes",
+   "NX": 6,
+   "NY": 4,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.16666666666666666,
+   "cobertura": 0.12,
+   "lift": 2.0833333333333335
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 1,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 2.0
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 1,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 2.0
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 24,
+   "NY": 6,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.20833333333333334,
+   "cobertura": 0.48,
+   "lift": 1.7361111111111112
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 6,
+   "NY": 25,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.8333333333333334,
+   "cobertura": 0.12,
+   "lift": 1.6666666666666667
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 6,
+   "NY": 25,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.8333333333333334,
+   "cobertura": 0.12,
+   "lift": 1.6666666666666667
+  },
+  {
+   "lhs": [
+    "Smoking=Yes"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 25,
+   "NY": 6,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.2,
+   "cobertura": 0.5,
+   "lift": 1.6666666666666667
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 5,
+   "NY": 25,
+   "NXY": 4,
+   "soporte": 0.08,
+   "confianza": 0.8,
+   "cobertura": 0.1,
+   "lift": 1.6
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 5,
+   "NY": 25,
+   "NXY": 4,
+   "soporte": 0.08,
+   "confianza": 0.8,
+   "cobertura": 0.1,
+   "lift": 1.6
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 21,
+   "NY": 6,
+   "NXY": 4,
+   "soporte": 0.08,
+   "confianza": 0.19047619047619047,
+   "cobertura": 0.42,
+   "lift": 1.5873015873015872
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=Yes",
+   "NX": 24,
+   "NY": 4,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 0.125,
+   "cobertura": 0.48,
+   "lift": 1.5625
+  },
+  {
+   "lhs": [
+    "Smoking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 22,
+   "NY": 6,
+   "NXY": 4,
+   "soporte": 0.08,
+   "confianza": 0.18181818181818182,
+   "cobertura": 0.44,
+   "lift": 1.5151515151515151
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 4,
+   "NY": 25,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 0.75,
+   "cobertura": 0.08,
+   "lift": 1.5
+  },
+  {
+   "lhs": [
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 4,
+   "NY": 25,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 0.75,
+   "cobertura": 0.08,
+   "lift": 1.5
+  },
+  {
+   "lhs": [
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=Yes",
+   "NX": 25,
+   "NY": 4,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 0.12,
+   "cobertura": 0.5,
+   "lift": 1.5
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.6666666666666666,
+   "cobertura": 0.06,
+   "lift": 1.3333333333333333
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "HeartDisease=No",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.6666666666666666,
+   "cobertura": 0.06,
+   "lift": 1.3333333333333333
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "HeartDisease=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.6666666666666666,
+   "cobertura": 0.06,
+   "lift": 1.3333333333333333
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.6666666666666666,
+   "cobertura": 0.06,
+   "lift": 1.3333333333333333
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.6666666666666666,
+   "cobertura": 0.06,
+   "lift": 1.3333333333333333
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.6666666666666666,
+   "cobertura": 0.06,
+   "lift": 1.3333333333333333
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=Yes",
+   "NX": 19,
+   "NY": 4,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.10526315789473684,
+   "cobertura": 0.38,
+   "lift": 1.3157894736842106
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=Yes",
+   "NX": 20,
+   "NY": 4,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.1,
+   "cobertura": 0.4,
+   "lift": 1.25
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 3,
+   "NY": 44,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 1.0,
+   "cobertura": 0.06,
+   "lift": 1.1363636363636365
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 3,
+   "NY": 44,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 1.0,
+   "cobertura": 0.06,
+   "lift": 1.1363636363636365
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "Smoking=No",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 2,
+   "NY": 44,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 1.0,
+   "cobertura": 0.04,
+   "lift": 1.1363636363636365
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "Smoking=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 2,
+   "NY": 44,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 1.0,
+   "cobertura": 0.04,
+   "lift": 1.1363636363636365
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 1,
+   "NY": 44,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.1363636363636365
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "Smoking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 1,
+   "NY": 44,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.1363636363636365
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "Smoking=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 1,
+   "NY": 44,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.1363636363636365
+  },
+  {
+   "lhs": [
+    "Smoking=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 1,
+   "NY": 44,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.1363636363636365
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 41,
+   "NY": 25,
+   "NXY": 23,
+   "soporte": 0.46,
+   "confianza": 0.5609756097560976,
+   "cobertura": 0.82,
+   "lift": 1.1219512195121952
+  },
+  {
+   "lhs": [
+    "Smoking=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 25,
+   "NY": 44,
+   "NXY": 24,
+   "soporte": 0.48,
+   "confianza": 0.96,
+   "cobertura": 0.5,
+   "lift": 1.0909090909090908
+  },
+  {
+   "lhs": [
+    "HeartDisease=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 44,
+   "NY": 25,
+   "NXY": 24,
+   "soporte": 0.48,
+   "confianza": 0.5454545454545454,
+   "cobertura": 0.88,
+   "lift": 1.0909090909090908
+  },
+  {
+   "lhs": [
+    "Smoking=No",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 24,
+   "NY": 44,
+   "NXY": 23,
+   "soporte": 0.46,
+   "confianza": 0.9583333333333334,
+   "cobertura": 0.48,
+   "lift": 1.0890151515151516
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 6,
+   "NY": 46,
+   "NXY": 6,
+   "soporte": 0.12,
+   "confianza": 1.0,
+   "cobertura": 0.12,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Smoking=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 5,
+   "NY": 46,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 1.0,
+   "cobertura": 0.1,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 5,
+   "NY": 46,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 1.0,
+   "cobertura": 0.1,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Smoking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 4,
+   "NY": 46,
+   "NXY": 4,
+   "soporte": 0.08,
+   "confianza": 1.0,
+   "cobertura": 0.08,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "Stroke=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 4,
+   "NY": 46,
+   "NXY": 4,
+   "soporte": 0.08,
+   "confianza": 1.0,
+   "cobertura": 0.08,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "HeartDisease=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 3,
+   "NY": 46,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 1.0,
+   "cobertura": 0.06,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 3,
+   "NY": 46,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 1.0,
+   "cobertura": 0.06,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 3,
+   "NY": 46,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 1.0,
+   "cobertura": 0.06,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "Smoking=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 3,
+   "NY": 46,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 1.0,
+   "cobertura": 0.06,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "HeartDisease=No",
+    "Smoking=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 2,
+   "NY": 46,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 1.0,
+   "cobertura": 0.04,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "Smoking=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 2,
+   "NY": 46,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 1.0,
+   "cobertura": 0.04,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Smoking=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 2,
+   "NY": 46,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 1.0,
+   "cobertura": 0.04,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes",
+    "Smoking=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "HeartDisease=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Smoking=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Smoking=No",
+    "Stroke=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Smoking=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Smoking=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Smoking=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "Smoking=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 1,
+   "NY": 46,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 1.0,
+   "cobertura": 0.02,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 46,
+   "NY": 6,
+   "NXY": 6,
+   "soporte": 0.12,
+   "confianza": 0.13043478260869565,
+   "cobertura": 0.92,
+   "lift": 1.0869565217391304
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 22,
+   "NY": 44,
+   "NXY": 21,
+   "soporte": 0.42,
+   "confianza": 0.9545454545454546,
+   "cobertura": 0.44,
+   "lift": 1.084710743801653
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=No",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 21,
+   "NY": 44,
+   "NXY": 20,
+   "soporte": 0.4,
+   "confianza": 0.9523809523809523,
+   "cobertura": 0.42,
+   "lift": 1.0822510822510822
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 37,
+   "NY": 25,
+   "NXY": 20,
+   "soporte": 0.4,
+   "confianza": 0.5405405405405406,
+   "cobertura": 0.74,
+   "lift": 1.0810810810810811
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 40,
+   "NY": 25,
+   "NXY": 21,
+   "soporte": 0.42,
+   "confianza": 0.525,
+   "cobertura": 0.8,
+   "lift": 1.05
+  },
+  {
+   "lhs": [
+    "Smoking=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 25,
+   "NY": 46,
+   "NXY": 24,
+   "soporte": 0.48,
+   "confianza": 0.96,
+   "cobertura": 0.5,
+   "lift": 1.0434782608695652
+  },
+  {
+   "lhs": [
+    "Smoking=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 25,
+   "NY": 46,
+   "NXY": 24,
+   "soporte": 0.48,
+   "confianza": 0.96,
+   "cobertura": 0.5,
+   "lift": 1.0434782608695652
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 46,
+   "NY": 25,
+   "NXY": 24,
+   "soporte": 0.48,
+   "confianza": 0.5217391304347826,
+   "cobertura": 0.92,
+   "lift": 1.0434782608695652
+  },
+  {
+   "lhs": [
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 46,
+   "NY": 25,
+   "NXY": 24,
+   "soporte": 0.48,
+   "confianza": 0.5217391304347826,
+   "cobertura": 0.92,
+   "lift": 1.0434782608695652
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Smoking=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 24,
+   "NY": 46,
+   "NXY": 23,
+   "soporte": 0.46,
+   "confianza": 0.9583333333333334,
+   "cobertura": 0.48,
+   "lift": 1.0416666666666667
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 22,
+   "NY": 46,
+   "NXY": 21,
+   "soporte": 0.42,
+   "confianza": 0.9545454545454546,
+   "cobertura": 0.44,
+   "lift": 1.0375494071146245
+  },
+  {
+   "lhs": [
+    "Smoking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 22,
+   "NY": 46,
+   "NXY": 21,
+   "soporte": 0.42,
+   "confianza": 0.9545454545454546,
+   "cobertura": 0.44,
+   "lift": 1.0375494071146245
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No",
+    "Smoking=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 21,
+   "NY": 46,
+   "NXY": 20,
+   "soporte": 0.4,
+   "confianza": 0.9523809523809523,
+   "cobertura": 0.42,
+   "lift": 1.0351966873706004
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 20,
+   "NY": 46,
+   "NXY": 19,
+   "soporte": 0.38,
+   "confianza": 0.95,
+   "cobertura": 0.4,
+   "lift": 1.0326086956521738
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Smoking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 18,
+   "NY": 46,
+   "NXY": 17,
+   "soporte": 0.34,
+   "confianza": 0.9444444444444444,
+   "cobertura": 0.36,
+   "lift": 1.0265700483091786
+  },
+  {
+   "lhs": [
+    "HeartDisease=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 44,
+   "NY": 46,
+   "NXY": 41,
+   "soporte": 0.82,
+   "confianza": 0.9318181818181818,
+   "cobertura": 0.88,
+   "lift": 1.0128458498023716
+  },
+  {
+   "lhs": [
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 46,
+   "NY": 44,
+   "NXY": 41,
+   "soporte": 0.82,
+   "confianza": 0.8913043478260869,
+   "cobertura": 0.92,
+   "lift": 1.0128458498023716
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 40,
+   "NY": 46,
+   "NXY": 37,
+   "soporte": 0.74,
+   "confianza": 0.925,
+   "cobertura": 0.8,
+   "lift": 1.0054347826086956
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 42,
+   "NY": 44,
+   "NXY": 37,
+   "soporte": 0.74,
+   "confianza": 0.8809523809523809,
+   "cobertura": 0.84,
+   "lift": 1.001082251082251
+  },
+  {
+   "lhs": [],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 50,
+   "NY": 46,
+   "NXY": 46,
+   "soporte": 0.92,
+   "confianza": 0.92,
+   "cobertura": 1.0,
+   "lift": 1.0
+  },
+  {
+   "lhs": [],
+   "rhs": "Stroke=No",
+   "NX": 50,
+   "NY": 46,
+   "NXY": 46,
+   "soporte": 0.92,
+   "confianza": 0.92,
+   "cobertura": 1.0,
+   "lift": 1.0
+  },
+  {
+   "lhs": [],
+   "rhs": "HeartDisease=No",
+   "NX": 50,
+   "NY": 44,
+   "NXY": 44,
+   "soporte": 0.88,
+   "confianza": 0.88,
+   "cobertura": 1.0,
+   "lift": 1.0
+  },
+  {
+   "lhs": [],
+   "rhs": "Smoking=No",
+   "NX": 50,
+   "NY": 25,
+   "NXY": 25,
+   "soporte": 0.5,
+   "confianza": 0.5,
+   "cobertura": 1.0,
+   "lift": 1.0
+  },
+  {
+   "lhs": [],
+   "rhs": "Smoking=Yes",
+   "NX": 50,
+   "NY": 25,
+   "NXY": 25,
+   "soporte": 0.5,
+   "confianza": 0.5,
+   "cobertura": 1.0,
+   "lift": 1.0
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 42,
+   "NY": 25,
+   "NXY": 21,
+   "soporte": 0.42,
+   "confianza": 0.5,
+   "cobertura": 0.84,
+   "lift": 1.0
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 42,
+   "NY": 25,
+   "NXY": 21,
+   "soporte": 0.42,
+   "confianza": 0.5,
+   "cobertura": 0.84,
+   "lift": 1.0
+  },
+  {
+   "lhs": [],
+   "rhs": "HeartDisease=Yes",
+   "NX": 50,
+   "NY": 6,
+   "NXY": 6,
+   "soporte": 0.12,
+   "confianza": 0.12,
+   "cobertura": 1.0,
+   "lift": 1.0
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 46,
+   "NY": 46,
+   "NXY": 42,
+   "soporte": 0.84,
+   "confianza": 0.9130434782608695,
+   "cobertura": 0.92,
+   "lift": 0.9924385633270322
+  },
+  {
+   "lhs": [
+    "Stroke=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 46,
+   "NY": 46,
+   "NXY": 42,
+   "soporte": 0.84,
+   "confianza": 0.9130434782608695,
+   "cobertura": 0.92,
+   "lift": 0.9924385633270322
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 42,
+   "NY": 6,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.11904761904761904,
+   "cobertura": 0.84,
+   "lift": 0.9920634920634921
+  },
+  {
+   "lhs": [
+    "HeartDisease=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 44,
+   "NY": 46,
+   "NXY": 40,
+   "soporte": 0.8,
+   "confianza": 0.9090909090909091,
+   "cobertura": 0.88,
+   "lift": 0.9881422924901185
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 46,
+   "NY": 44,
+   "NXY": 40,
+   "soporte": 0.8,
+   "confianza": 0.8695652173913043,
+   "cobertura": 0.92,
+   "lift": 0.9881422924901185
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Stroke=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 41,
+   "NY": 46,
+   "NXY": 37,
+   "soporte": 0.74,
+   "confianza": 0.9024390243902439,
+   "cobertura": 0.82,
+   "lift": 0.9809119830328739
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 20,
+   "NY": 46,
+   "NXY": 18,
+   "soporte": 0.36,
+   "confianza": 0.9,
+   "cobertura": 0.4,
+   "lift": 0.9782608695652174
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 19,
+   "NY": 46,
+   "NXY": 17,
+   "soporte": 0.34,
+   "confianza": 0.8947368421052632,
+   "cobertura": 0.38,
+   "lift": 0.9725400457665904
+  },
+  {
+   "lhs": [
+    "Smoking=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 25,
+   "NY": 46,
+   "NXY": 22,
+   "soporte": 0.44,
+   "confianza": 0.88,
+   "cobertura": 0.5,
+   "lift": 0.9565217391304348
+  },
+  {
+   "lhs": [
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 25,
+   "NY": 46,
+   "NXY": 22,
+   "soporte": 0.44,
+   "confianza": 0.88,
+   "cobertura": 0.5,
+   "lift": 0.9565217391304348
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 46,
+   "NY": 25,
+   "NXY": 22,
+   "soporte": 0.44,
+   "confianza": 0.4782608695652174,
+   "cobertura": 0.92,
+   "lift": 0.9565217391304348
+  },
+  {
+   "lhs": [
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 46,
+   "NY": 25,
+   "NXY": 22,
+   "soporte": 0.44,
+   "confianza": 0.4782608695652174,
+   "cobertura": 0.92,
+   "lift": 0.9565217391304348
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 24,
+   "NY": 46,
+   "NXY": 21,
+   "soporte": 0.42,
+   "confianza": 0.875,
+   "cobertura": 0.48,
+   "lift": 0.9510869565217391
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Smoking=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 24,
+   "NY": 46,
+   "NXY": 21,
+   "soporte": 0.42,
+   "confianza": 0.875,
+   "cobertura": 0.48,
+   "lift": 0.9510869565217391
+  },
+  {
+   "lhs": [
+    "Smoking=No",
+    "Stroke=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 24,
+   "NY": 46,
+   "NXY": 21,
+   "soporte": 0.42,
+   "confianza": 0.875,
+   "cobertura": 0.48,
+   "lift": 0.9510869565217391
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 40,
+   "NY": 25,
+   "NXY": 19,
+   "soporte": 0.38,
+   "confianza": 0.475,
+   "cobertura": 0.8,
+   "lift": 0.95
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Smoking=No",
+    "Stroke=No"
+   ],
+   "rhs": "AlcoholDrinking=No",
+   "NX": 23,
+   "NY": 46,
+   "NXY": 20,
+   "soporte": 0.4,
+   "confianza": 0.8695652173913043,
+   "cobertura": 0.46,
+   "lift": 0.945179584120983
+  },
+  {
+   "lhs": [
+    "Smoking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 22,
+   "NY": 44,
+   "NXY": 18,
+   "soporte": 0.36,
+   "confianza": 0.8181818181818182,
+   "cobertura": 0.44,
+   "lift": 0.9297520661157025
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 21,
+   "NY": 44,
+   "NXY": 17,
+   "soporte": 0.34,
+   "confianza": 0.8095238095238095,
+   "cobertura": 0.42,
+   "lift": 0.9199134199134199
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 37,
+   "NY": 25,
+   "NXY": 17,
+   "soporte": 0.34,
+   "confianza": 0.4594594594594595,
+   "cobertura": 0.74,
+   "lift": 0.918918918918919
+  },
+  {
+   "lhs": [
+    "Smoking=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 25,
+   "NY": 44,
+   "NXY": 20,
+   "soporte": 0.4,
+   "confianza": 0.8,
+   "cobertura": 0.5,
+   "lift": 0.9090909090909091
+  },
+  {
+   "lhs": [
+    "HeartDisease=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 44,
+   "NY": 25,
+   "NXY": 20,
+   "soporte": 0.4,
+   "confianza": 0.45454545454545453,
+   "cobertura": 0.88,
+   "lift": 0.9090909090909091
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 6,
+   "NY": 46,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.8333333333333334,
+   "cobertura": 0.12,
+   "lift": 0.9057971014492754
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 6,
+   "NY": 46,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.8333333333333334,
+   "cobertura": 0.12,
+   "lift": 0.9057971014492754
+  },
+  {
+   "lhs": [
+    "Stroke=No"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 46,
+   "NY": 6,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.10869565217391304,
+   "cobertura": 0.92,
+   "lift": 0.9057971014492754
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 24,
+   "NY": 44,
+   "NXY": 19,
+   "soporte": 0.38,
+   "confianza": 0.7916666666666666,
+   "cobertura": 0.48,
+   "lift": 0.8996212121212122
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 41,
+   "NY": 25,
+   "NXY": 18,
+   "soporte": 0.36,
+   "confianza": 0.43902439024390244,
+   "cobertura": 0.82,
+   "lift": 0.8780487804878049
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 5,
+   "NY": 46,
+   "NXY": 4,
+   "soporte": 0.08,
+   "confianza": 0.8,
+   "cobertura": 0.1,
+   "lift": 0.8695652173913043
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Smoking=Yes"
+   ],
+   "rhs": "Stroke=No",
+   "NX": 5,
+   "NY": 46,
+   "NXY": 4,
+   "soporte": 0.08,
+   "confianza": 0.8,
+   "cobertura": 0.1,
+   "lift": 0.8695652173913043
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 4,
+   "NY": 44,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 0.75,
+   "cobertura": 0.08,
+   "lift": 0.8522727272727273
+  },
+  {
+   "lhs": [
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 4,
+   "NY": 44,
+   "NXY": 3,
+   "soporte": 0.06,
+   "confianza": 0.75,
+   "cobertura": 0.08,
+   "lift": 0.8522727272727273
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Smoking=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 3,
+   "NY": 44,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.6666666666666666,
+   "cobertura": 0.06,
+   "lift": 0.7575757575757576
+  },
+  {
+   "lhs": [
+    "Smoking=Yes",
+    "Stroke=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 3,
+   "NY": 44,
+   "NXY": 2,
+   "soporte": 0.04,
+   "confianza": 0.6666666666666666,
+   "cobertura": 0.06,
+   "lift": 0.7575757575757576
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.3333333333333333,
+   "cobertura": 0.06,
+   "lift": 0.6666666666666666
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "HeartDisease=No",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.3333333333333333,
+   "cobertura": 0.06,
+   "lift": 0.6666666666666666
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "HeartDisease=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.3333333333333333,
+   "cobertura": 0.06,
+   "lift": 0.6666666666666666
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.3333333333333333,
+   "cobertura": 0.06,
+   "lift": 0.6666666666666666
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.3333333333333333,
+   "cobertura": 0.06,
+   "lift": 0.6666666666666666
+  },
+  {
+   "lhs": [
+    "HeartDisease=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 3,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.3333333333333333,
+   "cobertura": 0.06,
+   "lift": 0.6666666666666666
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 4,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.25,
+   "cobertura": 0.08,
+   "lift": 0.5
+  },
+  {
+   "lhs": [
+    "Stroke=Yes"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 4,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.25,
+   "cobertura": 0.08,
+   "lift": 0.5
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 5,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.2,
+   "cobertura": 0.1,
+   "lift": 0.4
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes",
+    "Stroke=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 5,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.2,
+   "cobertura": 0.1,
+   "lift": 0.4
+  },
+  {
+   "lhs": [
+    "AlcoholDrinking=No",
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 6,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.16666666666666666,
+   "cobertura": 0.12,
+   "lift": 0.3333333333333333
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 6,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.16666666666666666,
+   "cobertura": 0.12,
+   "lift": 0.3333333333333333
+  }
+ ],
+ "reglas_pedidas": [
+  {
+   "lhs": [
+    "HeartDisease=No"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 44,
+   "NY": 25,
+   "NXY": 24,
+   "soporte": 0.48,
+   "confianza": 0.5454545454545454,
+   "lift": 1.0909090909090908
+  },
+  {
+   "lhs": [
+    "HeartDisease=No"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 44,
+   "NY": 25,
+   "NXY": 20,
+   "soporte": 0.4,
+   "confianza": 0.45454545454545453,
+   "lift": 0.9090909090909091
+  },
+  {
+   "lhs": [
+    "Smoking=No"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 25,
+   "NY": 44,
+   "NXY": 24,
+   "soporte": 0.48,
+   "confianza": 0.96,
+   "lift": 1.0909090909090908
+  },
+  {
+   "lhs": [
+    "Smoking=No"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 25,
+   "NY": 6,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.04,
+   "lift": 0.3333333333333333
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Smoking=No",
+   "NX": 6,
+   "NY": 25,
+   "NXY": 1,
+   "soporte": 0.02,
+   "confianza": 0.16666666666666666,
+   "lift": 0.3333333333333333
+  },
+  {
+   "lhs": [
+    "HeartDisease=Yes"
+   ],
+   "rhs": "Smoking=Yes",
+   "NX": 6,
+   "NY": 25,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.8333333333333334,
+   "lift": 1.6666666666666667
+  },
+  {
+   "lhs": [
+    "Smoking=Yes"
+   ],
+   "rhs": "HeartDisease=No",
+   "NX": 25,
+   "NY": 44,
+   "NXY": 20,
+   "soporte": 0.4,
+   "confianza": 0.8,
+   "lift": 0.9090909090909091
+  },
+  {
+   "lhs": [
+    "Smoking=Yes"
+   ],
+   "rhs": "HeartDisease=Yes",
+   "NX": 25,
+   "NY": 6,
+   "NXY": 5,
+   "soporte": 0.1,
+   "confianza": 0.2,
+   "lift": 1.6666666666666667
+  }
+ ]
+}

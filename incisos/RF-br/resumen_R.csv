@@ -1,0 +1,2 @@
+"RMSE","MAE","R2","mtry","ntree","reproducible","variables"
+153636.664946348,89096.2855977039,0.753352047565058,5,100,TRUE,"agente_id|pais_id|recamaras|baños|m2_construcción|m2_terreno|pisos|código_frente_agua|código_vista|código_condición|año_construcción|año_renovación|código_postal|latitud|longitud|vista|condición"

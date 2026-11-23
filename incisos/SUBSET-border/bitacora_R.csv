@@ -1,0 +1,9 @@
+"paso","operacion","filas","columnas"
+"P0","Carga del archivo original",394866,10
+"B1","State == Texas (p.12)",41946,10
+"B2","Texas y Trucks (p.13)",3783,10
+"B3","df[, c(Port Name, Value)] (p.13)",394866,2
+"B4","Arizona con select (p.14)",22091,2
+"B5","State != Texas (p.14)",352920,10
+"B6","Texas o Arizona (p.15)",64037,10
+"B7","500 <= Value <= 5000 (p.15)",76446,10

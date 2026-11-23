@@ -1,0 +1,7 @@
+{"problema": "SUBSET.pdf p.5-8: ambx (airquality)", "objetivo": "Quitar faltantes", "archivo": "ambx.csv",
+ "pasos": [
+  {"tipo": "perfil"},
+  {"id": "A1", "tipo": "quitar_na", "desde": "P0", "operacion": "Ozone sin NA (p.5-6)", "columnas": ["Ozone"]},
+  {"id": "A2", "tipo": "quitar_na", "desde": "P0", "operacion": "complete.cases(ozone, solar) (p.7-8)", "columnas": ["Ozone", "Solar.R"]},
+  {"id": "A3", "tipo": "completos", "desde": "P0", "operacion": "complete.cases(datos) (p.9)", "guardar": "datos_limpios.csv"}
+ ]}

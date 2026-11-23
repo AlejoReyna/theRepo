@@ -1,0 +1,5 @@
+{"problema": "AD25-11 p.9 Table 10: matriz de confusión de prueba (T4)", "origen": "tabla", "positiva": "positivo",
+ "TP": 45, "FN": 12, "FP": 0, "TN": 26, "N_declarado": 87,
+ "tabla_publicada": {"TP": 55, "TN": 26, "FP": 0, "FN": 12},
+ "reportado": {"Accuracy": 0.85, "Precision": 1.0, "Recall": 0.7894},
+ "esperado_inconsistente": true}

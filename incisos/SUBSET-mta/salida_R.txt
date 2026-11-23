@@ -1,0 +1,26 @@
+Faltantes por columna (colSums(is.na())):
+  Service Date          Train         Branch Depart Station    Depart Time Arrive Station    Arrive Time         Period         Status   Minutes Late 
+             0              0              0              0              0              0              0              0              0           7129 
+P0   Carga del archivo original                                     141110 filas  10 columnas
+M1   data[data[,8] == Off-Peak, ] (p.16)                             90157 filas  10 columnas
+  Service Date Train             Branch         Depart Station            Depart Time     Arrive Station            Arrive Time   Period Status Minutes Late
+1   01/01/2012  6558 New Haven Mainline Grand Central Terminal 01/01/2012 08:08:00 PM          New Haven 01/01/2012 09:55:00 PM Off-Peak   Late           16
+2   01/01/2012  3506 New Haven Mainline Grand Central Terminal 01/01/2012 01:04:00 AM          New Haven 01/01/2012 03:02:00 AM Off-Peak   Late           12
+3   01/01/2012  9547             Harlem Grand Central Terminal 01/01/2012 04:26:00 PM North White Plains 01/01/2012 05:19:00 PM Off-Peak   Late           11
+M2   subset(op, Status == Cancelled) (p.16)                           1913 filas  10 columnas
+    Service Date Train     Branch Depart Station            Depart Time Arrive Station            Arrive Time   Period    Status Minutes Late
+132   01/22/2012  9910     Harlem        Wassaic 01/22/2012 06:26:00 AM      Southeast 01/22/2012 07:06:00 AM Off-Peak Cancelled           NA
+291   02/19/2012  9934     Harlem        Wassaic 02/19/2012 12:26:00 PM      Southeast 02/19/2012 01:06:00 PM Off-Peak Cancelled           NA
+484   03/11/2012  6705 New Canaan     New Canaan 03/11/2012 06:30:00 AM       Stamford 03/11/2012 06:46:00 AM Off-Peak Cancelled           NA
+M3   Fecha > 2024-01-01, 10 < retraso <= 20, Grand Central (p.17)      374 filas  10 columnas
+       Service Date Train             Branch Depart Station            Depart Time         Arrive Station            Arrive Time   Period Status Minutes Late
+138976   01/02/2024  1399 New Haven Mainline       Stamford 01/02/2024 12:52:00 AM Grand Central Terminal 01/02/2024 02:07:00 AM Off-Peak   Late           11
+138977   01/02/2024  1325 New Haven Mainline      Greenwich 01/02/2024 07:26:30 AM Grand Central Terminal 01/02/2024 08:22:00 AM  AM Peak   Late           15
+138978   01/02/2024   834             Hudson   Poughkeepsie 01/02/2024 06:48:30 AM Grand Central Terminal 01/02/2024 08:34:00 AM  AM Peak   Late           12
+
+Bitacora:
+ paso                                                    operacion  filas columnas
+   P0                                   Carga del archivo original 141110       10
+   M1                          data[data[,8] == Off-Peak, ] (p.16)  90157       10
+   M2                       subset(op, Status == Cancelled) (p.16)   1913       10
+   M3 Fecha > 2024-01-01, 10 < retraso <= 20, Grand Central (p.17)    374       10

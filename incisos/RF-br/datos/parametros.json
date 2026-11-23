@@ -1,0 +1,1 @@
+{"problema": "OD/AM R.pdf p.54-55 con OD/BR (2).csv: randomForest(ntree = 100) para precio, semilla 42, 80/20", "archivo": "BR.csv", "y": "precio", "ntree": 100, "observacion_excel": 1}

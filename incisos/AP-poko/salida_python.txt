@@ -1,0 +1,22 @@
+APRIORI — apri_poko.csv: 50 transacciones, 88 items, soporte >= 0.01, confianza >= 0.1
+  Nivel 1: 88 itemsets frecuentes
+  Nivel 2: 488 itemsets frecuentes
+  Nivel 3: 1081 itemsets frecuentes
+  Nivel 4: 1328 itemsets frecuentes
+  Nivel 5: 1027 itemsets frecuentes
+  Nivel 6: 521 itemsets frecuentes
+  Nivel 7: 172 itemsets frecuentes
+  Nivel 8: 34 itemsets frecuentes
+  Nivel 9: 3 itemsets frecuentes
+Reglas: 18686 (con antecedente vacio: 16)
+  {Category=Blocks,Ingame Cat=Road} => {Name=Aged-stone flooring}        S=0.0200 C=1.0000 L=50.0000 n=1
+  {Category=Blocks} => {Name=Aged-stone flooring}                        S=0.0200 C=1.0000 L=50.0000 n=1
+  {Category=Furniture,Colorful stuff=Yes,Fabric=Yes,Ingame Cat=Relaxatio S=0.0200 C=1.0000 L=50.0000 n=1
+  {Category=Furniture,Colorful stuff=Yes,Fabric=Yes,Ingame Cat=Relaxatio S=0.0200 C=1.0000 L=50.0000 n=1
+  {Category=Furniture,Colorful stuff=Yes,Fabric=Yes,Ingame Cat=Relaxatio S=0.0200 C=1.0000 L=50.0000 n=1
+  {Category=Furniture,Colorful stuff=Yes,Fabric=Yes,Ingame Cat=Relaxatio S=0.0200 C=1.0000 L=50.0000 n=1
+  {Category=Furniture,Colorful stuff=Yes,Fabric=Yes,Ingame Cat=Relaxatio S=0.0200 C=1.0000 L=50.0000 n=1
+  {Category=Furniture,Colorful stuff=Yes,Fabric=Yes,Ingame Cat=Relaxatio S=0.0200 C=1.0000 L=50.0000 n=1
+  {Category=Furniture,Colorful stuff=Yes,Fabric=Yes,Lots of nature=Yes,S S=0.0200 C=1.0000 L=50.0000 n=1
+  {Category=Furniture,Colorful stuff=Yes,Fabric=Yes,Lots of nature=Yes,S S=0.0200 C=1.0000 L=50.0000 n=1
+traza.json y reglas_python.csv escritas

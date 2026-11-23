@@ -1,0 +1,67 @@
+18 x 1 sparse Matrix of class "dgCMatrix"
+                      s=2194.680443
+(Intercept)        -1.962002476e+07
+agente_id          -8.109184041e+02
+pais_id            -8.155945266e+00
+recamaras          -3.874705455e+04
+baños               2.683038840e+04
+m2_construcción     8.358891952e+02
+m2_terreno          .              
+pisos               4.698850770e+04
+código_frente_agua  6.426608850e+05
+código_vista        5.911237257e+04
+código_condición    1.514553893e+04
+año_construcción   -1.643958975e+03
+año_renovación      3.883414980e+01
+código_postal      -2.138316849e+02
+latitud             6.664995216e+05
+longitud           -9.884533281e+04
+vista               .              
+condición           .              
+[1] "MSE: 32919464939.9469"
+
+==== Ridge, literal p.32 (T3) : alpha = 1  best_lambda = 2194.680443 
+18 x 1 sparse Matrix of class "dgCMatrix"
+                      s=2194.680443
+(Intercept)        -1.962002476e+07
+agente_id          -8.109184041e+02
+pais_id            -8.155945266e+00
+recamaras          -3.874705455e+04
+baños               2.683038840e+04
+m2_construcción     8.358891952e+02
+m2_terreno          .              
+pisos               4.698850770e+04
+código_frente_agua  6.426608850e+05
+código_vista        5.911237257e+04
+código_condición    1.514553893e+04
+año_construcción   -1.643958975e+03
+año_renovación      3.883414980e+01
+código_postal      -2.138316849e+02
+latitud             6.664995216e+05
+longitud           -9.884533281e+04
+vista               .              
+condición           .              
+[1] "MSE: 32919464939.9469"
+
+==== Ridge, p.31 : alpha = 0  best_lambda = 22991.81804 
+18 x 1 sparse Matrix of class "dgCMatrix"
+                      s=22991.81804
+(Intercept)        -1.734713714e+07
+agente_id          -1.336634412e+03
+pais_id            -1.408491744e+01
+recamaras          -3.036855288e+04
+baños               4.860781824e+04
+m2_construcción     7.202990818e+02
+m2_terreno          2.577675018e-01
+pisos               4.919512830e+04
+código_frente_agua  6.174489589e+05
+código_vista        6.583238541e+04
+código_condición    9.406633355e+03
+año_construcción   -1.574781041e+03
+año_renovación      4.392258842e+01
+código_postal      -2.381237079e+02
+latitud             6.505339308e+05
+longitud           -1.048043323e+05
+vista              -1.862990284e+03
+condición           9.176063607e+03
+[1] "MSE: 33319494028.6076"

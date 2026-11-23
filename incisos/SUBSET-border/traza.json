@@ -1,0 +1,71 @@
+{
+ "problema": "SUBSET.pdf p.12-15: Border Crossing",
+ "objetivo": "Subconjuntos de las láminas",
+ "archivo": "Border_Crossing_Entry_Data.csv",
+ "bitacora": [
+  {
+   "paso": "P0",
+   "operacion": "Carga del archivo original",
+   "filas": 394866,
+   "columnas": 10
+  },
+  {
+   "paso": "B1",
+   "operacion": "State == Texas (p.12)",
+   "filas": 41946,
+   "columnas": 10
+  },
+  {
+   "paso": "B2",
+   "operacion": "Texas y Trucks (p.13)",
+   "filas": 3783,
+   "columnas": 10
+  },
+  {
+   "paso": "B3",
+   "operacion": "df[, c(Port Name, Value)] (p.13)",
+   "filas": 394866,
+   "columnas": 2
+  },
+  {
+   "paso": "B4",
+   "operacion": "Arizona con select (p.14)",
+   "filas": 22091,
+   "columnas": 2
+  },
+  {
+   "paso": "B5",
+   "operacion": "State != Texas (p.14)",
+   "filas": 352920,
+   "columnas": 10
+  },
+  {
+   "paso": "B6",
+   "operacion": "Texas o Arizona (p.15)",
+   "filas": 64037,
+   "columnas": 10
+  },
+  {
+   "paso": "B7",
+   "operacion": "500 <= Value <= 5000 (p.15)",
+   "filas": 76446,
+   "columnas": 10
+  }
+ ],
+ "perfil": null,
+ "final": {
+  "filas": 76446,
+  "columnas": [
+   "Port Name",
+   "State",
+   "Port Code",
+   "Border",
+   "Date",
+   "Measure",
+   "Value",
+   "Latitude",
+   "Longitude",
+   "Point"
+  ]
+ }
+}

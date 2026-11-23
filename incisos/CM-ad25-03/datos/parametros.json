@@ -1,0 +1,2 @@
+{"problema": "AD25-03 p.11 Tabel 4: kNN con CA = precisión = recall = F1 = 0.917 sobre 60 alumnos; p.11 3.6: 27 predichos en clase superior", "origen": "reconstruir",
+ "N": 60, "decimales": 3, "reportado": {"CA": 0.917, "Precision": 0.917, "Recall": 0.917, "F1": 0.917}, "promedio": "ponderado", "predichos_positivos": 27}

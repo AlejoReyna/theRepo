@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definiciones_R05" targetNamespace="http://fime.uanl.mx/tsci3/p1">
+  <bpmn:collaboration id="Colaboracion">
+    <bpmn:participant id="Pool" name="Trámite de autorización (Registro 05)" processRef="Proceso_R05"/>
+  </bpmn:collaboration>
+  <bpmn:process id="Proceso_R05" isExecutable="false">
+    <bpmn:laneSet id="Carriles">
+      <bpmn:lane id="L1" name="Recepción (Nora, Luis, Ana)">
+        <bpmn:flowNodeRef>Inicio</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_a</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_d</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="L2" name="Validación de identidad (Julia, Raúl)">
+        <bpmn:flowNodeRef>G_and1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_b</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="L3" name="Revisión documental y agenda (Elena, Marco, Pilar)">
+        <bpmn:flowNodeRef>T_c</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>G_and2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>G_xm1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>G_xs1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_c2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_e</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="L4" name="Entrevista (Celia, Óscar)">
+        <bpmn:flowNodeRef>T_f</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>G_xs2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_g</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>G_xm2</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="L5" name="Integración y cierre (Marta, Iván)">
+        <bpmn:flowNodeRef>T_h</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_j</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Fin</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="L6" name="Autorización (Sofía)">
+        <bpmn:flowNodeRef>T_i</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Inicio" name="Solicitud entrante">
+      <bpmn:outgoing>F1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="T_a" name="Solicitud recibida">
+      <bpmn:incoming>F1</bpmn:incoming>
+      <bpmn:outgoing>F2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="G_and1" name="">
+      <bpmn:incoming>F2</bpmn:incoming>
+      <bpmn:outgoing>F3</bpmn:outgoing>
+      <bpmn:outgoing>F4</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:task id="T_b" name="Identidad validada">
+      <bpmn:incoming>F3</bpmn:incoming>
+      <bpmn:outgoing>F5</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T_c" name="Documentos verificados">
+      <bpmn:incoming>F4</bpmn:incoming>
+      <bpmn:outgoing>F6</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:parallelGateway id="G_and2" name="">
+      <bpmn:incoming>F5</bpmn:incoming>
+      <bpmn:incoming>F6</bpmn:incoming>
+      <bpmn:outgoing>F7</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:exclusiveGateway id="G_xm1" name="">
+      <bpmn:incoming>F7</bpmn:incoming>
+      <bpmn:incoming>F12</bpmn:incoming>
+      <bpmn:outgoing>F8</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="G_xs1" name="¿Documentación correcta?">
+      <bpmn:incoming>F8</bpmn:incoming>
+      <bpmn:outgoing>F9</bpmn:outgoing>
+      <bpmn:outgoing>F10</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="T_d" name="Corrección solicitada">
+      <bpmn:incoming>F10</bpmn:incoming>
+      <bpmn:outgoing>F11</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T_c2" name="Documentos verificados (re-verificación)">
+      <bpmn:incoming>F11</bpmn:incoming>
+      <bpmn:outgoing>F12</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T_e" name="Cita programada">
+      <bpmn:incoming>F9</bpmn:incoming>
+      <bpmn:outgoing>F13</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T_f" name="Entrevista realizada">
+      <bpmn:incoming>F13</bpmn:incoming>
+      <bpmn:outgoing>F14</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="G_xs2" name="¿Requiere orientación?">
+      <bpmn:incoming>F14</bpmn:incoming>
+      <bpmn:outgoing>F15</bpmn:outgoing>
+      <bpmn:outgoing>F16</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="T_g" name="Orientación brindada">
+      <bpmn:incoming>F15</bpmn:incoming>
+      <bpmn:outgoing>F17</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="G_xm2" name="">
+      <bpmn:incoming>F16</bpmn:incoming>
+      <bpmn:incoming>F17</bpmn:incoming>
+      <bpmn:outgoing>F18</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="T_h" name="Expediente integrado">
+      <bpmn:incoming>F18</bpmn:incoming>
+      <bpmn:outgoing>F19</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T_i" name="Autorización emitida">
+      <bpmn:incoming>F19</bpmn:incoming>
+      <bpmn:outgoing>F20</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="T_j" name="Cierre registrado">
+      <bpmn:incoming>F20</bpmn:incoming>
+      <bpmn:outgoing>F21</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Fin" name="Trámite concluido">
+      <bpmn:incoming>F21</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="F1" name="" sourceRef="Inicio" targetRef="T_a"/>
+    <bpmn:sequenceFlow id="F2" name="" sourceRef="T_a" targetRef="G_and1"/>
+    <bpmn:sequenceFlow id="F3" name="" sourceRef="G_and1" targetRef="T_b"/>
+    <bpmn:sequenceFlow id="F4" name="" sourceRef="G_and1" targetRef="T_c"/>
+    <bpmn:sequenceFlow id="F5" name="" sourceRef="T_b" targetRef="G_and2"/>
+    <bpmn:sequenceFlow id="F6" name="" sourceRef="T_c" targetRef="G_and2"/>
+    <bpmn:sequenceFlow id="F7" name="" sourceRef="G_and2" targetRef="G_xm1"/>
+    <bpmn:sequenceFlow id="F8" name="" sourceRef="G_xm1" targetRef="G_xs1"/>
+    <bpmn:sequenceFlow id="F9" name="Sí" sourceRef="G_xs1" targetRef="T_e"/>
+    <bpmn:sequenceFlow id="F10" name="No" sourceRef="G_xs1" targetRef="T_d"/>
+    <bpmn:sequenceFlow id="F11" name="" sourceRef="T_d" targetRef="T_c2"/>
+    <bpmn:sequenceFlow id="F12" name="" sourceRef="T_c2" targetRef="G_xm1"/>
+    <bpmn:sequenceFlow id="F13" name="" sourceRef="T_e" targetRef="T_f"/>
+    <bpmn:sequenceFlow id="F14" name="" sourceRef="T_f" targetRef="G_xs2"/>
+    <bpmn:sequenceFlow id="F15" name="Sí" sourceRef="G_xs2" targetRef="T_g"/>
+    <bpmn:sequenceFlow id="F16" name="No" sourceRef="G_xs2" targetRef="G_xm2"/>
+    <bpmn:sequenceFlow id="F17" name="" sourceRef="T_g" targetRef="G_xm2"/>
+    <bpmn:sequenceFlow id="F18" name="" sourceRef="G_xm2" targetRef="T_h"/>
+    <bpmn:sequenceFlow id="F19" name="" sourceRef="T_h" targetRef="T_i"/>
+    <bpmn:sequenceFlow id="F20" name="" sourceRef="T_i" targetRef="T_j"/>
+    <bpmn:sequenceFlow id="F21" name="" sourceRef="T_j" targetRef="Fin"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagrama"><bpmndi:BPMNPlane id="Plano" bpmnElement="Colaboracion">
+    <bpmndi:BPMNShape id="Pool_di" bpmnElement="Pool" isHorizontal="true"><dc:Bounds x="10" y="10" width="1759" height="810"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="L1_di" bpmnElement="L1" isHorizontal="true"><dc:Bounds x="44" y="10" width="1725" height="120"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="L2_di" bpmnElement="L2" isHorizontal="true"><dc:Bounds x="44" y="130" width="1725" height="110"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="L3_di" bpmnElement="L3" isHorizontal="true"><dc:Bounds x="44" y="240" width="1725" height="190"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="L4_di" bpmnElement="L4" isHorizontal="true"><dc:Bounds x="44" y="430" width="1725" height="170"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="L5_di" bpmnElement="L5" isHorizontal="true"><dc:Bounds x="44" y="600" width="1725" height="110"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="L6_di" bpmnElement="L6" isHorizontal="true"><dc:Bounds x="44" y="710" width="1725" height="110"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Inicio_di" bpmnElement="Inicio"><dc:Bounds x="111" y="52" width="36" height="36"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_a_di" bpmnElement="T_a"><dc:Bounds x="161" y="37" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="G_and1_di" bpmnElement="G_and1"><dc:Bounds x="299" y="160" width="50" height="50"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_b_di" bpmnElement="T_b"><dc:Bounds x="361" y="152" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_c_di" bpmnElement="T_c"><dc:Bounds x="361" y="347" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="G_and2_di" bpmnElement="G_and2"><dc:Bounds x="499" y="355" width="50" height="50"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="G_xm1_di" bpmnElement="G_xm1" isMarkerVisible="true"><dc:Bounds x="579" y="355" width="50" height="50"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="G_xs1_di" bpmnElement="G_xs1" isMarkerVisible="true"><dc:Bounds x="679" y="355" width="50" height="50"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_d_di" bpmnElement="T_d"><dc:Bounds x="641" y="37" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_c2_di" bpmnElement="T_c2"><dc:Bounds x="541" y="257" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_e_di" bpmnElement="T_e"><dc:Bounds x="771" y="347" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_f_di" bpmnElement="T_f"><dc:Bounds x="901" y="519" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="G_xs2_di" bpmnElement="G_xs2" isMarkerVisible="true"><dc:Bounds x="1054" y="527" width="50" height="50"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_g_di" bpmnElement="T_g"><dc:Bounds x="1116" y="445" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="G_xm2_di" bpmnElement="G_xm2" isMarkerVisible="true"><dc:Bounds x="1254" y="527" width="50" height="50"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_h_di" bpmnElement="T_h"><dc:Bounds x="1321" y="622" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_i_di" bpmnElement="T_i"><dc:Bounds x="1451" y="732" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="T_j_di" bpmnElement="T_j"><dc:Bounds x="1581" y="622" width="126" height="66"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Fin_di" bpmnElement="Fin"><dc:Bounds x="1721" y="637" width="36" height="36"/></bpmndi:BPMNShape>
+    <bpmndi:BPMNEdge id="F1_di" bpmnElement="F1">
+      <di:waypoint x="147" y="70"/>
+      <di:waypoint x="161" y="70"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F2_di" bpmnElement="F2">
+      <di:waypoint x="287" y="70"/>
+      <di:waypoint x="324" y="70"/>
+      <di:waypoint x="324" y="160"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F3_di" bpmnElement="F3">
+      <di:waypoint x="349" y="185"/>
+      <di:waypoint x="361" y="185"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F4_di" bpmnElement="F4">
+      <di:waypoint x="324" y="210"/>
+      <di:waypoint x="324" y="380"/>
+      <di:waypoint x="361" y="380"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F5_di" bpmnElement="F5">
+      <di:waypoint x="487" y="185"/>
+      <di:waypoint x="524" y="185"/>
+      <di:waypoint x="524" y="355"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F6_di" bpmnElement="F6">
+      <di:waypoint x="487" y="380"/>
+      <di:waypoint x="499" y="380"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F7_di" bpmnElement="F7">
+      <di:waypoint x="549" y="380"/>
+      <di:waypoint x="579" y="380"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F8_di" bpmnElement="F8">
+      <di:waypoint x="629" y="380"/>
+      <di:waypoint x="679" y="380"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F9_di" bpmnElement="F9">
+      <di:waypoint x="729" y="380"/>
+      <di:waypoint x="771" y="380"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F10_di" bpmnElement="F10">
+      <di:waypoint x="704" y="355"/>
+      <di:waypoint x="704" y="103"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F11_di" bpmnElement="F11">
+      <di:waypoint x="641" y="70"/>
+      <di:waypoint x="604" y="70"/>
+      <di:waypoint x="604" y="257"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F12_di" bpmnElement="F12">
+      <di:waypoint x="604" y="323"/>
+      <di:waypoint x="604" y="355"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F13_di" bpmnElement="F13">
+      <di:waypoint x="897" y="380"/>
+      <di:waypoint x="964" y="380"/>
+      <di:waypoint x="964" y="519"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F14_di" bpmnElement="F14">
+      <di:waypoint x="1027" y="552"/>
+      <di:waypoint x="1054" y="552"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F15_di" bpmnElement="F15">
+      <di:waypoint x="1079" y="527"/>
+      <di:waypoint x="1079" y="478"/>
+      <di:waypoint x="1116" y="478"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F16_di" bpmnElement="F16">
+      <di:waypoint x="1104" y="552"/>
+      <di:waypoint x="1254" y="552"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F17_di" bpmnElement="F17">
+      <di:waypoint x="1242" y="478"/>
+      <di:waypoint x="1279" y="478"/>
+      <di:waypoint x="1279" y="527"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F18_di" bpmnElement="F18">
+      <di:waypoint x="1304" y="552"/>
+      <di:waypoint x="1384" y="552"/>
+      <di:waypoint x="1384" y="622"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F19_di" bpmnElement="F19">
+      <di:waypoint x="1447" y="655"/>
+      <di:waypoint x="1514" y="655"/>
+      <di:waypoint x="1514" y="732"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F20_di" bpmnElement="F20">
+      <di:waypoint x="1577" y="765"/>
+      <di:waypoint x="1644" y="765"/>
+      <di:waypoint x="1644" y="688"/>
+    </bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="F21_di" bpmnElement="F21">
+      <di:waypoint x="1707" y="655"/>
+      <di:waypoint x="1721" y="655"/>
+    </bpmndi:BPMNEdge>
+  </bpmndi:BPMNPlane></bpmndi:BPMNDiagram>
+</bpmn:definitions>

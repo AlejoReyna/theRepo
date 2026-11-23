@@ -1,0 +1,21 @@
+Registros: 49   Variables: Duration (ms), Popularity, Danceability, Energy, Key, Loudness, Speechiness, Acousticness, Instrumentalness, Liveness, Valence, Tempo
+Iteracion 1: |C0| = 46, |C1| = 3, suma DMIN = 79.843030, cambios = -
+Iteracion 2: |C0| = 47, |C1| = 2, suma DMIN = 39.209262, cambios = 1
+Iteracion 3: |C0| = 46, |C1| = 3, suma DMIN = 38.633919, cambios = 1
+Iteracion 4: |C0| = 44, |C1| = 5, suma DMIN = 38.209936, cambios = 2
+Iteracion 5: |C0| = 42, |C1| = 7, suma DMIN = 37.541882, cambios = 2
+Iteracion 6: |C0| = 40, |C1| = 9, suma DMIN = 37.092656, cambios = 2
+Iteracion 7: |C0| = 37, |C1| = 12, suma DMIN = 36.737166, cambios = 3
+Iteracion 8: |C0| = 34, |C1| = 15, suma DMIN = 36.247257, cambios = 3
+Iteracion 9: |C0| = 31, |C1| = 18, suma DMIN = 35.882896, cambios = 3
+Iteracion 10: |C0| = 29, |C1| = 20, suma DMIN = 35.595658, cambios = 2
+Iteracion 11: |C0| = 29, |C1| = 20, suma DMIN = 35.509921, cambios = 0
+ Algoritmo Criterio K
+   K-means      WSS 4
+   K-means  Silueta 2
+   K-means      Gap 1
+
+kmeans con k = 2: tamanos 28, 21; WSS total = 462.7259; BSS/TSS = 0.1967
+  Duration (ms) Popularity Danceability  Energy     Key Loudness Speechiness Acousticness Instrumentalness Liveness Valence   Tempo
+1        0.2641    -0.2793      -0.3847 -0.6511 -0.1076  -0.4324     -0.4100       0.4735          -0.1421  -0.0512 -0.6048 -0.1863
+2       -0.3521     0.3725       0.5130  0.8681  0.1435   0.5765      0.5466      -0.6314           0.1894   0.0682  0.8064  0.2484

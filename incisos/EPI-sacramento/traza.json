@@ -1,0 +1,287 @@
+{
+ "problema": "OD/EPISODES.R con OD/SacramentocrimeJanuary2006mo.csv",
+ "archivo": "SacramentocrimeJanuary2006mo.csv",
+ "wsize": 10,
+ "eventos": 7584,
+ "casos": 606,
+ "pares": 726,
+ "episodios": 393,
+ "top_global": [
+  {
+   "ep": "TOWED/STORED VEHICLE -> TOWED/STORED VEHICLE",
+   "casos": 27,
+   "soporte": 0.04455445544554455
+  },
+  {
+   "ep": "TOWED/STORED VEH-14602.6 -> TOWED/STORED VEH-14602.6",
+   "casos": 12,
+   "soporte": 0.019801980198019802
+  },
+  {
+   "ep": "TOWED/STORED VEH-14602.6 -> TOWED/STORED VEHICLE",
+   "casos": 12,
+   "soporte": 0.019801980198019802
+  },
+  {
+   "ep": "459 PC  BURGLARY VEHICLE -> 459 PC  BURGLARY VEHICLE",
+   "casos": 11,
+   "soporte": 0.018151815181518153
+  },
+  {
+   "ep": "TOWED/STORED VEHICLE -> TOWED/STORED VEH-14602.6",
+   "casos": 11,
+   "soporte": 0.018151815181518153
+  },
+  {
+   "ep": "10851(A)VC TAKE VEH W/O OWNER -> 10851(A)VC TAKE VEH W/O OWNER",
+   "casos": 7,
+   "soporte": 0.01155115511551155
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> 10851 VC AUTO THEFT LOCATE",
+   "casos": 4,
+   "soporte": 0.006600660066006601
+  },
+  {
+   "ep": "459 PC  BURGLARY VEHICLE -> 10851(A)VC TAKE VEH W/O OWNER",
+   "casos": 4,
+   "soporte": 0.006600660066006601
+  },
+  {
+   "ep": "594(B)(2)(A) VANDALISM/ -$400 -> 459 PC  BURGLARY VEHICLE",
+   "casos": 3,
+   "soporte": 0.0049504950495049506
+  },
+  {
+   "ep": "GANG ACTIVITY - I RPT -> GANG ACTIVITY - I RPT",
+   "casos": 3,
+   "soporte": 0.0049504950495049506
+  },
+  {
+   "ep": "MISSING PERSON -> TOWED/STORED VEH-14602.6",
+   "casos": 3,
+   "soporte": 0.0049504950495049506
+  },
+  {
+   "ep": "TOWED/STORED VEHICLE -> 10851 VC AUTO THEFT LOCATE",
+   "casos": 3,
+   "soporte": 0.0049504950495049506
+  },
+  {
+   "ep": "TRAFFIC-ACCIDENT INJURY -> TOWED/STORED VEH-14602.6",
+   "casos": 3,
+   "soporte": 0.0049504950495049506
+  },
+  {
+   "ep": "TRAFFIC-ACCIDENT INJURY -> TOWED/STORED VEHICLE",
+   "casos": 3,
+   "soporte": 0.0049504950495049506
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> TOWED/STORED VEH-14602.6",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> TOWED/STORED VEHICLE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "10851(A)VC TAKE VEH W/O OWNER -> 20002(A) HIT/RUN",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "10851(A)VC TAKE VEH W/O OWNER -> 459 PC  BURGLARY RESIDENCE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "10851(A)VC TAKE VEH W/O OWNER -> 459 PC  BURGLARY VEHICLE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "11357(B)HS POSS -28.5GR MARIJ -> 459 PC  BURGLARY VEHICLE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "20001(A) VC HIT/RUN INJ/DEATH -> TOWED/STORED VEHICLE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "20002(A) HIT/RUN -> TOWED/STORED VEHICLE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "23152(A) VC DUI-ALCOHOL/DRUGS -> 10851 VC AUTO THEFT LOCATE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "23152(A) VC DUI-ALCOHOL/DRUGS -> TOWED/STORED VEHICLE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "459 PC  BURGLARY BUSINESS -> 459 PC  BURGLARY BUSINESS",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "459 PC  BURGLARY RESIDENCE -> 10851(A)VC TAKE VEH W/O OWNER",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "459 PC  BURGLARY VEHICLE -> 594(B)(2)(A) VANDALISM/ -$400",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "459 PC  BURGLARY VEHICLE -> MISSING PERSON",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "476 PC PASS FICTICIOUS CHECK -> 1203.2 PC VIOLATION OF PROBATI",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "484 PC PETTY THEFT -> 459 PC  BURGLARY VEHICLE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "5150 WI DANGER SELF/OTHERS -> 5150 WI DANGER SELF/OTHERS",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "647(B) PC   PROSTITUTION -> 647(B) PC   PROSTITUTION",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "CASUALTY REPORT -> 459 PC  BURGLARY VEHICLE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "MISCELLANEOUS I RPT (ZMISC) -> TOWED/STORED VEHICLE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "MISSING PERSON -> MISSING PERSON",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "THREATS - I RPT -> 459 PC  BURGLARY RESIDENCE",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "TOWED/STORED VEH-14602.6 -> 20002(A) HIT/RUN",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "TOWED/STORED VEH-14602.6 -> MISSING PERSON",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "TOWED/STORED VEHICLE -> 10851(A)VC TAKE VEH W/O OWNER",
+   "casos": 2,
+   "soporte": 0.0033003300330033004
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> 242 PC  BATTERY CIVILIAN",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> 484 PC   PETTY THEFT/INSIDE",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> 484 PETTY THEFT-PURSE SNATCH",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> 5150 WI DANGER SELF/OTHERS",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> BATTERY - I RPT",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> GANG ACTIVITY - I RPT",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851 VC AUTO THEFT LOCATE -> RECOVERED PROPERTY - I RPT",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851(A)VC TAKE VEH W/O OWNER -> 10851 VC AUTO THEFT LOCATE",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851(A)VC TAKE VEH W/O OWNER -> 11350(A)HS POSS CNTRL SUBST",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851(A)VC TAKE VEH W/O OWNER -> 148.9 PC FALSE ID TO OFFICER",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  },
+  {
+   "ep": "10851(A)VC TAKE VEH W/O OWNER -> 211 PC  ROBBERY UNSPECIFIED",
+   "casos": 1,
+   "soporte": 0.0016501650165016502
+  }
+ ],
+ "distritos": {
+  "1": {
+   "casos": 88,
+   "episodios": 33
+  },
+  "2": {
+   "casos": 100,
+   "episodios": 96
+  },
+  "3": {
+   "casos": 120,
+   "episodios": 100
+  },
+  "4": {
+   "casos": 129,
+   "episodios": 65
+  },
+  "5": {
+   "casos": 67,
+   "episodios": 83
+  },
+  "6": {
+   "casos": 102,
+   "episodios": 71
+  }
+ }
+}

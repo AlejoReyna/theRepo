@@ -1,0 +1,128 @@
+Vent Type: 151 celdas vacias -> 'Sin especificar'
+Registros: 737   Clase: Type   Atributos: Model Name, Fuel Type, Vent Type
+Valores distintos: Model Name=163, Fuel Type=4, Vent Type=4 
+
+===== NIVEL 1 =====
+Nodo [raiz] n=737 H=1.5556
+   E(Model Name)=0.0227  ganancia=1.5328  ramas=163
+   E(Fuel Type)=1.0850  ganancia=0.4706  ramas=4
+   E(Vent Type)=0.7864  ganancia=0.7692  ramas=4
+   -> se divide por Model Name
+
+===== NIVEL 2 =====
+Nodo [Model Name = Conquest] n=4 H=0.8113
+   E(Fuel Type)=0.8113  ganancia=0.0000  ramas=1
+   E(Vent Type)=0.8113  ganancia=0.0000  ramas=1
+   -> hoja Gas Storage (ganancia 0)
+Nodo [Model Name = Elite XL] n=7 H=0.5917
+   E(Fuel Type)=0.5572  ganancia=0.0345  ramas=2
+   E(Vent Type)=0.5917  ganancia=0.0000  ramas=1
+   -> se divide por Fuel Type
+Nodo [Model Name = Shield] n=20 H=0.4690
+   E(Fuel Type)=0.4690  ganancia=0.0000  ramas=2
+   E(Vent Type)=0.4349  ganancia=0.0341  ramas=2
+   -> se divide por Vent Type
+
+===== NIVEL 3 =====
+Nodo [Model Name = Elite XL y Fuel Type = Gas,Propane] n=6 H=0.6500
+   E(Vent Type)=0.6500  ganancia=0.0000  ramas=1
+   -> hoja Gas Tankless (ganancia 0)
+Nodo [Model Name = Shield y Vent Type = Power Direct Vent] n=16 H=0.5436
+   E(Fuel Type)=0.5436  ganancia=0.0000  ramas=2
+   -> hoja Gas Storage (ganancia 0)
+
+ID3 en R: 165 hojas, 733/737 aciertos = 99.46 %
+Nota T19: Model Name tiene 163 niveles; en rpart y ctree se usa su codigo entero (orden alfabetico), no se excluye (R1).
+
+Formula de R: Type ~ . 
+
+rpart (indice de Gini) - 0.0 s
+n= 737 
+
+node), split, n, loss, yval, (yprob)
+      * denotes terminal node
+
+  1) root 737 325 Gas Storage (0.09226594 0.55902307 0.06377205 0.28493894)  
+    2) Vent.Type=Power Direct Vent 376  22 Gas Storage (0.00000000 0.94148936 0.03723404 0.02127660) *
+    3) Vent.Type=Direct Vent,Power Vent,Sin especificar 361 159 Gas Tankless (0.18836565 0.16066482 0.09141274 0.55955679)  
+      6) Fuel.Type=Electric 68   0 Electric Heat Pump (1.00000000 0.00000000 0.00000000 0.00000000) *
+      7) Fuel.Type=Gas,Gas,Propane,Propane 293  91 Gas Tankless (0.00000000 0.19795222 0.11262799 0.68941980)  
+       14) Model.Name>=20.5 179  90 Gas Tankless (0.00000000 0.32402235 0.17877095 0.49720670)  
+         28) Vent.Type=Power Vent,Sin especificar 87  46 Gas Storage (0.00000000 0.47126437 0.36781609 0.16091954)  
+           56) Model.Name< 152.5 79  38 Gas Storage (0.00000000 0.51898734 0.30379747 0.17721519)  
+            112) Model.Name>=100 41  14 Gas Storage (0.00000000 0.65853659 0.34146341 0.00000000) *
+            113) Model.Name< 100 38  24 Gas Storage (0.00000000 0.36842105 0.26315789 0.36842105)  
+              226) Model.Name< 39.5 10   2 Gas Storage (0.00000000 0.80000000 0.20000000 0.00000000) *
+              227) Model.Name>=39.5 28  14 Gas Tankless (0.00000000 0.21428571 0.28571429 0.50000000) *
+           57) Model.Name>=152.5 8   0 Gas Storage-type Instantaneous (0.00000000 0.00000000 1.00000000 0.00000000) *
+         29) Vent.Type=Direct Vent 92  17 Gas Tankless (0.00000000 0.18478261 0.00000000 0.81521739)  
+           58) Model.Name< 68 9   0 Gas Storage (0.00000000 1.00000000 0.00000000 0.00000000) *
+           59) Model.Name>=68 83   8 Gas Tankless (0.00000000 0.09638554 0.00000000 0.90361446)  
+            118) Model.Name>=122.5 43   8 Gas Tankless (0.00000000 0.18604651 0.00000000 0.81395349)  
+              236) Model.Name< 125 8   0 Gas Storage (0.00000000 1.00000000 0.00000000 0.00000000) *
+              237) Model.Name>=125 35   0 Gas Tankless (0.00000000 0.00000000 0.00000000 1.00000000) *
+            119) Model.Name< 122.5 40   0 Gas Tankless (0.00000000 0.00000000 0.00000000 1.00000000) *
+       15) Model.Name< 20.5 114   1 Gas Tankless (0.00000000 0.00000000 0.00877193 0.99122807) *
+
+rpart (entropia, split = 'information') - 0.0 s
+n= 737 
+
+node), split, n, loss, yval, (yprob)
+      * denotes terminal node
+
+  1) root 737 325 Gas Storage (0.09226594 0.55902307 0.06377205 0.28493894)  
+    2) Vent.Type=Power Direct Vent 376  22 Gas Storage (0.00000000 0.94148936 0.03723404 0.02127660) *
+    3) Vent.Type=Direct Vent,Power Vent,Sin especificar 361 159 Gas Tankless (0.18836565 0.16066482 0.09141274 0.55955679)  
+      6) Fuel.Type=Electric 68   0 Electric Heat Pump (1.00000000 0.00000000 0.00000000 0.00000000) *
+      7) Fuel.Type=Gas,Gas,Propane,Propane 293  91 Gas Tankless (0.00000000 0.19795222 0.11262799 0.68941980)  
+       14) Model.Name>=20.5 179  90 Gas Tankless (0.00000000 0.32402235 0.17877095 0.49720670)  
+         28) Vent.Type=Power Vent,Sin especificar 87  46 Gas Storage (0.00000000 0.47126437 0.36781609 0.16091954)  
+           56) Model.Name>=100 49  22 Gas Storage (0.00000000 0.55102041 0.44897959 0.00000000)  
+            112) Model.Name< 152.5 41  14 Gas Storage (0.00000000 0.65853659 0.34146341 0.00000000) *
+            113) Model.Name>=152.5 8   0 Gas Storage-type Instantaneous (0.00000000 0.00000000 1.00000000 0.00000000) *
+           57) Model.Name< 100 38  24 Gas Storage (0.00000000 0.36842105 0.26315789 0.36842105)  
+            114) Model.Name< 49.5 12   4 Gas Storage (0.00000000 0.66666667 0.33333333 0.00000000) *
+            115) Model.Name>=49.5 26  12 Gas Tankless (0.00000000 0.23076923 0.23076923 0.53846154) *
+         29) Vent.Type=Direct Vent 92  17 Gas Tankless (0.00000000 0.18478261 0.00000000 0.81521739)  
+           58) Model.Name< 68 9   0 Gas Storage (0.00000000 1.00000000 0.00000000 0.00000000) *
+           59) Model.Name>=68 83   8 Gas Tankless (0.00000000 0.09638554 0.00000000 0.90361446)  
+            118) Model.Name>=122.5 43   8 Gas Tankless (0.00000000 0.18604651 0.00000000 0.81395349)  
+              236) Model.Name< 125 8   0 Gas Storage (0.00000000 1.00000000 0.00000000 0.00000000) *
+              237) Model.Name>=125 35   0 Gas Tankless (0.00000000 0.00000000 0.00000000 1.00000000) *
+            119) Model.Name< 122.5 40   0 Gas Tankless (0.00000000 0.00000000 0.00000000 1.00000000) *
+       15) Model.Name< 20.5 114   1 Gas Tankless (0.00000000 0.00000000 0.00877193 0.99122807) *
+
+ctree (partykit, alpha = 0.05) - 0.1 s
+
+Model formula:
+Type ~ Model.Name + Fuel.Type + Vent.Type
+
+Fitted party:
+[1] root
+|   [2] Vent.Type in Direct Vent, Power Vent, Sin especificar
+|   |   [3] Fuel.Type in Electric: Electric Heat Pump (n = 68, err = 0.0%)
+|   |   [4] Fuel.Type in Gas, Gas,Propane, Propane
+|   |   |   [5] Vent.Type in Direct Vent
+|   |   |   |   [6] Fuel.Type in Gas, Propane: Gas Tankless (n = 59, err = 1.7%)
+|   |   |   |   [7] Fuel.Type in Gas,Propane: Gas Tankless (n = 110, err = 15.5%)
+|   |   |   [8] Vent.Type in Power Vent, Sin especificar
+|   |   |   |   [9] Model.Name <= 11: Gas Tankless (n = 37, err = 0.0%)
+|   |   |   |   [10] Model.Name > 11
+|   |   |   |   |   [11] Fuel.Type in Gas: Gas Tankless (n = 21, err = 57.1%)
+|   |   |   |   |   [12] Fuel.Type in Gas,Propane, Propane: Gas Storage (n = 66, err = 48.5%)
+|   [13] Vent.Type in Power Direct Vent
+|   |   [14] Model.Name <= 97
+|   |   |   [15] Model.Name <= 70: Gas Storage (n = 107, err = 7.5%)
+|   |   |   [16] Model.Name > 70
+|   |   |   |   [17] Fuel.Type in Gas, Propane: Gas Storage (n = 13, err = 7.7%)
+|   |   |   |   [18] Fuel.Type in Gas,Propane: Gas Tankless (n = 9, err = 22.2%)
+|   |   [19] Model.Name > 97: Gas Storage (n = 247, err = 2.0%)
+
+Number of inner nodes:     9
+Number of terminal nodes: 10
+
+Comparacion de los arboles de R:
+              Modelo                           Criterio      Raiz Hojas Profundidad                                                            Clases_que_predice Exactitud
+               rpart       indice de Gini + poda por cp Vent Type    11           7 Electric Heat Pump; Gas Storage; Gas Storage-type Instantaneous; Gas Tankless 0.9280868
+ rpart (information)             entropia + poda por cp Vent Type    11           7 Electric Heat Pump; Gas Storage; Gas Storage-type Instantaneous; Gas Tankless 0.9280868
+               ctree pruebas de independencia (p-valor) Vent Type    10           5                                 Electric Heat Pump; Gas Storage; Gas Tankless 0.8941655

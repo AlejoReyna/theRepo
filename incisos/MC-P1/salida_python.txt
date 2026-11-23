@@ -1,0 +1,91 @@
+MODELADO DE PROCESOS — Registro 05 de REGEVEN.xlsx
+Eventos: 91   Casos: 10   Actividades: 10   Recursos: 13
+  a = solicitud recibida
+  b = identidad validada
+  c = documentos verificados
+  d = corrección solicitada
+  e = cita programada
+  f = entrevista realizada
+  g = orientación brindada
+  h = expediente integrado
+  i = autorización emitida
+  j = cierre registrado
+
+Variantes:
+  3 x <a,c,b,e,f,h,i,j>  casos 2, 6, 7
+  2 x <a,c,b,e,f,g,h,i,j>  casos 3, 8
+  2 x <a,c,b,d,c,e,f,h,i,j>  casos 4, 5
+  1 x <a,b,c,d,c,e,f,g,h,i,j>  casos 1
+  1 x <a,b,c,e,f,h,i,j>  casos 9
+  1 x <a,b,c,d,c,e,f,h,i,j>  casos 10
+
+Directamente seguido por |x>y|:
+       a   b   c   d   e   f   g   h   i   j
+  a    .   3   7   .   .   .   .   .   .   .
+  b    .   .   3   2   5   .   .   .   .   .
+  c    .   7   .   2   5   .   .   .   .   .
+  d    .   .   4   .   .   .   .   .   .   .
+  e    .   .   .   .   .  10   .   .   .   .
+  f    .   .   .   .   .   .   3   7   .   .
+  g    .   .   .   .   .   .   .   3   .   .
+  h    .   .   .   .   .   .   .   .  10   .
+  i    .   .   .   .   .   .   .   .   .  10
+  j    .   .   .   .   .   .   .   .   .   .
+
+Dependencias (umbral 0.5):
+  a => b  +0.750
+  a => c  +0.875
+  b => c  -0.364
+  b => d  +0.667
+  b => e  +0.833
+  c => b  +0.364
+  c => d  -0.286
+  c => e  +0.833
+  d => c  +0.286
+  e => f  +0.909
+  f => g  +0.750
+  f => h  +0.875
+  g => h  +0.750
+  h => i  +0.909
+  i => j  +0.909
+  bucle de longitud 2: c =>2 d  |c>>d| = 2  dep2 = 0.667
+
+Evidencia -> modelo:
+  * Las actividades {c', d} ocurren exactamente en los mismos 4 casos -> un bloque en secuencia.
+  * Corte de secuencia: {a} -> {b, c} -> {d, c'} -> {e} -> {f} -> {g} -> {h} -> {i} -> {j}.
+  * Corte paralelo: {b} y {c} se ejecutan en cualquier orden (cada una sigue a la otra) -> AND.
+  * Bloque {c', d}: 6 de 10 casos no lo ejecutan -> opcional x(tau, bloque).
+  * Corte de secuencia: {d} -> {c'}.
+  * Bloque {g}: 7 de 10 casos no lo ejecutan -> opcional x(tau, bloque).
+  * Retrabajo: el bloque opcional ->(d, c') termina repitiendo c (ya ejecutada) -> bucle loop(tau, ->(d, c)) despues de lo anterior; dep2(c,d) = 0.667 >= 0.5.
+
+Arbol de proceso: ->(a, ∧(b, c), ⟲(τ, ->(d, c)), e, f, x(τ, g), h, i, j)
+Con a lo mas una vuelta por bucle genera 8 trazas; contiene las 6 variantes: SI
+
+Red: |P| = 13, |T| = 13 (11 visibles, 2 silenciosas), |F| = 28
+  a    l=a  {ini} -> {p1, p2}
+  b    l=b  {p1} -> {p3}
+  c    l=c  {p2} -> {p4}
+  τ1   l=τ  {p3, p4} -> {p5}
+  d    l=d  {p5} -> {p6}
+  c′   l=c  {p6} -> {p5}
+  e    l=e  {p5} -> {p7}
+  f    l=f  {p7} -> {p8}
+  τ2   l=τ  {p8} -> {p9}
+  g    l=g  {p8} -> {p9}
+  h    l=h  {p9} -> {p10}
+  i    l=i  {p10} -> {p11}
+  j    l=j  {p11} -> {fin}
+
+Grafo de alcanzabilidad: 13 marcas, 15 arcos
+  red_wf               SI
+  segura               SI
+  solida               SI
+  libre_eleccion       SI
+  maquina_de_estados   NO
+  grafo_marcado        NO
+Replay: p=128 c=128 m=0 r=0 -> fitness = 1/2(1-m/c)+1/2(1-r/p) = 1.000
+
+Denominacion: Red de Petri etiquetada: red WF (flujo de trabajo), sólida, segura (1-acotada), de libre elección; no es máquina de estados y no es grafo marcado.
+
+Escritos: traza.json, red.dot, arbol.dot, red.pnml en /Users/alexis/theCode/newSkills/TSCI3/incisos/MC-P1

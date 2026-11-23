@@ -1,0 +1,4 @@
+"Modelo","Criterio","Raiz","Hojas","Profundidad","Clases_que_predice","Exactitud"
+"rpart","indice de Gini + poda por cp","Vent Type",11,7,"Electric Heat Pump; Gas Storage; Gas Storage-type Instantaneous; Gas Tankless",0.9280868385346
+"rpart (information)","entropia + poda por cp","Vent Type",11,7,"Electric Heat Pump; Gas Storage; Gas Storage-type Instantaneous; Gas Tankless",0.9280868385346
+"ctree","pruebas de independencia (p-valor)","Vent Type",10,5,"Electric Heat Pump; Gas Storage; Gas Tankless",0.894165535956581

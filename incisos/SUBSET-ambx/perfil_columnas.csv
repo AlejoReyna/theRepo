@@ -1,0 +1,5 @@
+columna,tipo,no_na,na,distintos,constante,igual_a,numeros_con_coma,ejemplo
+Ozone,numérica,23,6,21,False,,0,32
+Solar.R,numérica,28,1,26,False,,0,236
+Wind,numérica,29,0,16,False,,0,9.2
+Temp,numérica,28,1,14,False,,0,81

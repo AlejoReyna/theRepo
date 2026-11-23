@@ -1,0 +1,5 @@
+"real","pred","n"
+"positivo","positivo",45
+"negativo","positivo",0
+"positivo","negativo",12
+"negativo","negativo",26

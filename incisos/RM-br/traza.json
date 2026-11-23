@@ -1,0 +1,35 @@
+{
+ "problema": "OD/AM R.pdf p.25-28 y p.34-35 con OD/BR (2).csv (T10)",
+ "coeficientes": {
+  "(Intercept)": -35820.20710022339,
+  "m2_construcción": 995.9810818659558,
+  "recamaras": -52060.63288122096,
+  "condición": 46915.93156228336
+ },
+ "prediccion": 125139.1611478214,
+ "MSE": 58282614228.338615,
+ "MAE": 164086.5001831228,
+ "R2": 0.47259006731068165,
+ "coeficientes_factor": {
+  "(Intercept)": 66783.23830860207,
+  "m2_construcción": 971.9687738990777,
+  "condición1": -371066.97288350447,
+  "condición2": -321748.91495687555,
+  "condición3": -298282.3733294196,
+  "condición4": -189038.13966224756,
+  "m2_terreno": -1.6812834443065614,
+  "baños": 20008.685630279302,
+  "recamaras1": 330884.57093739015,
+  "recamaras2": 243239.4719105821,
+  "recamaras3": 133520.36932896535,
+  "recamaras4": 58858.039745772956,
+  "recamaras5": 45697.97604118956,
+  "recamaras6": 342631.8978287755,
+  "recamaras7": 153178.62365675968,
+  "recamaras9": null
+ },
+ "alias": [
+  "recamaras9"
+ ],
+ "ficticias": 12
+}

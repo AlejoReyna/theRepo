@@ -1,0 +1,34 @@
+
+Performance Measures:
+RMSE: 153636.6649 
+MAE: 89096.2856 
+R-squared: 0.7533520476 
+
+
+Call:
+ randomForest(x = X_train, y = y_train, ntree = 100, importance = TRUE,      keep.inbag = TRUE) 
+               Type of random forest: regression
+                     Number of trees: 100
+No. of variables tried at each split: 5
+
+          Mean of squared residuals: 27335687129
+                    % Var explained: 75.29
+                        %IncMSE  IncNodePurity
+agente_id          -1.001811276  1089307062987
+pais_id            -0.598773234   945852330155
+recamaras           1.874363326  2899578633170
+baños               7.842153041 16512626970139
+m2_construcción    14.214312248 24994386748414
+m2_terreno          2.426368237  3203700579453
+pisos               2.590526591  2096963024437
+código_frente_agua  2.600772833  2301652719421
+código_vista        3.355083435  2937617307160
+código_condición    1.088590271   875910135690
+año_construcción    4.175684868  3599338658583
+año_renovación     -0.342070171   756231554476
+código_postal       8.577647591  3718088904843
+latitud            24.788510559 14138573184972
+longitud            5.080905894  3508625605375
+vista               2.558102674  1888844804306
+condición           2.330558913   414676221112
+Misma semilla, mismas predicciones: TRUE 

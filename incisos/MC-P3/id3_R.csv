@@ -1,0 +1,12 @@
+"nivel","ruta","atributo","E","ganancia"
+1,"raiz","Model Name",0.0227499780457238,1.53283470466774
+1,"raiz","Fuel Type",1.08500661527922,0.470578067434247
+1,"raiz","Vent Type",0.786355577034641,0.769229105678822
+2,"Model Name = Conquest","Fuel Type",0.811278124459133,0
+2,"Model Name = Conquest","Vent Type",0.811278124459133,0
+2,"Model Name = Elite XL","Fuel Type",0.557162075698589,0.0345107028837383
+2,"Model Name = Elite XL","Vent Type",0.591672778582327,0
+2,"Model Name = Shield","Fuel Type",0.468995593589281,0
+2,"Model Name = Shield","Vent Type",0.434851554559677,0.0341440390296041
+3,"Model Name = Elite XL y Fuel Type = Gas,Propane","Vent Type",0.650022421648354,0
+3,"Model Name = Shield y Vent Type = Power Direct Vent","Fuel Type",0.543564443199596,0

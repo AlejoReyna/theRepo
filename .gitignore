@@ -1,0 +1,8 @@
+.venv/
+.lo_perfil/
+__pycache__/
+*.pyc
+.DS_Store
+~$*
+actividades/
+auditoria_fable_2026-11-15/

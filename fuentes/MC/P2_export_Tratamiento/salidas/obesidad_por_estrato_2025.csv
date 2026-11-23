@@ -1,0 +1,29 @@
+"Categoria","Estrato","Mediana_obesidad","Estados_con_dato"
+"Age (years)","18 - 24",19.9,48
+"Age (years)","25 - 34",33.7,48
+"Age (years)","35 - 44",38.05,48
+"Age (years)","45 - 54",41.05,48
+"Age (years)","55 - 64",38.45,48
+"Age (years)","65 or older",30.85,48
+"Education","College graduate",28.6,48
+"Education","High school graduate",35.1,48
+"Education","Less than high school",37.05,44
+"Education","Some college or technical school",37.7,48
+"Income","$15,000 - $24,999",39.8,45
+"Income","$25,000 - $34,999",37.6,47
+"Income","$35,000 - $49,999",35.4,47
+"Income","$50,000 - $74,999",35.85,48
+"Income","$75,000 or greater",34.15,48
+"Income","Data not reported",30.9,48
+"Income","Less than $15,000",36.45,36
+"Race/Ethnicity","Hispanic",36.3,40
+"Race/Ethnicity","NH American Indian/Alaska Native",43,7
+"Race/Ethnicity","NH Hawaiian/Pacific Islander",55.35,2
+"Race/Ethnicity","Non-Hispanic 2 or more races",34.6,19
+"Race/Ethnicity","Non-Hispanic Asian",13.5,23
+"Race/Ethnicity","Non-Hispanic Black",43.8,33
+"Race/Ethnicity","Non-Hispanic Other",21.65,2
+"Race/Ethnicity","Non-Hispanic White",32.25,48
+"Sex","Female",34.65,48
+"Sex","Male",33.2,48
+"Total","Total",33.6,48

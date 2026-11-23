@@ -1,0 +1,5012 @@
+{
+ "problema": "MC AD26 problema 3: árbol de decisión de mínima entropía para gastank y comparación con los árboles de R",
+ "metodo": "ID3 de minima entropia, nivel por nivel",
+ "fuentes": [
+  "EJ26-14 p.3, ecs. 2.1-2.3",
+  "EJ26-21 p.3"
+ ],
+ "datos": {
+  "archivo": "gastank.csv",
+  "n": 737,
+  "clase": "Type",
+  "clases": [
+   "Electric Heat Pump",
+   "Gas Storage",
+   "Gas Storage-type Instantaneous",
+   "Gas Tankless"
+  ],
+  "atributos": [
+   "Model Name",
+   "Fuel Type",
+   "Vent Type"
+  ],
+  "excluidos": [],
+  "vacio": "Sin especificar",
+  "recodificados": {
+   "Vent Type": 151
+  },
+  "valores_distintos": {
+   "Model Name": 163,
+   "Fuel Type": 4,
+   "Vent Type": 4
+  }
+ },
+ "H_raiz": 1.5555846827134636,
+ "niveles": [
+  {
+   "nivel": 1,
+   "nodos": [
+    {
+     "id": "N1.1",
+     "ruta": [],
+     "n": 737,
+     "conteo": {
+      "Electric Heat Pump": 68,
+      "Gas Storage": 412,
+      "Gas Storage-type Instantaneous": 47,
+      "Gas Tankless": 210
+     },
+     "H": 1.5555846827134636,
+     "candidatos": [
+      {
+       "atributo": "Model Name",
+       "tabla": [
+        {
+         "valor": "Triton",
+         "n": 160,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 160,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.21709633649932158,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Polaris",
+         "n": 60,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 60,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0814111261872456,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BFIT",
+         "n": 41,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 41
+         },
+         "H": 0.0,
+         "peso": 0.05563093622795115,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Emerge-X",
+         "n": 30,
+         "conteo": {
+          "Electric Heat Pump": 30,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0407055630936228,
+         "aporte": 0.0
+        },
+        {
+         "valor": "AMP",
+         "n": 28,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 28
+         },
+         "H": 0.0,
+         "peso": 0.037991858887381276,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Phantom-XL",
+         "n": 28,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 28
+         },
+         "H": 0.0,
+         "peso": 0.037991858887381276,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Shield",
+         "n": 20,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 18,
+          "Gas Storage-type Instantaneous": 2,
+          "Gas Tankless": 0
+         },
+         "H": 0.4689955935892812,
+         "peso": 0.027137042062415198,
+         "aporte": 0.012727153150319708
+        },
+        {
+         "valor": "AMPW",
+         "n": 18,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 18
+         },
+         "H": 0.0,
+         "peso": 0.024423337856173677,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Veritus",
+         "n": 15,
+         "conteo": {
+          "Electric Heat Pump": 15,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0203527815468114,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ARMOR",
+         "n": 13,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 13
+         },
+         "H": 0.0,
+         "peso": 0.017639077340569877,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Trinity",
+         "n": 12,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 12
+         },
+         "H": 0.0,
+         "peso": 0.016282225237449117,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EMERGE-xc",
+         "n": 10,
+         "conteo": {
+          "Electric Heat Pump": 10,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.013568521031207599,
+         "aporte": 0.0
+        },
+        {
+         "valor": "XP Plus",
+         "n": 10,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 10
+         },
+         "H": 0.0,
+         "peso": 0.013568521031207599,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Phoenix",
+         "n": 9,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 9,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.012211668928086838,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Elite XL",
+         "n": 7,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 6
+         },
+         "H": 0.5916727785823275,
+         "peso": 0.009497964721845319,
+         "aporte": 0.005619687177851143
+        },
+        {
+         "valor": "Brute XTR",
+         "n": 6,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 6
+         },
+         "H": 0.0,
+         "peso": 0.008141112618724558,
+         "aporte": 0.0
+        },
+        {
+         "valor": "NeoTherm XTR",
+         "n": 6,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 6
+         },
+         "H": 0.0,
+         "peso": 0.008141112618724558,
+         "aporte": 0.0
+        },
+        {
+         "valor": "REGENT",
+         "n": 6,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 6
+         },
+         "H": 0.0,
+         "peso": 0.008141112618724558,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ARMOR CONDENSING",
+         "n": 5,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 5
+         },
+         "H": 0.0,
+         "peso": 0.0067842605156037995,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH 199* 3**",
+         "n": 5,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 5,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0067842605156037995,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-199* 4**",
+         "n": 5,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 5,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0067842605156037995,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Citadel",
+         "n": 5,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 5
+         },
+         "H": 0.0,
+         "peso": 0.0067842605156037995,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH 120* 3**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH 150* 3**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH 250* 3**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH 300* 3**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH 400* 3**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-100* 4**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-120* 4**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-145* 4**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-150* 4**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-250* 4**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-251* 4**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-300* 4**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-400* 4**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH-500* 4**",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 4,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Conquest",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 3,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.8112781244591328,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0044031377175529594
+        },
+        {
+         "valor": "EF120T400*N*3",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EF120T500*N*3",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 4,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Gas Storage",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "HPHD-135VNU-483",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 4,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Outdoor Armor",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 4
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Phoenix Multi-Fit",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Rinnai Commercial Volume Water Heater",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 4
+         },
+         "H": 0.0,
+         "peso": 0.005427408412483039,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ATX-199-*-1**",
+         "n": 3,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 3,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.004070556309362279,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH 500* 3**",
+         "n": 3,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 3,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.004070556309362279,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHP Series",
+         "n": 3,
+         "conteo": {
+          "Electric Heat Pump": 3,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.004070556309362279,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Ecoking Ultimate Volume Water Heater",
+         "n": 3,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 3
+         },
+         "H": 0.0,
+         "peso": 0.004070556309362279,
+         "aporte": 0.0
+        },
+        {
+         "valor": "HPHD-135HNU-483",
+         "n": 3,
+         "conteo": {
+          "Electric Heat Pump": 3,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.004070556309362279,
+         "aporte": 0.0
+        },
+        {
+         "valor": "XP",
+         "n": 3,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 3
+         },
+         "H": 0.0,
+         "peso": 0.004070556309362279,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ARMOR WALL MOUNT",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 2
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGW100H**199*N**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGW60H**125*N**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGW60H**150*N**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGW60H**199*N**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGW80H**150*N**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGW80H**199*N**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EF100T150*X**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EF100T150E*N**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EF100T199*X**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EF100T199E*N**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EF100T250*X**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EF100T250E*N**",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EF60T125*X*2",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "EF60T125E*N*2",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "IQ Floor Model",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 2
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT300*2-***",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT300*2-A-***",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 2,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "iQ Floor Model",
+         "n": 2,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 2
+         },
+         "H": 0.0,
+         "peso": 0.0027137042062415195,
+         "aporte": 0.0
+        },
+        {
+         "valor": "60HEC-125-NA-****",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "60HEC-125-XA-****",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTH 251* 3**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTHS 1000A 1**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTHS 750A 1**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTX 100 3**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTX 80 120",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTX-100 4**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTX-80 1**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTXL 100 3**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "BTXL-100 4**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Brigade",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGT120T400**-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGT120T400**A-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGT120T500**-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CGT120T500**A-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHS160100HCXIN",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHS16080HCXIN",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHS199100HCXIN",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHS19980HCXIN",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHS320100HCXVIN",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHS398100HCXAIN",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHS398100HCXIN",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHS398100HCXVAIN",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "CHS398100HCXVIN",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Electron iE1",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 1,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "GHE75S*-100",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "I250",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 1
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE100T150*X**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE100T150E*N**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE100T199*X**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE100T199E*N**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE100T250*X**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE100T250E*N**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE120T400*N*3",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE120T400*X*3",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE120T500*N*3",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE120T500*X*3",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE60T125*X*",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "LUHE60T125E*N*",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "NCC300DV",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 1
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "NCC300OD",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 1
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "NHH199100-1",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "NHH199100-2",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Neuron",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 1
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ODCGT120T400**-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ODCGT120T400**A-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ODCGT120T500**-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ODCGT120T500**A-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ODOT400*2-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ODOT400*2-A-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ODOT500*2-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "ODOT500*2-A-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT250*2-*-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT400*2-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT400*2-A-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT500*2-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT500*2-A-***",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT600*-A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT700*-A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT800*-A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "OT900*-A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "RMHPHDA068VD000",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 1,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "RMHPHDA120VD000",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 1,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Rheem",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Richmond",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Ruud",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "SHE-50-100 *E 3**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "SHE-50-100-*E 4**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "SHE-75-100 *E 3**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "SHE-75-100-*E 4**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "SUF119251*E* 3**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "SUS 120 1000NEA 1**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "SUS 120 1000PEA 1**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "SUS 120 750NEA 1**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "SUS 120 750PEA 1**",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200400A1***A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200400A1***N",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200400B1***A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200400B1***N",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200400E1***A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200400E1***N",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200400F1***A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200400F1***N",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 1,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200500A1***A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200500A1***N",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200500B1***A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200500B1***N",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200500E1***A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200500E1***N",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200500F1***A",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "UTF1200500F1***N",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "iQ1501",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 1
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        },
+        {
+         "valor": "iQ251",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 1
+         },
+         "H": 0.0,
+         "peso": 0.0013568521031207597,
+         "aporte": 0.0
+        }
+       ],
+       "E": 0.02274997804572381,
+       "ganancia": 1.5328347046677397,
+       "split": 5.558977285211077,
+       "razon": 0.2757404151921332
+      },
+      {
+       "atributo": "Fuel Type",
+       "tabla": [
+        {
+         "valor": "Gas,Propane",
+         "n": 490,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 321,
+          "Gas Storage-type Instantaneous": 33,
+          "Gas Tankless": 136
+         },
+         "H": 1.1751199436655615,
+         "peso": 0.6648575305291723,
+         "aporte": 0.7812873438210652
+        },
+        {
+         "valor": "Gas",
+         "n": 125,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 54,
+          "Gas Storage-type Instantaneous": 8,
+          "Gas Tankless": 63
+         },
+         "H": 1.2751238022835105,
+         "peso": 0.16960651289009498,
+         "aporte": 0.21626930160846516
+        },
+        {
+         "valor": "Electric",
+         "n": 68,
+         "conteo": {
+          "Electric Heat Pump": 68,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.09226594301221167,
+         "aporte": 0.0
+        },
+        {
+         "valor": "Propane",
+         "n": 54,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 37,
+          "Gas Storage-type Instantaneous": 6,
+          "Gas Tankless": 11
+         },
+         "H": 1.1935301440596102,
+         "peso": 0.07327001356852103,
+         "aporte": 0.0874499698496865
+        }
+       ],
+       "E": 1.0850066152792168,
+       "ganancia": 0.4705780674342468,
+       "split": 1.4191612107017577,
+       "razon": 0.33158887368514794
+      },
+      {
+       "atributo": "Vent Type",
+       "tabla": [
+        {
+         "valor": "Power Direct Vent",
+         "n": 376,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 354,
+          "Gas Storage-type Instantaneous": 14,
+          "Gas Tankless": 8
+         },
+         "H": 0.376835304767564,
+         "peso": 0.5101763907734057,
+         "aporte": 0.19225247570231216
+        },
+        {
+         "valor": "Direct Vent",
+         "n": 170,
+         "conteo": {
+          "Electric Heat Pump": 1,
+          "Gas Storage": 17,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 151
+         },
+         "H": 0.5712380894356861,
+         "peso": 0.23066485753052918,
+         "aporte": 0.13176455251569422
+        },
+        {
+         "valor": "Sin especificar",
+         "n": 151,
+         "conteo": {
+          "Electric Heat Pump": 67,
+          "Gas Storage": 25,
+          "Gas Storage-type Instantaneous": 20,
+          "Gas Tankless": 39
+         },
+         "H": 1.840433686752802,
+         "peso": 0.20488466757123475,
+         "aporte": 0.37707664409724984
+        },
+        {
+         "valor": "Power Vent",
+         "n": 40,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 16,
+          "Gas Storage-type Instantaneous": 12,
+          "Gas Tankless": 12
+         },
+         "H": 1.5709505944546684,
+         "peso": 0.054274084124830396,
+         "aporte": 0.085261904719385
+        }
+       ],
+       "E": 0.7863555770346412,
+       "ganancia": 0.7692291056788224,
+       "split": 1.6802045176326788,
+       "razon": 0.4578187343304055
+      }
+     ],
+     "decision": {
+      "tipo": "dividir",
+      "atributo": "Model Name",
+      "ramas": 163
+     }
+    }
+   ]
+  },
+  {
+   "nivel": 2,
+   "nodos": [
+    {
+     "id": "N2.1",
+     "ruta": [
+      [
+       "Model Name",
+       "Shield"
+      ]
+     ],
+     "n": 20,
+     "conteo": {
+      "Electric Heat Pump": 0,
+      "Gas Storage": 18,
+      "Gas Storage-type Instantaneous": 2,
+      "Gas Tankless": 0
+     },
+     "H": 0.4689955935892812,
+     "candidatos": [
+      {
+       "atributo": "Fuel Type",
+       "tabla": [
+        {
+         "valor": "Gas",
+         "n": 10,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 9,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.4689955935892812,
+         "peso": 0.5,
+         "aporte": 0.2344977967946406
+        },
+        {
+         "valor": "Propane",
+         "n": 10,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 9,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.4689955935892812,
+         "peso": 0.5,
+         "aporte": 0.2344977967946406
+        }
+       ],
+       "E": 0.4689955935892812,
+       "ganancia": 0.0,
+       "split": 1.0,
+       "razon": 0.0
+      },
+      {
+       "atributo": "Vent Type",
+       "tabla": [
+        {
+         "valor": "Power Direct Vent",
+         "n": 16,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 14,
+          "Gas Storage-type Instantaneous": 2,
+          "Gas Tankless": 0
+         },
+         "H": 0.5435644431995964,
+         "peso": 0.8,
+         "aporte": 0.43485155455967717
+        },
+        {
+         "valor": "Sin especificar",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 4,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 0
+         },
+         "H": 0.0,
+         "peso": 0.2,
+         "aporte": 0.0
+        }
+       ],
+       "E": 0.43485155455967717,
+       "ganancia": 0.034144039029604056,
+       "split": 0.7219280948873623,
+       "razon": 0.04729562302867757
+      }
+     ],
+     "decision": {
+      "tipo": "dividir",
+      "atributo": "Vent Type",
+      "ramas": 2
+     }
+    },
+    {
+     "id": "N2.2",
+     "ruta": [
+      [
+       "Model Name",
+       "Elite XL"
+      ]
+     ],
+     "n": 7,
+     "conteo": {
+      "Electric Heat Pump": 0,
+      "Gas Storage": 0,
+      "Gas Storage-type Instantaneous": 1,
+      "Gas Tankless": 6
+     },
+     "H": 0.5916727785823275,
+     "candidatos": [
+      {
+       "atributo": "Fuel Type",
+       "tabla": [
+        {
+         "valor": "Gas,Propane",
+         "n": 6,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 5
+         },
+         "H": 0.6500224216483541,
+         "peso": 0.8571428571428571,
+         "aporte": 0.5571620756985892
+        },
+        {
+         "valor": "Gas",
+         "n": 1,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 0,
+          "Gas Tankless": 1
+         },
+         "H": 0.0,
+         "peso": 0.14285714285714285,
+         "aporte": 0.0
+        }
+       ],
+       "E": 0.5571620756985892,
+       "ganancia": 0.03451070288373825,
+       "split": 0.5916727785823275,
+       "razon": 0.05832734601451047
+      },
+      {
+       "atributo": "Vent Type",
+       "tabla": [
+        {
+         "valor": "Power Direct Vent",
+         "n": 7,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 6
+         },
+         "H": 0.5916727785823275,
+         "peso": 1.0,
+         "aporte": 0.5916727785823275
+        }
+       ],
+       "E": 0.5916727785823275,
+       "ganancia": 0.0,
+       "split": 0.0,
+       "razon": null
+      }
+     ],
+     "decision": {
+      "tipo": "dividir",
+      "atributo": "Fuel Type",
+      "ramas": 2
+     }
+    },
+    {
+     "id": "N2.3",
+     "ruta": [
+      [
+       "Model Name",
+       "Conquest"
+      ]
+     ],
+     "n": 4,
+     "conteo": {
+      "Electric Heat Pump": 0,
+      "Gas Storage": 3,
+      "Gas Storage-type Instantaneous": 1,
+      "Gas Tankless": 0
+     },
+     "H": 0.8112781244591328,
+     "candidatos": [
+      {
+       "atributo": "Fuel Type",
+       "tabla": [
+        {
+         "valor": "Gas",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 3,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.8112781244591328,
+         "peso": 1.0,
+         "aporte": 0.8112781244591328
+        }
+       ],
+       "E": 0.8112781244591328,
+       "ganancia": 0.0,
+       "split": 0.0,
+       "razon": null
+      },
+      {
+       "atributo": "Vent Type",
+       "tabla": [
+        {
+         "valor": "Power Direct Vent",
+         "n": 4,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 3,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.8112781244591328,
+         "peso": 1.0,
+         "aporte": 0.8112781244591328
+        }
+       ],
+       "E": 0.8112781244591328,
+       "ganancia": 0.0,
+       "split": 0.0,
+       "razon": null
+      }
+     ],
+     "decision": {
+      "tipo": "hoja",
+      "clase": "Gas Storage",
+      "motivo": "ganancia 0"
+     }
+    }
+   ]
+  },
+  {
+   "nivel": 3,
+   "nodos": [
+    {
+     "id": "N3.1",
+     "ruta": [
+      [
+       "Model Name",
+       "Shield"
+      ],
+      [
+       "Vent Type",
+       "Power Direct Vent"
+      ]
+     ],
+     "n": 16,
+     "conteo": {
+      "Electric Heat Pump": 0,
+      "Gas Storage": 14,
+      "Gas Storage-type Instantaneous": 2,
+      "Gas Tankless": 0
+     },
+     "H": 0.5435644431995964,
+     "candidatos": [
+      {
+       "atributo": "Fuel Type",
+       "tabla": [
+        {
+         "valor": "Gas",
+         "n": 8,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 7,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.5435644431995964,
+         "peso": 0.5,
+         "aporte": 0.2717822215997982
+        },
+        {
+         "valor": "Propane",
+         "n": 8,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 7,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 0
+         },
+         "H": 0.5435644431995964,
+         "peso": 0.5,
+         "aporte": 0.2717822215997982
+        }
+       ],
+       "E": 0.5435644431995964,
+       "ganancia": 0.0,
+       "split": 1.0,
+       "razon": 0.0
+      }
+     ],
+     "decision": {
+      "tipo": "hoja",
+      "clase": "Gas Storage",
+      "motivo": "ganancia 0"
+     }
+    },
+    {
+     "id": "N3.2",
+     "ruta": [
+      [
+       "Model Name",
+       "Elite XL"
+      ],
+      [
+       "Fuel Type",
+       "Gas,Propane"
+      ]
+     ],
+     "n": 6,
+     "conteo": {
+      "Electric Heat Pump": 0,
+      "Gas Storage": 0,
+      "Gas Storage-type Instantaneous": 1,
+      "Gas Tankless": 5
+     },
+     "H": 0.6500224216483541,
+     "candidatos": [
+      {
+       "atributo": "Vent Type",
+       "tabla": [
+        {
+         "valor": "Power Direct Vent",
+         "n": 6,
+         "conteo": {
+          "Electric Heat Pump": 0,
+          "Gas Storage": 0,
+          "Gas Storage-type Instantaneous": 1,
+          "Gas Tankless": 5
+         },
+         "H": 0.6500224216483541,
+         "peso": 1.0,
+         "aporte": 0.6500224216483541
+        }
+       ],
+       "E": 0.6500224216483541,
+       "ganancia": 0.0,
+       "split": 0.0,
+       "razon": null
+      }
+     ],
+     "decision": {
+      "tipo": "hoja",
+      "clase": "Gas Tankless",
+      "motivo": "ganancia 0"
+     }
+    }
+   ]
+  }
+ ],
+ "hojas": [
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Triton"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 160,
+   "aciertos": 160,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Polaris"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 60,
+   "aciertos": 60,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BFIT"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 41,
+   "aciertos": 41,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Emerge-X"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Electric Heat Pump",
+   "n": 30,
+   "aciertos": 30,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "AMP"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 28,
+   "aciertos": 28,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Phantom-XL"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 28,
+   "aciertos": 28,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "AMPW"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 18,
+   "aciertos": 18,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Veritus"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Electric Heat Pump",
+   "n": 15,
+   "aciertos": 15,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ARMOR"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 13,
+   "aciertos": 13,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Trinity"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 12,
+   "aciertos": 12,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EMERGE-xc"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Electric Heat Pump",
+   "n": 10,
+   "aciertos": 10,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "XP Plus"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 10,
+   "aciertos": 10,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Phoenix"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 9,
+   "aciertos": 9,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Brute XTR"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 6,
+   "aciertos": 6,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "NeoTherm XTR"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 6,
+   "aciertos": 6,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "REGENT"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 6,
+   "aciertos": 6,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ARMOR CONDENSING"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 5,
+   "aciertos": 5,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH 199* 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 5,
+   "aciertos": 5,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-199* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 5,
+   "aciertos": 5,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Citadel"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 5,
+   "aciertos": 5,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH 120* 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH 150* 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH 250* 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH 300* 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH 400* 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-100* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-120* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-145* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-150* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-250* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-251* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-300* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-400* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH-500* 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Conquest"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 3,
+   "H": 0.8112781244591328,
+   "motivo": "ganancia 0"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF120T400*N*3"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF120T500*N*3"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Gas Storage"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "HPHD-135VNU-483"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Electric Heat Pump",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Outdoor Armor"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Phoenix Multi-Fit"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Rinnai Commercial Volume Water Heater"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ATX-199-*-1**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 3,
+   "aciertos": 3,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH 500* 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 3,
+   "aciertos": 3,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHP Series"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Electric Heat Pump",
+   "n": 3,
+   "aciertos": 3,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Ecoking Ultimate Volume Water Heater"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 3,
+   "aciertos": 3,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "HPHD-135HNU-483"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Electric Heat Pump",
+   "n": 3,
+   "aciertos": 3,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "XP"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 3,
+   "aciertos": 3,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ARMOR WALL MOUNT"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGW100H**199*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGW60H**125*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGW60H**150*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGW60H**199*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGW80H**150*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGW80H**199*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF100T150*X**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF100T150E*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF100T199*X**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF100T199E*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF100T250*X**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF100T250E*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF60T125*X*2"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "EF60T125E*N*2"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "IQ Floor Model"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT300*2-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT300*2-A-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "iQ Floor Model"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 2,
+   "aciertos": 2,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "60HEC-125-NA-****"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "60HEC-125-XA-****"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTH 251* 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTHS 1000A 1**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTHS 750A 1**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTX 100 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTX 80 120"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTX-100 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTX-80 1**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTXL 100 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "BTXL-100 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Brigade"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGT120T400**-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGT120T400**A-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGT120T500**-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CGT120T500**A-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHS160100HCXIN"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHS16080HCXIN"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHS199100HCXIN"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHS19980HCXIN"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHS320100HCXVIN"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHS398100HCXAIN"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHS398100HCXIN"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHS398100HCXVAIN"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "CHS398100HCXVIN"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Electron iE1"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Electric Heat Pump",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "GHE75S*-100"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "I250"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE100T150*X**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE100T150E*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE100T199*X**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE100T199E*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE100T250*X**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE100T250E*N**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE120T400*N*3"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE120T400*X*3"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE120T500*N*3"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE120T500*X*3"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE60T125*X*"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "LUHE60T125E*N*"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "NCC300DV"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "NCC300OD"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "NHH199100-1"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "NHH199100-2"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Neuron"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ODCGT120T400**-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ODCGT120T400**A-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ODCGT120T500**-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ODCGT120T500**A-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ODOT400*2-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ODOT400*2-A-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ODOT500*2-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "ODOT500*2-A-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT250*2-*-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT400*2-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT400*2-A-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT500*2-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT500*2-A-***"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT600*-A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT700*-A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT800*-A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "OT900*-A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "RMHPHDA068VD000"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Electric Heat Pump",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "RMHPHDA120VD000"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Electric Heat Pump",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Rheem"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Richmond"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Ruud"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "SHE-50-100 *E 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "SHE-50-100-*E 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "SHE-75-100 *E 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "SHE-75-100-*E 4**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "SUF119251*E* 3**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "SUS 120 1000NEA 1**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "SUS 120 1000PEA 1**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "SUS 120 750NEA 1**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "SUS 120 750PEA 1**"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200400A1***A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200400A1***N"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200400B1***A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200400B1***N"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200400E1***A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200400E1***N"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200400F1***A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200400F1***N"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200500A1***A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200500A1***N"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200500B1***A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200500B1***N"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200500E1***A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200500E1***N"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200500F1***A"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "UTF1200500F1***N"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Storage-type Instantaneous",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "iQ1501"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "iQ251"
+    ]
+   ],
+   "nivel": 2,
+   "clase": "Gas Tankless",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Shield"
+    ],
+    [
+     "Vent Type",
+     "Power Direct Vent"
+    ]
+   ],
+   "nivel": 3,
+   "clase": "Gas Storage",
+   "n": 16,
+   "aciertos": 14,
+   "H": 0.5435644431995964,
+   "motivo": "ganancia 0"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Shield"
+    ],
+    [
+     "Vent Type",
+     "Sin especificar"
+    ]
+   ],
+   "nivel": 3,
+   "clase": "Gas Storage",
+   "n": 4,
+   "aciertos": 4,
+   "H": 0.0,
+   "motivo": "pura"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Elite XL"
+    ],
+    [
+     "Fuel Type",
+     "Gas,Propane"
+    ]
+   ],
+   "nivel": 3,
+   "clase": "Gas Tankless",
+   "n": 6,
+   "aciertos": 5,
+   "H": 0.6500224216483541,
+   "motivo": "ganancia 0"
+  },
+  {
+   "ruta": [
+    [
+     "Model Name",
+     "Elite XL"
+    ],
+    [
+     "Fuel Type",
+     "Gas"
+    ]
+   ],
+   "nivel": 3,
+   "clase": "Gas Tankless",
+   "n": 1,
+   "aciertos": 1,
+   "H": 0.0,
+   "motivo": "pura"
+  }
+ ],
+ "resumen": {
+  "raiz": "Model Name",
+  "hojas": 165,
+  "profundidad": 2,
+  "aciertos": 733,
+  "exactitud": 0.994572591587517
+ }
+}

@@ -1,0 +1,10 @@
+{"problema": "SUBSET.pdf p.12-15: Border Crossing", "objetivo": "Subconjuntos de las láminas", "archivo": "Border_Crossing_Entry_Data.csv",
+ "pasos": [
+  {"id": "B1", "tipo": "filtrar", "desde": "P0", "operacion": "State == Texas (p.12)", "condicion": ["State", "==", "Texas"]},
+  {"id": "B2", "tipo": "filtrar", "desde": "P0", "operacion": "Texas y Trucks (p.13)", "condicion": {"y": [["State", "==", "Texas"], ["Measure", "==", "Trucks"]]}},
+  {"id": "B3", "tipo": "seleccionar", "desde": "P0", "operacion": "df[, c(Port Name, Value)] (p.13)", "columnas": ["Port Name", "Value"]},
+  {"id": "B4", "tipo": "filtrar", "desde": "P0", "operacion": "Arizona con select (p.14)", "condicion": ["State", "==", "Arizona"], "select": ["Port Name", "Value"]},
+  {"id": "B5", "tipo": "filtrar", "desde": "P0", "operacion": "State != Texas (p.14)", "condicion": ["State", "!=", "Texas"]},
+  {"id": "B6", "tipo": "filtrar", "desde": "P0", "operacion": "Texas o Arizona (p.15)", "condicion": {"o": [["State", "==", "Texas"], ["State", "==", "Arizona"]]}},
+  {"id": "B7", "tipo": "filtrar", "desde": "P0", "operacion": "500 <= Value <= 5000 (p.15)", "condicion": {"y": [["Value", ">=", 500], ["Value", "<=", 5000]]}}
+ ]}

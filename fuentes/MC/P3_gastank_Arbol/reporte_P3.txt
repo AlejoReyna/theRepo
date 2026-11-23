@@ -1,0 +1,196 @@
+
+------------------------------------------------------------------------------
+0. DATOS
+------------------------------------------------------------------------------
+Archivo: gastank.csv   filas: 737   columnas: 4
+Valores vacios por columna: Model Name=0, Type=0, Fuel Type=0, Vent Type=151
+Tratamiento: 'Vent Type' vacio -> categoria 'Sin especificar' (151 filas; en las
+bombas de calor electricas significa 'no ventila', por eso se conserva como categoria
+y no se elimina ni se imputa). 'Gas,Propane' se conserva como categoria propia
+(equipo apto para ambos combustibles).
+
+Clase objetivo: Tipo (Type). Predictores: Combustible (Fuel Type) y Ventilacion (Vent Type).
+Model Name se EXCLUYE: es practicamente un identificador (163 valores distintos para 737 filas).
+Tipo
+            Electric Heat Pump                    Gas Storage Gas Storage-type Instantaneous 
+                            68                            412                             47 
+                  Gas Tankless 
+                           210 
+
+                   Tipo
+Ventilacion         Electric Heat Pump Gas Storage Gas Storage-type Instantaneous Gas Tankless
+  Direct Vent                        1          17                              1          151
+  Power Direct Vent                  0         354                             14            8
+  Power Vent                         0          16                             12           12
+  Sin especificar                   67          25                             20           39
+
+             Tipo
+Combustible   Electric Heat Pump Gas Storage Gas Storage-type Instantaneous Gas Tankless
+  Electric                    68           0                              0            0
+  Gas                          0          54                              8           63
+  Gas,Propane                  0         321                             33          136
+  Propane                      0          37                              6           11
+
+------------------------------------------------------------------------------
+1. NODO RAIZ: entropia ponderada de cada atributo (se busca la MINIMA)
+------------------------------------------------------------------------------
+H(Tipo) = -sum p*log2(p) = -(0.0923)log2(0.0923) -(0.5590)log2(0.5590) -(0.0638)log2(0.0638) -(0.2849)log2(0.2849) = 1.5556 bits
+            H_padre E_ponderada ganancia split_info razon_ganancia
+Ventilacion  1.5556      0.7864   0.7692     1.6802         0.4578
+Combustible  1.5556      1.0850   0.4706     1.4192         0.3316
+Modelo       1.5556      0.0227   1.5328     5.5590         0.2757
+Detalle de E(Ventilacion) = sum |Sv|/|S| * H(Sv):
+  Direct Vent        n=170  H=0.5712  peso=0.2307  aporte=0.1318
+  Power Direct Vent  n=376  H=0.3768  peso=0.5102  aporte=0.1923
+  Power Vent         n= 40  H=1.5710  peso=0.0543  aporte=0.0853
+  Sin especificar    n=151  H=1.8404  peso=0.2049  aporte=0.3771
+Modelo tendria la mayor ganancia (1.53) pero es el sesgo conocido de ID3 hacia
+atributos con muchos valores: generaria 163 ramas, no generaliza (razon de ganancia 0.28).
+Entre los atributos validos, Ventilacion deja la menor entropia (0.786 < 1.085) -> RAIZ.
+
+------------------------------------------------------------------------------
+2. ARBOL ID3 DE MINIMA ENTROPIA (todos los datos)
+------------------------------------------------------------------------------
+Abreviaturas: EHP=Electric Heat Pump, GS=Gas Storage, GSI=Gas Storage-type Instantaneous, GT=Gas Tankless
+
+RAIZ -> [Ventilacion]  n=737  H=1.556  ganancias: Ventilacion=0.7692, Combustible=0.4706
+    = Direct Vent -> [Combustible]  n=170  H=0.571  ganancias: Combustible=0.1281
+        = Electric -> HOJA: Electric Heat Pump  (n=1, aciertos=1, H=0.000) {EHP=1}
+        = Gas -> HOJA: Gas Tankless  (n=48, aciertos=47, H=0.146) {GSI=1 GT=47}
+        = Gas,Propane -> HOJA: Gas Tankless  (n=110, aciertos=93, H=0.621) {GS=17 GT=93}
+        = Propane -> HOJA: Gas Tankless  (n=11, aciertos=11, H=0.000) {GT=11}
+    = Power Direct Vent -> HOJA: Gas Storage  (n=376, aciertos=354, H=0.377) {GS=354 GSI=14 GT=8}  [poda: Combustible (ganancia 0.0030) no cambia la clase]
+    = Power Vent -> [Combustible]  n=40  H=1.571  ganancias: Combustible=0.4029
+        = Gas -> HOJA: Gas Tankless  (n=22, aciertos=12, H=1.449) {GS=5 GSI=5 GT=12}
+        = Gas,Propane -> HOJA: Gas Storage  (n=10, aciertos=8, H=0.722) {GS=8 GSI=2}
+        = Propane -> HOJA: Gas Storage-type Instantaneous  (n=8, aciertos=5, H=0.954) {GS=3 GSI=5}
+    = Sin especificar -> [Combustible]  n=151  H=1.840  ganancias: Combustible=1.0285
+        = Electric -> HOJA: Electric Heat Pump  (n=67, aciertos=67, H=0.000) {EHP=67}
+        = Gas -> HOJA: Gas Tankless  (n=5, aciertos=3, H=0.971) {GS=2 GT=3}
+        = Gas,Propane -> HOJA: Gas Tankless  (n=77, aciertos=36, H=1.529) {GS=21 GSI=20 GT=36}
+        = Propane -> HOJA: Gas Storage  (n=2, aciertos=2, H=0.000) {GS=2}
+
+Hojas: 12 (antes de la poda trivial: 14)   Profundidad: 2
+Exactitud de re-sustitucion: 639/737 = 86.70%
+     Prediccion
+Real  EHP  GS GSI  GT
+  EHP  68   0   0   0
+  GS    0 364   3  45
+  GSI   0  16   5  26
+  GT    0   8   0 202
+
+Reglas del arbol ID3:
+  SI Ventilacion = 'Direct Vent' Y Combustible = 'Electric' ENTONCES Tipo = Electric Heat Pump   (1/1)
+  SI Ventilacion = 'Direct Vent' Y Combustible = 'Gas' ENTONCES Tipo = Gas Tankless   (47/48)
+  SI Ventilacion = 'Direct Vent' Y Combustible = 'Gas,Propane' ENTONCES Tipo = Gas Tankless   (93/110)
+  SI Ventilacion = 'Direct Vent' Y Combustible = 'Propane' ENTONCES Tipo = Gas Tankless   (11/11)
+  SI Ventilacion = 'Power Direct Vent' ENTONCES Tipo = Gas Storage   (354/376)
+  SI Ventilacion = 'Power Vent' Y Combustible = 'Gas' ENTONCES Tipo = Gas Tankless   (12/22)
+  SI Ventilacion = 'Power Vent' Y Combustible = 'Gas,Propane' ENTONCES Tipo = Gas Storage   (8/10)
+  SI Ventilacion = 'Power Vent' Y Combustible = 'Propane' ENTONCES Tipo = Gas Storage-type Instantaneous   (5/8)
+  SI Ventilacion = 'Sin especificar' Y Combustible = 'Electric' ENTONCES Tipo = Electric Heat Pump   (67/67)
+  SI Ventilacion = 'Sin especificar' Y Combustible = 'Gas' ENTONCES Tipo = Gas Tankless   (3/5)
+  SI Ventilacion = 'Sin especificar' Y Combustible = 'Gas,Propane' ENTONCES Tipo = Gas Tankless   (36/77)
+  SI Ventilacion = 'Sin especificar' Y Combustible = 'Propane' ENTONCES Tipo = Gas Storage   (2/2)
+
+------------------------------------------------------------------------------
+3a. ARBOL rpart (CART, criterio Gini, parametros por defecto: cp=0.01, minsplit=20)
+------------------------------------------------------------------------------
+n= 737 
+
+node), split, n, loss, yval, (yprob)
+      * denotes terminal node
+
+1) root 737 325 Gas Storage (0.09226594 0.55902307 0.06377205 0.28493894)  
+  2) Ventilacion=Power Direct Vent 376  22 Gas Storage (0.00000000 0.94148936 0.03723404 0.02127660) *
+  3) Ventilacion=Direct Vent,Power Vent,Sin especificar 361 159 Gas Tankless (0.18836565 0.16066482 0.09141274 0.55955679)  
+    6) Combustible=Electric 68   0 Electric Heat Pump (1.00000000 0.00000000 0.00000000 0.00000000) *
+    7) Combustible=Gas,Gas,Propane,Propane 293  91 Gas Tankless (0.00000000 0.19795222 0.11262799 0.68941980) *
+
+
+Classification tree:
+rpart(formula = Tipo ~ Ventilacion + Combustible, data = df, 
+    method = "class")
+
+Variables actually used in tree construction:
+[1] Combustible Ventilacion
+
+Root node error: 325/737 = 0.44098
+
+n= 737 
+
+       CP nsplit rel error  xerror     xstd
+1 0.44308      0   1.00000 1.00000 0.041474
+2 0.20923      1   0.55692 0.55692 0.035955
+3 0.01000      2   0.34769 0.34769 0.030096
+
+Importancia de variables (rpart):
+Ventilacion Combustible 
+     172.73      128.78 
+Exactitud de re-sustitucion rpart: 84.67%
+     Prediccion
+Real  EHP  GS  GT
+  EHP  68   0   0
+  GS    0 354  58
+  GSI   0  14  33
+  GT    0   8 202
+
+------------------------------------------------------------------------------
+3a'. rpart con criterio de ENTROPIA (split = 'information') - referencia
+------------------------------------------------------------------------------
+n= 737 
+
+node), split, n, loss, yval, (yprob)
+      * denotes terminal node
+
+1) root 737 325 Gas Storage (0.09226594 0.55902307 0.06377205 0.28493894)  
+  2) Ventilacion=Power Direct Vent 376  22 Gas Storage (0.00000000 0.94148936 0.03723404 0.02127660) *
+  3) Ventilacion=Direct Vent,Power Vent,Sin especificar 361 159 Gas Tankless (0.18836565 0.16066482 0.09141274 0.55955679)  
+    6) Combustible=Electric 68   0 Electric Heat Pump (1.00000000 0.00000000 0.00000000 0.00000000) *
+    7) Combustible=Gas,Gas,Propane,Propane 293  91 Gas Tankless (0.00000000 0.19795222 0.11262799 0.68941980) *
+Exactitud de re-sustitucion rpart-information: 84.67%
+
+------------------------------------------------------------------------------
+3b. ARBOL ctree (partykit, inferencia condicional, alpha = 0.05)
+------------------------------------------------------------------------------
+
+Model formula:
+Tipo ~ Ventilacion + Combustible
+
+Fitted party:
+[1] root
+|   [2] Ventilacion in Direct Vent, Power Vent, Sin especificar
+|   |   [3] Combustible in Electric: Electric Heat Pump (n = 68, err = 0.0%)
+|   |   [4] Combustible in Gas, Gas,Propane, Propane
+|   |   |   [5] Ventilacion in Direct Vent
+|   |   |   |   [6] Combustible in Gas, Propane: Gas Tankless (n = 59, err = 1.7%)
+|   |   |   |   [7] Combustible in Gas,Propane: Gas Tankless (n = 110, err = 15.5%)
+|   |   |   [8] Ventilacion in Power Vent, Sin especificar: Gas Tankless (n = 124, err = 58.9%)
+|   [9] Ventilacion in Power Direct Vent: Gas Storage (n = 376, err = 5.9%)
+
+Number of inner nodes:    4
+Number of terminal nodes: 5
+Exactitud de re-sustitucion ctree: 84.67%
+     Prediccion
+Real  EHP  GS  GT
+  EHP  68   0   0
+  GS    0 354  58
+  GSI   0  14  33
+  GT    0   8 202
+
+------------------------------------------------------------------------------
+4. COMPARACION DE LOS ARBOLES
+------------------------------------------------------------------------------
+ Arbol                         Criterio                           Tipo_de_corte                  Raiz       
+ ID3 (minima entropia, a mano) Ganancia de informacion (entropia) Multirrama (un hijo por valor) Ventilacion
+ rpart (CART-Gini)             Indice de Gini + poda por cp       Binario (agrupa categorias)    Ventilacion
+ ctree (partykit)              Pruebas de independencia (p-valor) Binario (agrupa categorias)    Ventilacion
+ Hojas Profundidad Exactitud_resustitucion Exactitud_prueba_30
+ 12    2           86.70                   85.52              
+  3    2           84.67                   82.81              
+  5    4           84.67                   82.81              
+
+Particion de validacion: 516 filas de entrenamiento / 221 de prueba (semilla 1851265).
+
+Coincidencia de predicciones sobre las 737 filas:
+  ID3 vs rpart: 97.29%   ID3 vs ctree: 97.29%   rpart vs ctree: 100.00%

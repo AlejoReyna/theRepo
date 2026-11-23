@@ -1,0 +1,12 @@
+Criterio de clase: M0 = registro 42 (dist 0.385066), M1 = registro 8 (dist 0.827621); |M0| = 46, |M1| = 3; costo = 42.672814; silueta media = 0.2538
+PAM sobre min-max: medoides = registros 23, 42; costo = 40.490272; tamanos = 21, 28; silueta media = 0.0860
+ Algoritmo Criterio K
+       PAM      WSS 5
+       PAM  Silueta 2
+       PAM      Gap 1
+     CLARA      WSS 5
+     CLARA  Silueta 2
+     CLARA      Gap 1
+
+PAM con k = 2: medoides (registros) 11, 23, tamanos 26, 23, silueta media 0.1346
+CLARA con k = 2: medoides (registros) 11, 23, tamanos 26, 23

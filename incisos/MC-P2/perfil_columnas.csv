@@ -1,0 +1,34 @@
+columna,tipo,no_na,na,distintos,constante,igual_a,numeros_con_coma,ejemplo
+YearStart,numérica,118580,0,15,False,,0,2011
+YearEnd,numérica,118580,0,15,False,YearStart,0,2011
+LocationAbbr,texto,118580,0,55,False,,0,AL
+LocationDesc,texto,118580,0,55,False,,0,Alabama
+Datasource,texto,118580,0,1,True,,0,Behavioral Risk Factor Surveillance Syst
+Class,texto,118580,0,3,False,,0,Obesity / Weight Status
+Topic,texto,118580,0,3,False,,0,Obesity / Weight Status
+Question,texto,118580,0,9,False,,0,Percent of adults aged 18 years and olde
+Data_Value_Unit,texto,12320,106260,1,True,,0,%
+Data_Value_Type,texto,118580,0,1,True,,0,Value
+Data_Value,numérica,104119,14461,725,False,,0,34.8
+Data_Value_Alt,numérica,104119,14461,725,False,Data_Value,0,34.8
+Data_Value_Footnote_Symbol,texto,14461,104119,2,False,,0,-
+Data_Value_Footnote,texto,14461,104119,1,True,,0,Data not available because sample size i
+Low_Confidence_Limit,numérica,104119,14461,702,False,,0,31.3
+High_Confidence_Limit,numérica,104119,14461,794,False,,0,38.5
+Sample_Size,texto,104119,14461,10615,False,,54140,"1,367"
+Total,texto,4235,114345,1,True,,0,Total
+Age(years),texto,25410,93170,6,False,,0,18 - 24
+Education,texto,16940,101640,5,False,,0,College graduate
+Sex,texto,8470,110110,2,False,,0,Female
+Income,texto,29645,88935,7,False,,0,"$15,000 - $24,999"
+Race/Ethnicity,texto,33880,84700,8,False,,0,Non-Hispanic 2 or more races
+GeoLocation,texto,116424,2156,105,False,,0,"    (32.840571122, -86.631860762)"
+ClassID,texto,118580,0,3,False,,0,OWS
+TopicID,texto,118580,0,3,False,,0,OWS1
+QuestionID,texto,118580,0,9,False,,0,Q036
+DataValueTypeID,texto,118580,0,1,True,,0,VALUE
+LocationID,numérica,118580,0,55,False,,0,1
+StratificationCategory1,texto,118580,0,6,False,,0,Income
+Stratification1,texto,118580,0,28,False,,0,"$15,000 - $24,999"
+StratificationCategoryId1,texto,118580,0,6,False,,0,INC
+StratificationID1,texto,118580,0,28,False,,0,INC1525

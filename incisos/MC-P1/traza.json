@@ -1,0 +1,703 @@
+{
+ "registro": "Registro 05",
+ "archivo": "REGEVEN.xlsx",
+ "eventos": 91,
+ "casos": 10,
+ "actividades": 10,
+ "recursos": 13,
+ "letras": {
+  "a": "solicitud recibida",
+  "b": "identidad validada",
+  "c": "documentos verificados",
+  "d": "corrección solicitada",
+  "e": "cita programada",
+  "f": "entrevista realizada",
+  "g": "orientación brindada",
+  "h": "expediente integrado",
+  "i": "autorización emitida",
+  "j": "cierre registrado"
+ },
+ "trazas": {
+  "1": "abcdcefghij",
+  "2": "acbefhij",
+  "3": "acbefghij",
+  "4": "acbdcefhij",
+  "5": "acbdcefhij",
+  "6": "acbefhij",
+  "7": "acbefhij",
+  "8": "acbefghij",
+  "9": "abcefhij",
+  "10": "abcdcefhij"
+ },
+ "variantes": [
+  {
+   "traza": "acbefhij",
+   "frecuencia": 3,
+   "casos": [
+    "2",
+    "6",
+    "7"
+   ]
+  },
+  {
+   "traza": "acbefghij",
+   "frecuencia": 2,
+   "casos": [
+    "3",
+    "8"
+   ]
+  },
+  {
+   "traza": "acbdcefhij",
+   "frecuencia": 2,
+   "casos": [
+    "4",
+    "5"
+   ]
+  },
+  {
+   "traza": "abcdcefghij",
+   "frecuencia": 1,
+   "casos": [
+    "1"
+   ]
+  },
+  {
+   "traza": "abcefhij",
+   "frecuencia": 1,
+   "casos": [
+    "9"
+   ]
+  },
+  {
+   "traza": "abcdcefhij",
+   "frecuencia": 1,
+   "casos": [
+    "10"
+   ]
+  }
+ ],
+ "dfg": {
+  "a>b": 3,
+  "a>c": 7,
+  "b>c": 3,
+  "b>d": 2,
+  "b>e": 5,
+  "c>b": 7,
+  "c>d": 2,
+  "c>e": 5,
+  "d>c": 4,
+  "e>f": 10,
+  "f>g": 3,
+  "f>h": 7,
+  "g>h": 3,
+  "h>i": 10,
+  "i>j": 10
+ },
+ "inicio": {
+  "a": 10
+ },
+ "fin": {
+  "j": 10
+ },
+ "footprint": {
+  "a,a": "#",
+  "a,b": "->",
+  "a,c": "->",
+  "a,d": "#",
+  "a,e": "#",
+  "a,f": "#",
+  "a,g": "#",
+  "a,h": "#",
+  "a,i": "#",
+  "a,j": "#",
+  "b,a": "<-",
+  "b,b": "#",
+  "b,c": "||",
+  "b,d": "->",
+  "b,e": "->",
+  "b,f": "#",
+  "b,g": "#",
+  "b,h": "#",
+  "b,i": "#",
+  "b,j": "#",
+  "c,a": "<-",
+  "c,b": "||",
+  "c,c": "#",
+  "c,d": "||",
+  "c,e": "->",
+  "c,f": "#",
+  "c,g": "#",
+  "c,h": "#",
+  "c,i": "#",
+  "c,j": "#",
+  "d,a": "#",
+  "d,b": "<-",
+  "d,c": "||",
+  "d,d": "#",
+  "d,e": "#",
+  "d,f": "#",
+  "d,g": "#",
+  "d,h": "#",
+  "d,i": "#",
+  "d,j": "#",
+  "e,a": "#",
+  "e,b": "<-",
+  "e,c": "<-",
+  "e,d": "#",
+  "e,e": "#",
+  "e,f": "->",
+  "e,g": "#",
+  "e,h": "#",
+  "e,i": "#",
+  "e,j": "#",
+  "f,a": "#",
+  "f,b": "#",
+  "f,c": "#",
+  "f,d": "#",
+  "f,e": "<-",
+  "f,f": "#",
+  "f,g": "->",
+  "f,h": "->",
+  "f,i": "#",
+  "f,j": "#",
+  "g,a": "#",
+  "g,b": "#",
+  "g,c": "#",
+  "g,d": "#",
+  "g,e": "#",
+  "g,f": "<-",
+  "g,g": "#",
+  "g,h": "->",
+  "g,i": "#",
+  "g,j": "#",
+  "h,a": "#",
+  "h,b": "#",
+  "h,c": "#",
+  "h,d": "#",
+  "h,e": "#",
+  "h,f": "<-",
+  "h,g": "<-",
+  "h,h": "#",
+  "h,i": "->",
+  "h,j": "#",
+  "i,a": "#",
+  "i,b": "#",
+  "i,c": "#",
+  "i,d": "#",
+  "i,e": "#",
+  "i,f": "#",
+  "i,g": "#",
+  "i,h": "<-",
+  "i,i": "#",
+  "i,j": "->",
+  "j,a": "#",
+  "j,b": "#",
+  "j,c": "#",
+  "j,d": "#",
+  "j,e": "#",
+  "j,f": "#",
+  "j,g": "#",
+  "j,h": "#",
+  "j,i": "<-",
+  "j,j": "#"
+ },
+ "dependencia": {
+  "a=>b": 0.75,
+  "a=>c": 0.875,
+  "b=>c": -0.363636,
+  "b=>d": 0.666667,
+  "b=>e": 0.833333,
+  "c=>b": 0.363636,
+  "c=>d": -0.285714,
+  "c=>e": 0.833333,
+  "d=>c": 0.285714,
+  "e=>f": 0.909091,
+  "f=>g": 0.75,
+  "f=>h": 0.875,
+  "g=>h": 0.75,
+  "h=>i": 0.909091,
+  "i=>j": 0.909091
+ },
+ "bucle2": {
+  "c>>d": 2
+ },
+ "dependencia_bucle2": {
+  "c=>2d": 0.666667
+ },
+ "evidencia": [
+  "Las actividades {c', d} ocurren exactamente en los mismos 4 casos -> un bloque en secuencia.",
+  "Corte de secuencia: {a} -> {b, c} -> {d, c'} -> {e} -> {f} -> {g} -> {h} -> {i} -> {j}.",
+  "Corte paralelo: {b} y {c} se ejecutan en cualquier orden (cada una sigue a la otra) -> AND.",
+  "Bloque {c', d}: 6 de 10 casos no lo ejecutan -> opcional x(tau, bloque).",
+  "Corte de secuencia: {d} -> {c'}.",
+  "Bloque {g}: 7 de 10 casos no lo ejecutan -> opcional x(tau, bloque).",
+  "Retrabajo: el bloque opcional ->(d, c') termina repitiendo c (ya ejecutada) -> bucle loop(tau, ->(d, c)) despues de lo anterior; dep2(c,d) = 0.667 >= 0.5."
+ ],
+ "arbol": "->(a, ∧(b, c), ⟲(τ, ->(d, c)), e, f, x(τ, g), h, i, j)",
+ "arbol_json": {
+  "tipo": "seq",
+  "hijos": [
+   {
+    "tipo": "act",
+    "etiqueta": "a"
+   },
+   {
+    "tipo": "and",
+    "hijos": [
+     {
+      "tipo": "act",
+      "etiqueta": "b"
+     },
+     {
+      "tipo": "act",
+      "etiqueta": "c"
+     }
+    ]
+   },
+   {
+    "tipo": "loop",
+    "hijos": [
+     {
+      "tipo": "tau"
+     },
+     {
+      "tipo": "seq",
+      "hijos": [
+       {
+        "tipo": "act",
+        "etiqueta": "d"
+       },
+       {
+        "tipo": "act",
+        "etiqueta": "c"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "act",
+    "etiqueta": "e"
+   },
+   {
+    "tipo": "act",
+    "etiqueta": "f"
+   },
+   {
+    "tipo": "xor",
+    "hijos": [
+     {
+      "tipo": "tau"
+     },
+     {
+      "tipo": "act",
+      "etiqueta": "g"
+     }
+    ]
+   },
+   {
+    "tipo": "act",
+    "etiqueta": "h"
+   },
+   {
+    "tipo": "act",
+    "etiqueta": "i"
+   },
+   {
+    "tipo": "act",
+    "etiqueta": "j"
+   }
+  ]
+ },
+ "lenguaje_una_vuelta": [
+  "abcdcefghij",
+  "abcdcefhij",
+  "abcefghij",
+  "abcefhij",
+  "acbdcefghij",
+  "acbdcefhij",
+  "acbefghij",
+  "acbefhij"
+ ],
+ "variantes_en_el_lenguaje": true,
+ "red": {
+  "P": [
+   "ini",
+   "p1",
+   "p2",
+   "p3",
+   "p4",
+   "p5",
+   "p6",
+   "p7",
+   "p8",
+   "p9",
+   "p10",
+   "p11",
+   "fin"
+  ],
+  "T": [
+   "a",
+   "b",
+   "c",
+   "τ1",
+   "d",
+   "c′",
+   "e",
+   "f",
+   "τ2",
+   "g",
+   "h",
+   "i",
+   "j"
+  ],
+  "F": [
+   [
+    "ini",
+    "a"
+   ],
+   [
+    "p1",
+    "b"
+   ],
+   [
+    "p2",
+    "c"
+   ],
+   [
+    "p3",
+    "τ1"
+   ],
+   [
+    "p4",
+    "τ1"
+   ],
+   [
+    "p5",
+    "d"
+   ],
+   [
+    "p6",
+    "c′"
+   ],
+   [
+    "p5",
+    "e"
+   ],
+   [
+    "p7",
+    "f"
+   ],
+   [
+    "p8",
+    "τ2"
+   ],
+   [
+    "p8",
+    "g"
+   ],
+   [
+    "p9",
+    "h"
+   ],
+   [
+    "p10",
+    "i"
+   ],
+   [
+    "p11",
+    "j"
+   ],
+   [
+    "a",
+    "p1"
+   ],
+   [
+    "a",
+    "p2"
+   ],
+   [
+    "b",
+    "p3"
+   ],
+   [
+    "c",
+    "p4"
+   ],
+   [
+    "τ1",
+    "p5"
+   ],
+   [
+    "d",
+    "p6"
+   ],
+   [
+    "c′",
+    "p5"
+   ],
+   [
+    "e",
+    "p7"
+   ],
+   [
+    "f",
+    "p8"
+   ],
+   [
+    "τ2",
+    "p9"
+   ],
+   [
+    "g",
+    "p9"
+   ],
+   [
+    "h",
+    "p10"
+   ],
+   [
+    "i",
+    "p11"
+   ],
+   [
+    "j",
+    "fin"
+   ]
+  ],
+  "l": {
+   "a": "a",
+   "b": "b",
+   "c": "c",
+   "τ1": "τ",
+   "d": "d",
+   "c′": "c",
+   "e": "e",
+   "f": "f",
+   "τ2": "τ",
+   "g": "g",
+   "h": "h",
+   "i": "i",
+   "j": "j"
+  },
+  "visibles": 11,
+  "silenciosas": 2,
+  "arcos": 28
+ },
+ "propiedades": {
+  "red_wf": true,
+  "fuentes": [
+   "ini"
+  ],
+  "sumideros": [
+   "fin"
+  ],
+  "fuertemente_conexa_con_t*": true,
+  "marcas": 13,
+  "arcos_alcanzabilidad": 15,
+  "exploracion_completa": true,
+  "segura": true,
+  "cota": 1,
+  "opcion_de_completar": true,
+  "terminacion_propia": true,
+  "transiciones_muertas": [],
+  "solida": true,
+  "libre_eleccion": true,
+  "maquina_de_estados": false,
+  "grafo_marcado": false,
+  "lugares_con_eleccion": [
+   "p5",
+   "p8"
+  ],
+  "transiciones_con_division": [
+   "a"
+  ],
+  "transiciones_con_sincronizacion": [
+   "τ1"
+  ]
+ },
+ "marcas": [
+  "[fin]",
+  "[ini]",
+  "[p1, p2]",
+  "[p1, p4]",
+  "[p10]",
+  "[p11]",
+  "[p2, p3]",
+  "[p3, p4]",
+  "[p5]",
+  "[p6]",
+  "[p7]",
+  "[p8]",
+  "[p9]"
+ ],
+ "replay": {
+  "por_caso": {
+   "1": [
+    14,
+    14,
+    0,
+    0
+   ],
+   "2": [
+    12,
+    12,
+    0,
+    0
+   ],
+   "3": [
+    12,
+    12,
+    0,
+    0
+   ],
+   "4": [
+    14,
+    14,
+    0,
+    0
+   ],
+   "5": [
+    14,
+    14,
+    0,
+    0
+   ],
+   "6": [
+    12,
+    12,
+    0,
+    0
+   ],
+   "7": [
+    12,
+    12,
+    0,
+    0
+   ],
+   "8": [
+    12,
+    12,
+    0,
+    0
+   ],
+   "9": [
+    12,
+    12,
+    0,
+    0
+   ],
+   "10": [
+    14,
+    14,
+    0,
+    0
+   ]
+  },
+  "p": 128,
+  "c": 128,
+  "m": 0,
+  "r": 0,
+  "fitness": 1.0
+ },
+ "denominacion": "Red de Petri etiquetada: red WF (flujo de trabajo), sólida, segura (1-acotada), de libre elección; no es máquina de estados y no es grafo marcado.",
+ "recursos_por_actividad": {
+  "a": {
+   "Nora": 3,
+   "Luis": 2,
+   "Ana": 5
+  },
+  "b": {
+   "Julia": 8,
+   "Raúl": 2
+  },
+  "c": {
+   "Elena": 3,
+   "Marco": 4,
+   "Pilar": 7
+  },
+  "d": {
+   "Luis": 4
+  },
+  "e": {
+   "Pilar": 5,
+   "Elena": 5
+  },
+  "f": {
+   "Celia": 4,
+   "Óscar": 6
+  },
+  "g": {
+   "Óscar": 2,
+   "Celia": 1
+  },
+  "h": {
+   "Marta": 7,
+   "Iván": 3
+  },
+  "i": {
+   "Sofía": 10
+  },
+  "j": {
+   "Iván": 7,
+   "Marta": 3
+  }
+ },
+ "costo_por_actividad": {
+  "a": [
+   40
+  ],
+  "b": [
+   70
+  ],
+  "c": [
+   85
+  ],
+  "d": [
+   65
+  ],
+  "e": [
+   45
+  ],
+  "f": [
+   150
+  ],
+  "g": [
+   120
+  ],
+  "h": [
+   90
+  ],
+  "i": [
+   110
+  ],
+  "j": [
+   35
+  ]
+ },
+ "duracion_dias": {
+  "1": 11.00625,
+  "2": 8.82638888888889,
+  "3": 10.375,
+  "4": 10.359027777777778,
+  "5": 12.328472222222222,
+  "6": 9.625694444444445,
+  "7": 8.475,
+  "8": 8.914583333333333,
+  "9": 8.259722222222223,
+  "10": 12.370833333333334
+ },
+ "costo_por_caso": {
+  "1": 895,
+  "2": 625,
+  "3": 745,
+  "4": 775,
+  "5": 775,
+  "6": 625,
+  "7": 625,
+  "8": 745,
+  "9": 625,
+  "10": 775
+ }
+}

@@ -1,0 +1,37 @@
+digraph ID3 {
+  rankdir=LR; nodesep=0.12; ranksep=0.9; pad=0.2;
+  node [fontname="Helvetica", fontsize=10]; edge [fontname="Helvetica", fontsize=9];
+  labelloc="t"; fontname="Helvetica"; fontsize=14;
+  label=<<b>Árbol ID3 de mínima entropía - gastank (clase: Type)</b><br/><font point-size="11">EHP=Electric Heat Pump · GS=Gas Storage · GSI=Gas Storage-type Instantaneous · GT=Gas Tankless</font>>;
+  n1 [shape=ellipse, style=filled, fillcolor="#FFF4D6", label=<<b>Ventilacion</b><br/>n=737 · H=1.556>];
+  n2 [shape=ellipse, style=filled, fillcolor="#FFF4D6", label=<<b>Combustible</b><br/>n=170 · H=0.571>];
+  n3 [shape=box, style="rounded,filled", fillcolor="#DDEFD9", label=<<b>EHP</b><br/>n=1 · aciertos=1<br/>H=0.000>];
+  n2 -> n3 [label="Electric"];
+  n4 [shape=box, style="rounded,filled", fillcolor="#EFE0F5", label=<<b>GT</b><br/>n=48 · aciertos=47<br/>H=0.146>];
+  n2 -> n4 [label="Gas"];
+  n5 [shape=box, style="rounded,filled", fillcolor="#EFE0F5", label=<<b>GT</b><br/>n=110 · aciertos=93<br/>H=0.621>];
+  n2 -> n5 [label="Gas, Propane"];
+  n6 [shape=box, style="rounded,filled", fillcolor="#EFE0F5", label=<<b>GT</b><br/>n=11 · aciertos=11<br/>H=0.000>];
+  n2 -> n6 [label="Propane"];
+  n1 -> n2 [label="Direct Vent"];
+  n7 [shape=box, style="rounded,filled", fillcolor="#DCE8F7", label=<<b>GS</b><br/>n=376 · aciertos=354<br/>H=0.377>];
+  n1 -> n7 [label="Power Direct Vent"];
+  n8 [shape=ellipse, style=filled, fillcolor="#FFF4D6", label=<<b>Combustible</b><br/>n=40 · H=1.571>];
+  n9 [shape=box, style="rounded,filled", fillcolor="#EFE0F5", label=<<b>GT</b><br/>n=22 · aciertos=12<br/>H=1.449>];
+  n8 -> n9 [label="Gas"];
+  n10 [shape=box, style="rounded,filled", fillcolor="#DCE8F7", label=<<b>GS</b><br/>n=10 · aciertos=8<br/>H=0.722>];
+  n8 -> n10 [label="Gas, Propane"];
+  n11 [shape=box, style="rounded,filled", fillcolor="#F8E3D2", label=<<b>GSI</b><br/>n=8 · aciertos=5<br/>H=0.954>];
+  n8 -> n11 [label="Propane"];
+  n1 -> n8 [label="Power Vent"];
+  n12 [shape=ellipse, style=filled, fillcolor="#FFF4D6", label=<<b>Combustible</b><br/>n=151 · H=1.840>];
+  n13 [shape=box, style="rounded,filled", fillcolor="#DDEFD9", label=<<b>EHP</b><br/>n=67 · aciertos=67<br/>H=0.000>];
+  n12 -> n13 [label="Electric"];
+  n14 [shape=box, style="rounded,filled", fillcolor="#EFE0F5", label=<<b>GT</b><br/>n=5 · aciertos=3<br/>H=0.971>];
+  n12 -> n14 [label="Gas"];
+  n15 [shape=box, style="rounded,filled", fillcolor="#EFE0F5", label=<<b>GT</b><br/>n=77 · aciertos=36<br/>H=1.529>];
+  n12 -> n15 [label="Gas, Propane"];
+  n16 [shape=box, style="rounded,filled", fillcolor="#DCE8F7", label=<<b>GS</b><br/>n=2 · aciertos=2<br/>H=0.000>];
+  n12 -> n16 [label="Propane"];
+  n1 -> n12 [label="Sin especificar"];
+}

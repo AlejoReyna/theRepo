@@ -1,0 +1,2 @@
+{"problema": "OD/AM R.pdf p.48 y p.53 con OD/BR (2).csv: KNN k = 3 (semilla 42, 75 % entrenamiento) y k por validación cruzada de 10 pliegues", "archivo": "BR.csv",
+ "columnas": ["recamaras", "baños", "m2_construcción", "m2_terreno", "pisos", "condición"], "k": 3, "k_valores": [1, 3, 5, 7, 9, 11, 13, 15], "punto_excel": 1}

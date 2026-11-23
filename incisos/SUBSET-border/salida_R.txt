@@ -1,0 +1,50 @@
+Faltantes por columna (colSums(is.na())):
+Port Name     State Port Code    Border      Date   Measure     Value  Latitude Longitude     Point 
+        0         0         0         0         0         0         0         0         0         0 
+P0   Carga del archivo original                                     394866 filas  10 columnas
+B1   State == Texas (p.12)                                           41946 filas  10 columnas
+  Port Name State Port Code           Border     Date                     Measure  Value Latitude Longitude                                      Point
+1      Roma Texas      2310 US-Mexico Border Dec 2023                       Buses     46   26.404   -99.019               POINT (-99.018981 26.403928)
+2   Del Rio Texas      2302 US-Mexico Border Dec 2023                      Trucks   6552   29.327  -100.928              POINT (-100.927612 29.326784)
+5    Ysleta Texas      2401 US-Mexico Border Jan 2024 Personal Vehicle Passengers 521714   31.673  -106.335 POINT (-106.335449846028 31.6731261376859)
+B2   Texas y Trucks (p.13)                                            3783 filas  10 columnas
+    Port Name State Port Code           Border     Date Measure Value Latitude Longitude                         Point
+2     Del Rio Texas      2302 US-Mexico Border Dec 2023  Trucks  6552   29.327  -100.928 POINT (-100.927612 29.326784)
+107      Roma Texas      2310 US-Mexico Border Jan 2024  Trucks  3553   26.404   -99.019  POINT (-99.018981 26.403928)
+198  Progreso Texas      2309 US-Mexico Border Jan 2024  Trucks  4423   26.062   -97.950  POINT (-97.949958 26.062133)
+B3   df[, c(Port Name, Value)] (p.13)                               394866 filas   2 columnas
+     Port Name Value
+1         Roma    46
+2      Del Rio  6552
+3 Willow Creek     2
+B4   Arizona con select (p.14)                                       22091 filas   2 columnas
+   Port Name  Value
+39   Nogales 311743
+60    Sasabe    953
+76   Nogales    779
+B5   State != Texas (p.14)                                          352920 filas  10 columnas
+     Port Name     State Port Code           Border     Date           Measure Value Latitude Longitude                         Point
+3 Willow Creek   Montana      3325 US-Canada Border Jan 2024       Pedestrians     2   49.000  -109.731 POINT (-109.731333 48.999972)
+4     Whitlash   Montana      3321 US-Canada Border Jan 2024 Personal Vehicles    29   48.997  -111.258  POINT (-111.257916 48.99725)
+6      Warroad Minnesota      3423 US-Canada Border Jan 2024            Trucks   837   48.999   -95.377     POINT (-95.376555 48.999)
+B6   Texas o Arizona (p.15)                                          64037 filas  10 columnas
+  Port Name State Port Code           Border     Date                     Measure  Value Latitude Longitude                                      Point
+1      Roma Texas      2310 US-Mexico Border Dec 2023                       Buses     46   26.404   -99.019               POINT (-99.018981 26.403928)
+2   Del Rio Texas      2302 US-Mexico Border Dec 2023                      Trucks   6552   29.327  -100.928              POINT (-100.927612 29.326784)
+5    Ysleta Texas      2401 US-Mexico Border Jan 2024 Personal Vehicle Passengers 521714   31.673  -106.335 POINT (-106.335449846028 31.6731261376859)
+B7   500 <= Value <= 5000 (p.15)                                     76446 filas  10 columnas
+   Port Name     State Port Code           Border     Date                     Measure Value Latitude Longitude                         Point
+6    Warroad Minnesota      3423 US-Canada Border Jan 2024                      Trucks   837   48.999   -95.377     POINT (-95.376555 48.999)
+8  Wildhorse   Montana      3323 US-Canada Border Jan 2024 Personal Vehicle Passengers   965   48.999  -110.215 POINT (-110.215083 48.999361)
+13 Wildhorse   Montana      3323 US-Canada Border Jan 2024           Personal Vehicles   519   48.999  -110.215 POINT (-110.215083 48.999361)
+
+Bitacora:
+ paso                        operacion  filas columnas
+   P0       Carga del archivo original 394866       10
+   B1            State == Texas (p.12)  41946       10
+   B2            Texas y Trucks (p.13)   3783       10
+   B3 df[, c(Port Name, Value)] (p.13) 394866        2
+   B4        Arizona con select (p.14)  22091        2
+   B5            State != Texas (p.14) 352920       10
+   B6           Texas o Arizona (p.15)  64037       10
+   B7      500 <= Value <= 5000 (p.15)  76446       10

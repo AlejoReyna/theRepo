@@ -1,0 +1,4 @@
+"Algoritmo","Criterio","K"
+"K-means","WSS",4
+"K-means","Silueta",2
+"K-means","Gap",1

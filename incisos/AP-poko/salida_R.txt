@@ -1,0 +1,43 @@
+transactions in sparse format with
+ 6 transactions (rows) and
+ 88 items (columns)
+transactions as itemMatrix in sparse format with
+ 50 rows (elements/itemsets/transactions) and
+ 88 columns (items) and a density of 0.07204545 
+
+most frequent items:
+           Fabric=Yes        Soft stuff=Yes    Category=Furniture Ingame Cat=Relaxation        Category=Misc.               (Other) 
+                   40                    28                    24                    23                    16                   186 
+
+element (itemset/transaction) length distribution:
+sizes
+ 3  4  5  6  7  8  9 
+ 1  2  8 20  9  7  3 
+
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   3.00    6.00    6.00    6.34    7.00    9.00 
+
+includes extended item information - examples:
+                    labels variables              levels
+1 Name=Aged-stone flooring      Name Aged-stone flooring
+2     Name=Air conditioner      Name     Air conditioner
+3         Name=Alarm Clock      Name         Alarm Clock
+
+includes extended transaction information - examples:
+  transactionID
+1             1
+2             2
+3             3
+
+Reglas: 18686 (con antecedente vacio: 16)
+     lhs                           rhs                        support confidence coverage lift count
+[1]  {Category=Blocks}          => {Name=Aged-stone flooring} 0.02    1          0.02     50   1    
+[2]  {Name=Aged-stone flooring} => {Category=Blocks}          0.02    1          0.02     50   1    
+[3]  {Name=Party bunting}       => {Gatherings=No}            0.02    1          0.02     50   1    
+[4]  {Gatherings=No}            => {Name=Party bunting}       0.02    1          0.02     50   1    
+[5]  {Name=Plain lamp}          => {Category=Utilities}       0.02    1          0.02     50   1    
+[6]  {Category=Utilities}       => {Name=Plain lamp}          0.02    1          0.02     50   1    
+[7]  {Name=Air conditioner}     => {Nice breezes=Yes}         0.02    1          0.02     50   1    
+[8]  {Nice breezes=Yes}         => {Name=Air conditioner}     0.02    1          0.02     50   1    
+[9]  {Name=Punching bag}        => {Exercise=Yes}             0.02    1          0.02     50   1    
+[10] {Exercise=Yes}             => {Name=Punching bag}        0.02    1          0.02     50   1    

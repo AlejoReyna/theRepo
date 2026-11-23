@@ -1,0 +1,38 @@
+{
+ "problema": "AD25-11 p.9 Table 10: matriz de confusión de prueba (T4)",
+ "origen": "tabla",
+ "caret_literal_p50": {
+  "Accuracy": 0.855421686746988,
+  "Kappa": 0.701438848920863,
+  "Sensitivity": 1.0,
+  "Specificity": 0.68421052631579,
+  "PPV": 0.789473684210526,
+  "NPV": 1.0,
+  "Precision": 0.789473684210526,
+  "Recall": 1.0,
+  "F1": 0.88235294117647
+ },
+ "inconsistencias": [
+  "N de las fórmulas = 83 ≠ 87 datos de prueba declarados",
+  "la tabla publicada pone TP = 55 y las fórmulas usan 45",
+  "la tabla publicada suma 93 ≠ 87"
+ ],
+ "TP": 45,
+ "FN": 12,
+ "FP": 0,
+ "TN": 26,
+ "metricas": {
+  "N": 83.0,
+  "p": 57.0,
+  "n": 26.0,
+  "p'": 45.0,
+  "n'": 38.0,
+  "Accuracy": 0.8554216867469879,
+  "Kappa": 0.7014388489208633,
+  "Recall": 0.7894736842105263,
+  "Specificity": 1.0,
+  "Precision": 1.0,
+  "NPV": 0.6842105263157895,
+  "F1": 0.8823529411764706
+ }
+}

@@ -1,0 +1,26 @@
+Faltantes por columna (colSums(is.na())):
+  Ozone Solar.R    Wind    Temp 
+      6       1       0       1 
+P0   Carga del archivo original                                         29 filas   4 columnas
+A1   Ozone sin NA (p.5-6)                                               23 filas   4 columnas
+  Ozone Solar.R Wind Temp
+1    32     236  9.2   81
+3    64     175  4.6   83
+4    40     314 10.9   83
+A2   complete.cases(ozone, solar) (p.7-8)                               22 filas   4 columnas
+  Ozone Solar.R Wind Temp
+1    32     236  9.2   81
+3    64     175  4.6   83
+4    40     314 10.9   83
+A3   complete.cases(datos) (p.9)                                        21 filas   4 columnas
+  Ozone Solar.R Wind Temp
+1    32     236  9.2   81
+3    64     175  4.6   83
+4    40     314 10.9   83
+
+Bitacora:
+ paso                            operacion filas columnas
+   P0           Carga del archivo original    29        4
+   A1                 Ozone sin NA (p.5-6)    23        4
+   A2 complete.cases(ozone, solar) (p.7-8)    22        4
+   A3          complete.cases(datos) (p.9)    21        4

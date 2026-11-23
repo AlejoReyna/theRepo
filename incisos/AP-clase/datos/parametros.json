@@ -1,0 +1,73 @@
+{
+ "problema": "Ejercicio de clase OD/AP (1).xlsx: reglas entre HeartDisease, Smoking, AlcoholDrinking y Stroke",
+ "archivo": "ap_clase.csv",
+ "columnas": [
+  "HeartDisease",
+  "Smoking",
+  "AlcoholDrinking",
+  "Stroke"
+ ],
+ "soporte": 0.01,
+ "confianza": 0.1,
+ "reglas_pedidas": [
+  {
+   "si": [
+    "HeartDisease=No"
+   ],
+   "entonces": "Smoking=No"
+  },
+  {
+   "si": [
+    "HeartDisease=No"
+   ],
+   "entonces": "Smoking=Yes"
+  },
+  {
+   "si": [
+    "Smoking=No"
+   ],
+   "entonces": "HeartDisease=No"
+  },
+  {
+   "si": [
+    "Smoking=No"
+   ],
+   "entonces": "HeartDisease=Yes"
+  },
+  {
+   "si": [
+    "HeartDisease=Yes"
+   ],
+   "entonces": "Smoking=No"
+  },
+  {
+   "si": [
+    "HeartDisease=Yes"
+   ],
+   "entonces": "Smoking=Yes"
+  },
+  {
+   "si": [
+    "Smoking=Yes"
+   ],
+   "entonces": "HeartDisease=No"
+  },
+  {
+   "si": [
+    "Smoking=Yes"
+   ],
+   "entonces": "HeartDisease=Yes"
+  }
+ ],
+ "composicion": [
+  {
+   "si": [
+    "HeartDisease=No"
+   ],
+   "entonces": [
+    "AlcoholDrinking=No",
+    "Smoking=No"
+   ]
+  }
+ ]
+}

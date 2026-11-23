@@ -1,0 +1,7 @@
+"Algoritmo","Criterio","K"
+"PAM","WSS",5
+"PAM","Silueta",2
+"PAM","Gap",1
+"CLARA","WSS",5
+"CLARA","Silueta",2
+"CLARA","Gap",1

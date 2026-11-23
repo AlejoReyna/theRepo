@@ -1,0 +1,509 @@
+{
+ "problema": "MC AD26 problema 2: tratamiento de export.csv con subsettings variados",
+ "objetivo": "Clasificar el nivel de obesidad adulta (Baja < 30 %, Media 30-35 %, Alta >= 35 %) de cada estado x año con sus indicadores de actividad física (Q043-Q047)",
+ "archivo": "export.csv",
+ "bitacora": [
+  {
+   "paso": "P0",
+   "operacion": "Carga del archivo original",
+   "filas": 118580,
+   "columnas": 33
+  },
+  {
+   "paso": "P1",
+   "operacion": "Eliminar columnas constantes, duplicadas, dispersas y códigos",
+   "filas": 118580,
+   "columnas": 13
+  },
+  {
+   "paso": "P2a",
+   "operacion": "Sample_Size: texto con comas -> número",
+   "filas": 118580,
+   "columnas": 13
+  },
+  {
+   "paso": "P2b",
+   "operacion": "GeoLocation -> Latitud y Longitud",
+   "filas": 118580,
+   "columnas": 14
+  },
+  {
+   "paso": "P2c",
+   "operacion": "Ancho_IC = High - Low",
+   "filas": 118580,
+   "columnas": 15
+  },
+  {
+   "paso": "P2",
+   "operacion": "YearStart -> Anio",
+   "filas": 118580,
+   "columnas": 15
+  },
+  {
+   "paso": "P3a",
+   "operacion": "Quitar filas sin valor (suprimidas por muestra insuficiente)",
+   "filas": 104119,
+   "columnas": 15
+  },
+  {
+   "paso": "P3",
+   "operacion": "Quitar el símbolo de supresión (ya constante)",
+   "filas": 104119,
+   "columnas": 14
+  },
+  {
+   "paso": "P4",
+   "operacion": "Solo 50 estados + DC",
+   "filas": 98673,
+   "columnas": 14
+  },
+  {
+   "paso": "P5",
+   "operacion": "Quitar estimaciones imprecisas (IC > 20)",
+   "filas": 90650,
+   "columnas": 14
+  },
+  {
+   "paso": "P6",
+   "operacion": "Estrato Total (nivel estatal)",
+   "filas": 3881,
+   "columnas": 14
+  },
+  {
+   "paso": "P7",
+   "operacion": "Obesidad (Q036) y actividad física (Q043-Q047)",
+   "filas": 2726,
+   "columnas": 14
+  },
+  {
+   "paso": "P8",
+   "operacion": "Años con todas las preguntas",
+   "filas": 1818,
+   "columnas": 14,
+   "comunes": [
+    2011,
+    2013,
+    2015,
+    2017,
+    2019,
+    2023
+   ]
+  },
+  {
+   "paso": "P9",
+   "operacion": "Pivoteo largo -> ancho (reshape)",
+   "filas": 303,
+   "columnas": 9
+  },
+  {
+   "paso": "P10",
+   "operacion": "Eliminar estado-año incompletos",
+   "filas": 303,
+   "columnas": 9
+  },
+  {
+   "paso": "P11",
+   "operacion": "Obesidad 2025, todos los estratos",
+   "filas": 1113,
+   "columnas": 5
+  },
+  {
+   "paso": "P10c",
+   "operacion": "Clase nivel_obesidad con cut()",
+   "filas": 303,
+   "columnas": 10
+  },
+  {
+   "paso": "P12",
+   "operacion": "Muestra de entrenamiento (70 %)",
+   "filas": 212,
+   "columnas": 10
+  },
+  {
+   "paso": "P13",
+   "operacion": "Muestra de prueba (30 %)",
+   "filas": 91,
+   "columnas": 10
+  }
+ ],
+ "perfil": [
+  {
+   "columna": "YearStart",
+   "tipo": "numérica",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 15,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "2011"
+  },
+  {
+   "columna": "YearEnd",
+   "tipo": "numérica",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 15,
+   "constante": false,
+   "igual_a": "YearStart",
+   "numeros_con_coma": 0,
+   "ejemplo": "2011"
+  },
+  {
+   "columna": "LocationAbbr",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 55,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "AL"
+  },
+  {
+   "columna": "LocationDesc",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 55,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Alabama"
+  },
+  {
+   "columna": "Datasource",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 1,
+   "constante": true,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Behavioral Risk Factor Surveillance Syst"
+  },
+  {
+   "columna": "Class",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 3,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Obesity / Weight Status"
+  },
+  {
+   "columna": "Topic",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 3,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Obesity / Weight Status"
+  },
+  {
+   "columna": "Question",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 9,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Percent of adults aged 18 years and olde"
+  },
+  {
+   "columna": "Data_Value_Unit",
+   "tipo": "texto",
+   "no_na": 12320,
+   "na": 106260,
+   "distintos": 1,
+   "constante": true,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "%"
+  },
+  {
+   "columna": "Data_Value_Type",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 1,
+   "constante": true,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Value"
+  },
+  {
+   "columna": "Data_Value",
+   "tipo": "numérica",
+   "no_na": 104119,
+   "na": 14461,
+   "distintos": 725,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "34.8"
+  },
+  {
+   "columna": "Data_Value_Alt",
+   "tipo": "numérica",
+   "no_na": 104119,
+   "na": 14461,
+   "distintos": 725,
+   "constante": false,
+   "igual_a": "Data_Value",
+   "numeros_con_coma": 0,
+   "ejemplo": "34.8"
+  },
+  {
+   "columna": "Data_Value_Footnote_Symbol",
+   "tipo": "texto",
+   "no_na": 14461,
+   "na": 104119,
+   "distintos": 2,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "-"
+  },
+  {
+   "columna": "Data_Value_Footnote",
+   "tipo": "texto",
+   "no_na": 14461,
+   "na": 104119,
+   "distintos": 1,
+   "constante": true,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Data not available because sample size i"
+  },
+  {
+   "columna": "Low_Confidence_Limit",
+   "tipo": "numérica",
+   "no_na": 104119,
+   "na": 14461,
+   "distintos": 702,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "31.3"
+  },
+  {
+   "columna": "High_Confidence_Limit",
+   "tipo": "numérica",
+   "no_na": 104119,
+   "na": 14461,
+   "distintos": 794,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "38.5"
+  },
+  {
+   "columna": "Sample_Size",
+   "tipo": "texto",
+   "no_na": 104119,
+   "na": 14461,
+   "distintos": 10615,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 54140,
+   "ejemplo": "1,367"
+  },
+  {
+   "columna": "Total",
+   "tipo": "texto",
+   "no_na": 4235,
+   "na": 114345,
+   "distintos": 1,
+   "constante": true,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Total"
+  },
+  {
+   "columna": "Age(years)",
+   "tipo": "texto",
+   "no_na": 25410,
+   "na": 93170,
+   "distintos": 6,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "18 - 24"
+  },
+  {
+   "columna": "Education",
+   "tipo": "texto",
+   "no_na": 16940,
+   "na": 101640,
+   "distintos": 5,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "College graduate"
+  },
+  {
+   "columna": "Sex",
+   "tipo": "texto",
+   "no_na": 8470,
+   "na": 110110,
+   "distintos": 2,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Female"
+  },
+  {
+   "columna": "Income",
+   "tipo": "texto",
+   "no_na": 29645,
+   "na": 88935,
+   "distintos": 7,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "$15,000 - $24,999"
+  },
+  {
+   "columna": "Race/Ethnicity",
+   "tipo": "texto",
+   "no_na": 33880,
+   "na": 84700,
+   "distintos": 8,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Non-Hispanic 2 or more races"
+  },
+  {
+   "columna": "GeoLocation",
+   "tipo": "texto",
+   "no_na": 116424,
+   "na": 2156,
+   "distintos": 105,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "    (32.840571122, -86.631860762)"
+  },
+  {
+   "columna": "ClassID",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 3,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "OWS"
+  },
+  {
+   "columna": "TopicID",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 3,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "OWS1"
+  },
+  {
+   "columna": "QuestionID",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 9,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Q036"
+  },
+  {
+   "columna": "DataValueTypeID",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 1,
+   "constante": true,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "VALUE"
+  },
+  {
+   "columna": "LocationID",
+   "tipo": "numérica",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 55,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "1"
+  },
+  {
+   "columna": "StratificationCategory1",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 6,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "Income"
+  },
+  {
+   "columna": "Stratification1",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 28,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "$15,000 - $24,999"
+  },
+  {
+   "columna": "StratificationCategoryId1",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 6,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "INC"
+  },
+  {
+   "columna": "StratificationID1",
+   "tipo": "texto",
+   "no_na": 118580,
+   "na": 0,
+   "distintos": 28,
+   "constante": false,
+   "igual_a": "",
+   "numeros_con_coma": 0,
+   "ejemplo": "INC1525"
+  }
+ ],
+ "final": {
+  "filas": 91,
+  "columnas": [
+   "LocationAbbr",
+   "LocationDesc",
+   "Anio",
+   "Data_Value.Q036",
+   "Data_Value.Q043",
+   "Data_Value.Q044",
+   "Data_Value.Q045",
+   "Data_Value.Q046",
+   "Data_Value.Q047",
+   "nivel_obesidad"
+  ]
+ }
+}

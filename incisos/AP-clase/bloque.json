@@ -1,0 +1,566 @@
+{
+ "id": "AP-clase",
+ "metodo": "Apriori",
+ "titulo": "Reglas de asociación con Apriori",
+ "enunciado": "Se pide obtener las reglas de asociación entre HeartDisease, Smoking, AlcoholDrinking y Stroke con soporte mínimo 0.01 y confianza mínima 0.1, y evaluar las reglas del ejercicio de clase.",
+ "datos": [
+  [
+   "Dato",
+   "Valor",
+   "Dato",
+   "Valor"
+  ],
+  [
+   "Transacciones",
+   "50",
+   "Columnas",
+   "4"
+  ],
+  [
+   "Soporte mínimo",
+   "0.01",
+   "Confianza mínima",
+   "0.1"
+  ]
+ ],
+ "cajas": [
+  {
+   "titulo": "Ítems",
+   "texto": "Cada celda columna=valor es un ítem.",
+   "cita": 1
+  },
+  {
+   "titulo": "Nivel 1",
+   "texto": "Contar los ítems y quedarse con S ≥ 0.01.",
+   "cita": 2
+  },
+  {
+   "titulo": "Niveles k",
+   "texto": "Combinar los frecuentes del nivel anterior.",
+   "cita": 2
+  },
+  {
+   "titulo": "Reglas",
+   "texto": "Generar X ⇒ Y con C ≥ 0.1.",
+   "cita": 1
+  },
+  {
+   "titulo": "Medidas",
+   "texto": "S, C y L de las reglas pedidas.",
+   "cita": 1
+  }
+ ],
+ "fuentes": [
+  "OD/AP (1).xlsx I2:O11 (S, C y L).",
+  "EJ26-24 p.6 (Apriori por niveles).",
+  "OD/arules R (2).txt (umbrales)."
+ ],
+ "pasos": [
+  {
+   "titulo": "Paso 1 Itemsets frecuentes de tamaño 1",
+   "texto": "Itemsets de 1 ítems con soporte ≥ 0.01: 8 (todo subconjunto de un itemset frecuente es frecuente).",
+   "tablas": [
+    [
+     [
+      "Itemset",
+      "Frecuencia",
+      "Soporte"
+     ],
+     [
+      "AlcoholDrinking=No",
+      "46",
+      "0.9200"
+     ],
+     [
+      "Stroke=No",
+      "46",
+      "0.9200"
+     ],
+     [
+      "HeartDisease=No",
+      "44",
+      "0.8800"
+     ],
+     [
+      "Smoking=No",
+      "25",
+      "0.5000"
+     ],
+     [
+      "Smoking=Yes",
+      "25",
+      "0.5000"
+     ],
+     [
+      "HeartDisease=Yes",
+      "6",
+      "0.1200"
+     ],
+     [
+      "Stroke=Yes",
+      "4",
+      "0.0800"
+     ],
+     [
+      "AlcoholDrinking=Yes",
+      "3",
+      "0.0600"
+     ]
+    ]
+   ]
+  },
+  {
+   "titulo": "Paso 2 Itemsets frecuentes de tamaño 2",
+   "texto": "Itemsets de 2 ítems con soporte ≥ 0.01: 22 (todo subconjunto de un itemset frecuente es frecuente).",
+   "tablas": [
+    [
+     [
+      "Itemset",
+      "Frecuencia",
+      "Soporte"
+     ],
+     [
+      "AlcoholDrinking=No, Stroke=No",
+      "42",
+      "0.8400"
+     ],
+     [
+      "HeartDisease=No, Stroke=No",
+      "41",
+      "0.8200"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=No",
+      "40",
+      "0.8000"
+     ],
+     [
+      "AlcoholDrinking=No, Smoking=Yes",
+      "24",
+      "0.4800"
+     ],
+     [
+      "HeartDisease=No, Smoking=No",
+      "24",
+      "0.4800"
+     ],
+     [
+      "Smoking=No, Stroke=No",
+      "24",
+      "0.4800"
+     ],
+     [
+      "AlcoholDrinking=No, Smoking=No",
+      "22",
+      "0.4400"
+     ],
+     [
+      "Smoking=Yes, Stroke=No",
+      "22",
+      "0.4400"
+     ],
+     [
+      "HeartDisease=No, Smoking=Yes",
+      "20",
+      "0.4000"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=Yes",
+      "6",
+      "0.1200"
+     ],
+     [
+      "HeartDisease=Yes, Smoking=Yes",
+      "5",
+      "0.1000"
+     ],
+     [
+      "HeartDisease=Yes, Stroke=No",
+      "5",
+      "0.1000"
+     ],
+     [
+      "AlcoholDrinking=No, Stroke=Yes",
+      "4",
+      "0.0800"
+     ],
+     [
+      "AlcoholDrinking=Yes, HeartDisease=No",
+      "3",
+      "0.0600"
+     ],
+     [
+      "AlcoholDrinking=Yes, Stroke=No",
+      "3",
+      "0.0600"
+     ],
+     [
+      "HeartDisease=No, Stroke=Yes",
+      "3",
+      "0.0600"
+     ],
+     [
+      "Smoking=Yes, Stroke=Yes",
+      "3",
+      "0.0600"
+     ],
+     [
+      "AlcoholDrinking=Yes, Smoking=No",
+      "2",
+      "0.0400"
+     ],
+     [
+      "AlcoholDrinking=Yes, Smoking=Yes",
+      "1",
+      "0.0200"
+     ],
+     [
+      "HeartDisease=Yes, Smoking=No",
+      "1",
+      "0.0200"
+     ],
+     [
+      "HeartDisease=Yes, Stroke=Yes",
+      "1",
+      "0.0200"
+     ],
+     [
+      "Smoking=No, Stroke=Yes",
+      "1",
+      "0.0200"
+     ]
+    ]
+   ]
+  },
+  {
+   "titulo": "Paso 3 Itemsets frecuentes de tamaño 3",
+   "texto": "Itemsets de 3 ítems con soporte ≥ 0.01: 24 (todo subconjunto de un itemset frecuente es frecuente).",
+   "tablas": [
+    [
+     [
+      "Itemset",
+      "Frecuencia",
+      "Soporte"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=No, Stroke=No",
+      "37",
+      "0.7400"
+     ],
+     [
+      "HeartDisease=No, Smoking=No, Stroke=No",
+      "23",
+      "0.4600"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=No, Smoking=No",
+      "21",
+      "0.4200"
+     ],
+     [
+      "AlcoholDrinking=No, Smoking=No, Stroke=No",
+      "21",
+      "0.4200"
+     ],
+     [
+      "AlcoholDrinking=No, Smoking=Yes, Stroke=No",
+      "21",
+      "0.4200"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=No, Smoking=Yes",
+      "19",
+      "0.3800"
+     ],
+     [
+      "HeartDisease=No, Smoking=Yes, Stroke=No",
+      "18",
+      "0.3600"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=Yes, Smoking=Yes",
+      "5",
+      "0.1000"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=Yes, Stroke=No",
+      "5",
+      "0.1000"
+     ],
+     [
+      "HeartDisease=Yes, Smoking=Yes, Stroke=No",
+      "4",
+      "0.0800"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=No, Stroke=Yes",
+      "3",
+      "0.0600"
+     ],
+     [
+      "AlcoholDrinking=No, Smoking=Yes, Stroke=Yes",
+      "3",
+      "0.0600"
+     ],
+     [
+      "AlcoholDrinking=Yes, HeartDisease=No, Stroke=No",
+      "3",
+      "0.0600"
+     ],
+     [
+      "AlcoholDrinking=Yes, HeartDisease=No, Smoking=No",
+      "2",
+      "0.0400"
+     ],
+     [
+      "AlcoholDrinking=Yes, Smoking=No, Stroke=No",
+      "2",
+      "0.0400"
+     ],
+     [
+      "HeartDisease=No, Smoking=Yes, Stroke=Yes",
+      "2",
+      "0.0400"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=Yes, Smoking=No",
+      "1",
+      "0.0200"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=Yes, Stroke=Yes",
+      "1",
+      "0.0200"
+     ],
+     [
+      "AlcoholDrinking=No, Smoking=No, Stroke=Yes",
+      "1",
+      "0.0200"
+     ],
+     [
+      "AlcoholDrinking=Yes, HeartDisease=No, Smoking=Yes",
+      "1",
+      "0.0200"
+     ],
+     [
+      "AlcoholDrinking=Yes, Smoking=Yes, Stroke=No",
+      "1",
+      "0.0200"
+     ],
+     [
+      "HeartDisease=No, Smoking=No, Stroke=Yes",
+      "1",
+      "0.0200"
+     ],
+     [
+      "HeartDisease=Yes, Smoking=No, Stroke=No",
+      "1",
+      "0.0200"
+     ],
+     [
+      "HeartDisease=Yes, Smoking=Yes, Stroke=Yes",
+      "1",
+      "0.0200"
+     ]
+    ]
+   ]
+  },
+  {
+   "titulo": "Paso 4 Itemsets frecuentes de tamaño 4",
+   "texto": "Itemsets de 4 ítems con soporte ≥ 0.01: 9 (todo subconjunto de un itemset frecuente es frecuente).",
+   "tablas": [
+    [
+     [
+      "Itemset",
+      "Frecuencia",
+      "Soporte"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=No, Smoking=No, Stroke=No",
+      "20",
+      "0.4000"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=No, Smoking=Yes, Stroke=No",
+      "17",
+      "0.3400"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=Yes, Smoking=Yes, Stroke=No",
+      "4",
+      "0.0800"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=No, Smoking=Yes, Stroke=Yes",
+      "2",
+      "0.0400"
+     ],
+     [
+      "AlcoholDrinking=Yes, HeartDisease=No, Smoking=No, Stroke=No",
+      "2",
+      "0.0400"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=No, Smoking=No, Stroke=Yes",
+      "1",
+      "0.0200"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=Yes, Smoking=No, Stroke=No",
+      "1",
+      "0.0200"
+     ],
+     [
+      "AlcoholDrinking=No, HeartDisease=Yes, Smoking=Yes, Stroke=Yes",
+      "1",
+      "0.0200"
+     ],
+     [
+      "AlcoholDrinking=Yes, HeartDisease=No, Smoking=Yes, Stroke=No",
+      "1",
+      "0.0200"
+     ]
+    ]
+   ]
+  },
+  {
+   "titulo": "Paso 5 Reglas pedidas",
+   "texto": "S = NX∧Y/N, C = NX∧Y/NX y L = NX∧Y·N/(NX·NY), con N = 50.",
+   "formulas": [
+    "S = NX∧Y / N",
+    "C = NX∧Y / NX",
+    "L = NX∧Y · N / (NX · NY)"
+   ],
+   "tablas": [
+    [
+     [
+      "SI X",
+      "ENTONCES Y",
+      "NX",
+      "NY",
+      "NX∧Y",
+      "S",
+      "C",
+      "L"
+     ],
+     [
+      "HeartDisease=No",
+      "Smoking=No",
+      "44",
+      "25",
+      "24",
+      "0.4800",
+      "0.5455",
+      "1.0909"
+     ],
+     [
+      "HeartDisease=No",
+      "Smoking=Yes",
+      "44",
+      "25",
+      "20",
+      "0.4000",
+      "0.4545",
+      "0.9091"
+     ],
+     [
+      "Smoking=No",
+      "HeartDisease=No",
+      "25",
+      "44",
+      "24",
+      "0.4800",
+      "0.9600",
+      "1.0909"
+     ],
+     [
+      "Smoking=No",
+      "HeartDisease=Yes",
+      "25",
+      "6",
+      "1",
+      "0.0200",
+      "0.0400",
+      "0.3333"
+     ],
+     [
+      "HeartDisease=Yes",
+      "Smoking=No",
+      "6",
+      "25",
+      "1",
+      "0.0200",
+      "0.1667",
+      "0.3333"
+     ],
+     [
+      "HeartDisease=Yes",
+      "Smoking=Yes",
+      "6",
+      "25",
+      "5",
+      "0.1000",
+      "0.8333",
+      "1.6667"
+     ],
+     [
+      "Smoking=Yes",
+      "HeartDisease=No",
+      "25",
+      "44",
+      "20",
+      "0.4000",
+      "0.8000",
+      "0.9091"
+     ],
+     [
+      "Smoking=Yes",
+      "HeartDisease=Yes",
+      "25",
+      "6",
+      "5",
+      "0.1000",
+      "0.2000",
+      "1.6667"
+     ]
+    ]
+   ]
+  }
+ ],
+ "codigo": {
+  "python": [
+   {
+    "archivo": "codigo/resolver.py",
+    "funciones": [
+     "apriori",
+     "reglas"
+    ]
+   }
+  ],
+  "r": [
+   {
+    "archivo": "codigo/script.R",
+    "lineas": [
+     1,
+     30
+    ]
+   }
+  ]
+ },
+ "comprobacion": "Un programa independiente cuenta cada subconjunto de cada transacción y arma las reglas por otro camino; coincide con la traza. R (arules) da las mismas 136 reglas.",
+ "respuesta": "136 reglas; SI HeartDisease=No ENTONCES Smoking=No: S = 0.4800, C = 0.5455, L = 1.0909.",
+ "numeros_clave": [
+  {
+   "texto": "136",
+   "traza": "n_reglas"
+  },
+  {
+   "texto": "0.5455",
+   "traza": "reglas_pedidas.0.confianza"
+  },
+  {
+   "texto": "1.0909",
+   "traza": "reglas_pedidas.0.lift"
+  }
+ ]
+}

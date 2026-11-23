@@ -1,0 +1,25 @@
+APRIORI — ap_clase.csv: 50 transacciones, 8 items, soporte >= 0.01, confianza >= 0.1
+  Nivel 1: 8 itemsets frecuentes
+  Nivel 2: 22 itemsets frecuentes
+  Nivel 3: 24 itemsets frecuentes
+  Nivel 4: 9 itemsets frecuentes
+Reglas: 136 (con antecedente vacio: 6)
+  {AlcoholDrinking=No,Smoking=Yes,Stroke=Yes} => {HeartDisease=Yes}      S=0.0200 C=0.3333 L=2.7778 n=1
+  {Smoking=Yes,Stroke=Yes} => {HeartDisease=Yes}                         S=0.0200 C=0.3333 L=2.7778 n=1
+  {AlcoholDrinking=No,HeartDisease=Yes,Smoking=Yes} => {Stroke=Yes}      S=0.0200 C=0.2000 L=2.5000 n=1
+  {HeartDisease=Yes,Smoking=Yes} => {Stroke=Yes}                         S=0.0200 C=0.2000 L=2.5000 n=1
+  {AlcoholDrinking=No,Stroke=Yes} => {HeartDisease=Yes}                  S=0.0200 C=0.2500 L=2.0833 n=1
+  {Stroke=Yes} => {HeartDisease=Yes}                                     S=0.0200 C=0.2500 L=2.0833 n=1
+  {AlcoholDrinking=No,HeartDisease=Yes} => {Stroke=Yes}                  S=0.0200 C=0.1667 L=2.0833 n=1
+  {HeartDisease=Yes} => {Stroke=Yes}                                     S=0.0200 C=0.1667 L=2.0833 n=1
+  {AlcoholDrinking=No,HeartDisease=Yes,Stroke=Yes} => {Smoking=Yes}      S=0.0200 C=1.0000 L=2.0000 n=1
+  {HeartDisease=Yes,Stroke=Yes} => {Smoking=Yes}                         S=0.0200 C=1.0000 L=2.0000 n=1
+  pedida {HeartDisease=No} => {Smoking=No}                            NX=44 NY=25 NXY=24 S=0.4800 C=0.5455 L=1.0909
+  pedida {HeartDisease=No} => {Smoking=Yes}                           NX=44 NY=25 NXY=20 S=0.4000 C=0.4545 L=0.9091
+  pedida {Smoking=No} => {HeartDisease=No}                            NX=25 NY=44 NXY=24 S=0.4800 C=0.9600 L=1.0909
+  pedida {Smoking=No} => {HeartDisease=Yes}                           NX=25 NY=6 NXY=1 S=0.0200 C=0.0400 L=0.3333
+  pedida {HeartDisease=Yes} => {Smoking=No}                           NX=6 NY=25 NXY=1 S=0.0200 C=0.1667 L=0.3333
+  pedida {HeartDisease=Yes} => {Smoking=Yes}                          NX=6 NY=25 NXY=5 S=0.1000 C=0.8333 L=1.6667
+  pedida {Smoking=Yes} => {HeartDisease=No}                           NX=25 NY=44 NXY=20 S=0.4000 C=0.8000 L=0.9091
+  pedida {Smoking=Yes} => {HeartDisease=Yes}                          NX=25 NY=6 NXY=5 S=0.1000 C=0.2000 L=1.6667
+traza.json y reglas_python.csv escritas

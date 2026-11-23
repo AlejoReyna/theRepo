@@ -1,0 +1,20 @@
+"paso","operacion","filas","columnas"
+"P0","Carga del archivo original",118580,33
+"P1","Eliminar columnas constantes, duplicadas, dispersas y códigos",118580,13
+"P2a","Sample_Size: texto con comas -> número",118580,13
+"P2b","GeoLocation -> Latitud y Longitud",118580,14
+"P2c","Ancho_IC = High - Low",118580,15
+"P2","YearStart -> Anio",118580,15
+"P3a","Quitar filas sin valor (suprimidas por muestra insuficiente)",104119,15
+"P3","Quitar el símbolo de supresión (ya constante)",104119,14
+"P4","Solo 50 estados + DC",98673,14
+"P5","Quitar estimaciones imprecisas (IC > 20)",90650,14
+"P6","Estrato Total (nivel estatal)",3881,14
+"P7","Obesidad (Q036) y actividad física (Q043-Q047)",2726,14
+"P8","Años con todas las preguntas",1818,14
+"P9","Pivoteo largo -> ancho (reshape)",303,9
+"P10","Eliminar estado-año incompletos",303,9
+"P11","Obesidad 2025, todos los estratos",1113,5
+"P10c","Clase nivel_obesidad con cut()",303,10
+"P12","Muestra de entrenamiento (70 %)",212,10
+"P13","Muestra de prueba (30 %)",91,10

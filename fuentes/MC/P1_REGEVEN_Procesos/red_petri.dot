@@ -1,0 +1,63 @@
+digraph RedPetri {
+  rankdir=LR; splines=true; nodesep=0.35; ranksep=0.32; pad=0.2;
+  node [fontname="Helvetica", fontsize=10]; edge [arrowsize=0.7];
+  labelloc="t"; fontname="Helvetica-Bold"; fontsize=14;
+  label="Red de Petri (red WF) - Registro 05";
+  "ini" [shape=circle, width=0.42, fixedsize=true, label="&#9679;", xlabel=<<font point-size="9">ini</font>>];
+  "p1" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p1</font>>];
+  "p2" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p2</font>>];
+  "p3" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p3</font>>];
+  "p4" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p4</font>>];
+  "p5" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p5</font>>];
+  "p6" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p6</font>>];
+  "p7" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p7</font>>];
+  "p8" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p8</font>>];
+  "p9" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p9</font>>];
+  "p10" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p10</font>>];
+  "p11" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">p11</font>>];
+  "fin" [shape=circle, width=0.42, fixedsize=true, label="", xlabel=<<font point-size="9">fin</font>> peripheries=2];
+  "a" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>a</b><br/><font point-size="9">solicitud<br/>recibida</font>>];
+  "b" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>b</b><br/><font point-size="9">identidad<br/>validada</font>>];
+  "c" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>c</b><br/><font point-size="9">documentos<br/>verificados</font>>];
+  "t1" [shape=box, style=filled, fillcolor=black, width=0.14, height=0.55, fixedsize=true, label="", xlabel=<<font point-size="9">&#964;1</font>>];
+  "d" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>d</b><br/><font point-size="9">corrección<br/>solicitada</font>>];
+  "c2" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>c'</b><br/><font point-size="9">documentos<br/>verificados</font>>];
+  "e" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>e</b><br/><font point-size="9">cita<br/>programada</font>>];
+  "f" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>f</b><br/><font point-size="9">entrevista<br/>realizada</font>>];
+  "g" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>g</b><br/><font point-size="9">orientación<br/>brindada</font>>];
+  "t2" [shape=box, style=filled, fillcolor=black, width=0.14, height=0.55, fixedsize=true, label="", xlabel=<<font point-size="9">&#964;2</font>>];
+  "h" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>h</b><br/><font point-size="9">expediente<br/>integrado</font>>];
+  "i" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>i</b><br/><font point-size="9">autorización<br/>emitida</font>>];
+  "j" [shape=box, style="filled", fillcolor="#EAF2FB", color="#2F5D8A", label=<<b>j</b><br/><font point-size="9">cierre<br/>registrado</font>>];
+  "ini" -> "a";
+  "a" -> "p1";
+  "a" -> "p2";
+  "p1" -> "b";
+  "b" -> "p3";
+  "p2" -> "c";
+  "c" -> "p4";
+  "p3" -> "t1";
+  "p4" -> "t1";
+  "t1" -> "p5";
+  "p5" -> "d" [color="#B04A2F"];
+  "d" -> "p6" [color="#B04A2F"];
+  "p6" -> "c2" [color="#B04A2F"];
+  "c2" -> "p5" [color="#B04A2F"];
+  "p5" -> "e";
+  "e" -> "p7";
+  "p7" -> "f";
+  "f" -> "p8";
+  "p8" -> "g";
+  "g" -> "p9";
+  "p8" -> "t2";
+  "t2" -> "p9";
+  "p9" -> "h";
+  "h" -> "p10";
+  "p10" -> "i";
+  "i" -> "p11";
+  "p11" -> "j";
+  "j" -> "fin";
+  { rank=same; "p1"; "p2"; }
+  { rank=same; "b"; "c"; }
+  { rank=same; "p3"; "p4"; }
+}

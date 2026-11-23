@@ -1,0 +1,91 @@
+
+Call:
+lm(formula = as.formula(paste0("`", Y, "` ~ .")), data = data)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-881272.14  -92840.36   -1165.13   72718.23 1252774.82 
+
+Coefficients: (1 not defined because of singularities)
+                        Estimate    Std. Error  t value   Pr(>|t|)    
+(Intercept)        -1.416180e+07  1.161197e+07 -1.21959 0.22291439    
+agente_id          -1.367971e+03  1.550456e+03 -0.88230 0.37782873    
+pais_id            -1.662439e+01  2.040761e+01 -0.81462 0.41548865    
+recamaras          -4.681261e+04  8.711842e+03 -5.37345 9.6471e-08 ***
+baños               3.230698e+04  1.455277e+04  2.21999 0.02664705 *  
+m2_construcción     8.486560e+02  3.787781e+01 22.40510 < 2.22e-16 ***
+m2_terreno          1.803503e-01  7.107076e-01  0.25376 0.79973281    
+pisos               5.176734e+04  1.420204e+04  3.64506 0.00028133 ***
+código_frente_agua  6.474247e+05  8.493130e+04  7.62292 5.8304e-14 ***
+código_vista        8.174615e+04  2.209650e+04  3.69951 0.00022799 ***
+código_condición    1.821177e+04  9.830376e+03  1.85260 0.06423911 .  
+año_construcción   -1.785229e+03  3.028283e+02 -5.89519 5.1400e-09 ***
+año_renovación      4.096733e+01  1.529381e+01  2.67869 0.00751452 ** 
+código_postal      -3.160664e+02  1.317374e+02 -2.39921 0.01661564 *  
+latitud             6.827009e+05  4.394322e+04 15.53598 < 2.22e-16 ***
+longitud           -1.321742e+05  5.271574e+04 -2.50730 0.01232607 *  
+vista              -2.576705e+04  2.315680e+04 -1.11272 0.26610032    
+condición                     NA            NA       NA         NA    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 182612.3 on 983 degrees of freedom
+Multiple R-squared:  0.695848,	Adjusted R-squared:  0.6908974 
+F-statistic: 140.5585 on 16 and 983 DF,  p-value: < 2.2204e-16
+
+Stepwise Model Path 
+Analysis of Deviance Table
+
+Initial Model:
+precio ~ agente_id + pais_id + recamaras + baños + m2_construcción + 
+    m2_terreno + pisos + código_frente_agua + código_vista + 
+    código_condición + año_construcción + año_renovación + 
+    código_postal + latitud + longitud + vista + condición
+
+Final Model:
+precio ~ recamaras + baños + m2_construcción + pisos + código_frente_agua + 
+    código_vista + código_condición + año_construcción + 
+    año_renovación + código_postal + latitud + longitud
+
+
+          Step Df    Deviance Resid. Df     Resid. Dev         AIC
+1                                   983 32780361787825 24247.09545
+2  - condición  0           0       983 32780361787825 24247.09545
+3 - m2_terreno  1  2147395414       984 32782509183238 24245.16095
+4    - pais_id  1 21841758836       985 32804350942074 24243.82699
+5  - agente_id  1 28417869468       986 32832768811542 24242.69290
+6      - vista  1 40471806677       987 32873240618219 24241.92481
+
+Call:
+lm(formula = precio ~ recamaras + baños + m2_construcción + 
+    pisos + código_frente_agua + código_vista + código_condición + 
+    año_construcción + año_renovación + código_postal + 
+    latitud + longitud, data = data)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-889516.89  -92427.24   -1880.87   74465.69 1245651.50 
+
+Coefficients:
+                        Estimate    Std. Error  t value   Pr(>|t|)    
+(Intercept)        -1.250324e+07  1.140569e+07 -1.09623 0.27324645    
+recamaras          -4.709341e+04  8.698342e+03 -5.41407 7.7374e-08 ***
+baños               3.111177e+04  1.452226e+04  2.14235 0.03240938 *  
+m2_construcción     8.510727e+02  3.753441e+01 22.67447 < 2.22e-16 ***
+pisos               5.322770e+04  1.407487e+04  3.78175 0.00016508 ***
+código_frente_agua  6.551660e+05  8.399164e+04  7.80037 1.5654e-14 ***
+código_vista        5.997591e+04  1.008950e+04  5.94439 3.8455e-09 ***
+código_condición    1.856240e+04  9.788898e+03  1.89627 0.05821608 .  
+año_construcción   -1.793853e+03  3.004316e+02 -5.97092 3.2879e-09 ***
+año_renovación      4.025005e+01  1.527109e+01  2.63570 0.00852803 ** 
+código_postal      -3.275439e+02  1.309975e+02 -2.50038 0.01256716 *  
+latitud             6.794608e+05  4.351624e+04 15.61396 < 2.22e-16 ***
+longitud           -1.290705e+05  5.106732e+04 -2.52746 0.01164430 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 182499.9 on 987 degrees of freedom
+Multiple R-squared:  0.6949862,	Adjusted R-squared:  0.6912779 
+F-statistic:   187.41 on 12 and 987 DF,  p-value: < 2.2204e-16
+
+Modelo final: 13 parametros, extractAIC = 24241.924809, AIC() = 2k - 2 ln L = 27081.801875

@@ -1,0 +1,196 @@
+==============================================================================
+PROBLEMA 1 - REGEVEN, hoja 'Registro 05'  (matricula 1851265 -> digito 5)
+==============================================================================
+Atributos del registro: Case id, Event id, Timestamp, Activity, Resource, Cost
+Eventos: 91   Casos: 10   Actividades distintas: 10   Recursos distintos: 13
+
+Codificacion de actividades:
+  a = solicitud recibida       (10 eventos)
+  b = identidad validada       (10 eventos)
+  c = documentos verificados   (14 eventos)
+  d = corrección solicitada    ( 4 eventos)
+  e = cita programada          (10 eventos)
+  f = entrevista realizada     (10 eventos)
+  g = orientación brindada     ( 3 eventos)
+  h = expediente integrado     (10 eventos)
+  i = autorización emitida     (10 eventos)
+  j = cierre registrado        (10 eventos)
+
+--- 1. TRAZAS POR CASO ---
+  caso  1: <a,b,c,d,c,e,f,g,h,i,j>
+  caso  2: <a,c,b,e,f,h,i,j>
+  caso  3: <a,c,b,e,f,g,h,i,j>
+  caso  4: <a,c,b,d,c,e,f,h,i,j>
+  caso  5: <a,c,b,d,c,e,f,h,i,j>
+  caso  6: <a,c,b,e,f,h,i,j>
+  caso  7: <a,c,b,e,f,h,i,j>
+  caso  8: <a,c,b,e,f,g,h,i,j>
+  caso  9: <a,b,c,e,f,h,i,j>
+  caso 10: <a,b,c,d,c,e,f,h,i,j>
+
+--- 2. VARIANTES (registro simplificado L) ---
+  3 x <a,c,b,e,f,h,i,j>   casos 2, 6, 7
+  2 x <a,c,b,e,f,g,h,i,j>   casos 3, 8
+  2 x <a,c,b,d,c,e,f,h,i,j>   casos 4, 5
+  1 x <a,b,c,d,c,e,f,g,h,i,j>   casos 1
+  1 x <a,b,c,e,f,h,i,j>   casos 9
+  1 x <a,b,c,d,c,e,f,h,i,j>   casos 10
+  L = [ <a,c,b,e,f,h,i,j>^3, <a,c,b,e,f,g,h,i,j>^2, <a,c,b,d,c,e,f,h,i,j>^2, <a,b,c,d,c,e,f,g,h,i,j>^1, <a,b,c,e,f,h,i,j>^1, <a,b,c,d,c,e,f,h,i,j>^1 ]
+
+--- 3. MATRIZ 'DIRECTAMENTE SEGUIDO POR' |x > y| ---
+         a   b   c   d   e   f   g   h   i   j
+   a    .   3   7   .   .   .   .   .   .   .
+   b    .   .   3   2   5   .   .   .   .   .
+   c    .   7   .   2   5   .   .   .   .   .
+   d    .   .   4   .   .   .   .   .   .   .
+   e    .   .   .   .   .  10   .   .   .   .
+   f    .   .   .   .   .   .   3   7   .   .
+   g    .   .   .   .   .   .   .   3   .   .
+   h    .   .   .   .   .   .   .   .  10   .
+   i    .   .   .   .   .   .   .   .   .  10
+   j    .   .   .   .   .   .   .   .   .   .
+  Actividades de inicio: {'a': 10}   de fin: {'j': 10}
+
+--- 4. FOOTPRINT (relaciones del algoritmo alfa) ---
+         a   b   c   d   e   f   g   h   i   j
+   a    #  ->  ->   #   #   #   #   #   #   #
+   b   <-   #  ||  ->  ->   #   #   #   #   #
+   c   <-  ||   #  ||  ->   #   #   #   #   #
+   d    #  <-  ||   #   #   #   #   #   #   #
+   e    #  <-  <-   #   #  ->   #   #   #   #
+   f    #   #   #   #  <-   #  ->  ->   #   #
+   g    #   #   #   #   #  <-   #  ->   #   #
+   h    #   #   #   #   #  <-  <-   #  ->   #
+   i    #   #   #   #   #   #   #  <-   #  ->
+   j    #   #   #   #   #   #   #   #  <-   #
+  Nota: c>d y d>c aparecen como 'c||d', pero en realidad es un bucle de longitud 2
+  (patron c,d,c). El alfa clasico no lo detecta; por eso se usan las medidas
+  del Heuristics Miner (y alfa+), que si distinguen el bucle.
+
+--- 5. HEURISTICS MINER: dependencias a=>b = (|a>b|-|b>a|)/(|a>b|+|b>a|+1) ---
+  a => b : |a>b|=3 |b>a|=0  dep=+0.750
+  a => c : |a>c|=7 |c>a|=0  dep=+0.875
+  b => c : |b>c|=3 |c>b|=7  dep=-0.364
+  b => d : |b>d|=2 |d>b|=0  dep=+0.667
+  b => e : |b>e|=5 |e>b|=0  dep=+0.833
+  c => b : |c>b|=7 |b>c|=3  dep=+0.364
+  c => d : |c>d|=2 |d>c|=4  dep=-0.286
+  c => e : |c>e|=5 |e>c|=0  dep=+0.833
+  d => c : |d>c|=4 |c>d|=2  dep=+0.286
+  e => f : |e>f|=10 |f>e|=0  dep=+0.909
+  f => g : |f>g|=3 |g>f|=0  dep=+0.750
+  f => h : |f>h|=7 |h>f|=0  dep=+0.875
+  g => h : |g>h|=3 |h>g|=0  dep=+0.750
+  h => i : |h>i|=10 |i>h|=0  dep=+0.909
+  i => j : |i>j|=10 |j>i|=0  dep=+0.909
+  bucle long. 2: c=>2d  |c>>d|=2  dep2=0.667  -> bucle c-d-c
+  Lectura (umbral de dependencia 0.5):
+   * |b=>c| = 0.364 < 0.5: b y c ocurren en ambos ordenes sin dependencia causal;
+     ambas dependen de a y preceden a e -> paralelismo AND(b, c).
+   * c=>d y d=>c son bajas (0.286), pero la medida de bucle de longitud 2 (0.667)
+     supera el umbral -> bucle de retrabajo c-d-c. Ademas d solo ocurre cuando b y c
+     ya terminaron -> el bucle va DESPUES de la sincronizacion AND.
+   * f=>g 0.750, g=>h 0.750 y f=>h 0.875 -> g es opcional: XOR(g, tau).
+
+--- 6. RED DE PETRI DESCUBIERTA  N = (P, T, F, A, l),  M0=[ini], Mf=[fin] ---
+  P = {ini, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, fin}  |P| = 13
+  T = {a, b, c, t1, d, c2, e, f, g, t2, h, i, j}  |T| = 13  (11 visibles + 2 silenciosas)
+  |F| = 28 arcos:
+    (ini,a), (a,p1), (a,p2), (p1,b), (b,p3), (p2,c), (c,p4), (p3,t1), (p4,t1), (t1,p5), (p5,d), (d,p6), (p6,c2), (c2,p5), (p5,e), (e,p7), (p7,f), (f,p8), (p8,g), (g,p9), (p8,t2), (t2,p9), (p9,h), (h,p10), (p10,i), (i,p11), (p11,j), (j,fin)
+  l: a->a, b->b, c->c, t1->τ, d->d, c2->c, e->e, f->f, g->g, t2->τ, h->h, i->i, j->j
+  Significado de los lugares:
+    ini  caso creado (fuente)
+    p1   por validar identidad
+    p2   por verificar documentos
+    p3   identidad validada
+    p4   documentos verificados
+    p5   expediente en revision (decide: corregir o citar)
+    p6   correccion pendiente de re-verificar
+    p7   cita programada, por entrevistar
+    p8   entrevista hecha (decide: orientar o no)
+    p9   listo para integrar expediente
+    p10  expediente integrado, por autorizar
+    p11  autorizado, por cerrar
+    fin  caso terminado (sumidero)
+
+--- 7. DENOMINACION / PROPIEDADES DE LA RED ---
+  Red WF (workflow net): SI  (fuente ['ini'], sumidero ['fin'], conexa al cortocircuitar)
+  Grafo de alcanzabilidad: 13 marcas, 15 arcos
+  Cota maxima de fichas por lugar: 1 -> segura (1-acotada): SI
+  Solidez (soundness): opcion de completar=SI, terminacion propia=SI, sin transiciones muertas=SI
+    -> red WF SOLIDA: SI
+  Libre eleccion (free-choice): SI
+  Maquina de estados: NO   Grafo marcado: NO   Pura (sin auto-bucles): SI
+  DENOMINACION: red de Petri etiquetada tipo RED WF (flujo de trabajo), solida,
+  segura y de libre eleccion; no es maquina de estados ni grafo marcado porque
+  combina concurrencia (AND b||c) con eleccion (XOR corregir/citar, orientar/no).
+  Marcas alcanzables:
+    [fin]
+    [ini]
+    [p10]
+    [p11]
+    [p5]
+    [p6]
+    [p7]
+    [p8]
+    [p9]
+    [p1, p2]
+    [p1, p4]
+    [p2, p3]
+    [p3, p4]
+
+--- 8. REPRODUCCION (REPLAY) DE LAS TRAZAS EN LA RED ---
+  caso  1: disparos a b c τ d c2 e f g h i j               p=14 c=14 m=0 r=0
+  caso  2: disparos a c b τ e f τ h i j                    p=12 c=12 m=0 r=0
+  caso  3: disparos a c b τ e f g h i j                    p=12 c=12 m=0 r=0
+  caso  4: disparos a c b τ d c2 e f τ h i j               p=14 c=14 m=0 r=0
+  caso  5: disparos a c b τ d c2 e f τ h i j               p=14 c=14 m=0 r=0
+  caso  6: disparos a c b τ e f τ h i j                    p=12 c=12 m=0 r=0
+  caso  7: disparos a c b τ e f τ h i j                    p=12 c=12 m=0 r=0
+  caso  8: disparos a c b τ e f g h i j                    p=12 c=12 m=0 r=0
+  caso  9: disparos a b c τ e f τ h i j                    p=12 c=12 m=0 r=0
+  caso 10: disparos a b c τ d c2 e f τ h i j               p=14 c=14 m=0 r=0
+  Totales: p=128 c=128 m=0 r=0  ->  fitness = 1/2(1-m/c)+1/2(1-r/p) = 1.000
+  Trazas que ajustan: 10/10
+
+--- 9. ARBOL DE PROCESO ---
+  →(a, ∧(b, c), ↺(τ, →(d, c)), e, f, ×(g, τ), h, i, j)
+  Operadores: → secuencia, ∧ paralelo, × eleccion exclusiva, ↺ bucle (hacer, rehacer), τ silenciosa
+  Lenguaje con a lo mas 1 correccion: 8 trazas
+    <a,b,c,e,f,h,i,j>  <- en el registro (1x)
+    <a,c,b,e,f,h,i,j>  <- en el registro (3x)
+    <a,b,c,e,f,g,h,i,j>
+    <a,c,b,e,f,g,h,i,j>  <- en el registro (2x)
+    <a,b,c,d,c,e,f,h,i,j>  <- en el registro (1x)
+    <a,c,b,d,c,e,f,h,i,j>  <- en el registro (2x)
+    <a,b,c,d,c,e,f,g,h,i,j>  <- en el registro (1x)
+    <a,c,b,d,c,e,f,g,h,i,j>
+  Todas las variantes del registro pertenecen al lenguaje del arbol: SI
+  Precision: el registro cubre 6 de las 8 trazas posibles con <=1 correccion.
+
+--- 10. DESEMPENO Y RECURSOS (perspectivas de tiempo, costo y organizacion) ---
+  caso  1:  264.1 h (11.0 dias)  costo  895
+  caso  2:  211.8 h ( 8.8 dias)  costo  625
+  caso  3:  249.0 h (10.4 dias)  costo  745
+  caso  4:  248.6 h (10.4 dias)  costo  775
+  caso  5:  295.9 h (12.3 dias)  costo  775
+  caso  6:  231.0 h ( 9.6 dias)  costo  625
+  caso  7:  203.4 h ( 8.5 dias)  costo  625
+  caso  8:  213.9 h ( 8.9 dias)  costo  745
+  caso  9:  198.2 h ( 8.3 dias)  costo  625
+  caso 10:  296.9 h (12.4 dias)  costo  775
+  Duracion promedio: 241.3 h (10.05 dias); costo promedio por caso: 721.0
+  Recursos por actividad:
+    a solicitud recibida       {'Nora': 3, 'Luis': 2, 'Ana': 5}
+    b identidad validada       {'Julia': 8, 'Raúl': 2}
+    c documentos verificados   {'Elena': 3, 'Marco': 4, 'Pilar': 7}
+    d corrección solicitada    {'Luis': 4}
+    e cita programada          {'Pilar': 5, 'Elena': 5}
+    f entrevista realizada     {'Celia': 4, 'Óscar': 6}
+    g orientación brindada     {'Óscar': 2, 'Celia': 1}
+    h expediente integrado     {'Marta': 7, 'Iván': 3}
+    i autorización emitida     {'Sofía': 10}
+    j cierre registrado        {'Iván': 7, 'Marta': 3}
+
+Archivos generados en /Users/alexis_reyna/MyCode/Said/1851265_MC_TSCI3/P1_REGEVEN_Procesos:
+  Problema_1.bpmn, Problema_1.pnml, arbol_proceso.dot, arbol_proceso.png, arbol_proceso.svg, bpmn.png, bpmn.svg, red_petri.dot, red_petri.png, red_petri.svg, red_petri_compacta.dot, red_petri_compacta.png, red_petri_compacta.svg

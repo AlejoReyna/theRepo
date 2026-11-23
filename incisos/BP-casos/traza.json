@@ -1,0 +1,16 @@
+{
+ "old: waiting ~ eruptions": {
+  "BP": 0.0041189203306057,
+  "gl": 1,
+  "p": 0.948827845571828,
+  "decision": "no se rechaza H0: homocedasticidad",
+  "BP_python": 0.004118920330605896
+ },
+ "BR: precio ~ m2_construcción + recamaras + condición": {
+  "BP": 106.419601807171,
+  "gl": 3,
+  "p": 6.46774517326997e-23,
+  "decision": "se rechaza H0: hay heterocedasticidad",
+  "BP_python": 106.41960180717088
+ }
+}

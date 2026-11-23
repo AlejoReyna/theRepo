@@ -1,0 +1,284 @@
+
+==========================================================================================
+1. CARGA Y PERFILADO DEL REGISTRO
+==========================================================================================
+  -> [P0] Carga del archivo original: 118,580 filas x 33 columnas
+   columna                    tipo      n_distintos n_faltantes pct_faltantes ejemplo                                 
+1  YearStart                  integer      15            0       0.0          2011                                    
+2  YearEnd                    integer      15            0       0.0          2011                                    
+3  LocationAbbr               character    55            0       0.0          AL                                      
+4  LocationDesc               character    55            0       0.0          Alabama                                 
+5  Datasource                 character     1            0       0.0          Behavioral Risk Factor Surveillance Syst
+6  Class                      character     3            0       0.0          Obesity / Weight Status                 
+7  Topic                      character     3            0       0.0          Obesity / Weight Status                 
+8  Question                   character     9            0       0.0          Percent of adults aged 18 years and olde
+9  Data_Value_Unit            character     1       106260      89.6          %                                       
+10 Data_Value_Type            character     1            0       0.0          Value                                   
+11 Data_Value                 numeric     725        14461      12.2          34.8                                    
+12 Data_Value_Alt             numeric     725        14461      12.2          34.8                                    
+13 Data_Value_Footnote_Symbol character     2       104119      87.8          -                                       
+14 Data_Value_Footnote        character     1       104119      87.8          Data not available because sample size i
+15 Low_Confidence_Limit       numeric     702        14461      12.2          31.3                                    
+16 High_Confidence_Limit      numeric     794        14461      12.2          38.5                                    
+17 Sample_Size                character 10615        14461      12.2          1,367                                   
+18 Total                      character     1       114345      96.4          Total                                   
+19 Age(years)                 character     6        93170      78.6          18 - 24                                 
+20 Education                  character     5       101640      85.7          College graduate                        
+21 Sex                        character     2       110110      92.9          Female                                  
+22 Income                     character     7        88935      75.0          $15,000 - $24,999                       
+23 Race/Ethnicity             character     8        84700      71.4          Non-Hispanic 2 or more races            
+24 GeoLocation                character   105         2156       1.8              (32.840571122, -86.631860762)       
+25 ClassID                    character     3            0       0.0          OWS                                     
+26 TopicID                    character     3            0       0.0          OWS1                                    
+27 QuestionID                 character     9            0       0.0          Q036                                    
+28 DataValueTypeID            character     1            0       0.0          VALUE                                   
+29 LocationID                 integer      55            0       0.0          1                                       
+30 StratificationCategory1    character     6            0       0.0          Income                                  
+31 Stratification1            character    28            0       0.0          $15,000 - $24,999                       
+32 StratificationCategoryId1  character     6            0       0.0          INC                                     
+33 StratificationID1          character    28            0       0.0          INC1525                                 
+
+Hallazgos del perfilado:
+  * 118,580 filas; 55 estados/territorios; anos 2011-2025; 9 preguntas (QuestionID).
+  * Registro en formato LARGO: una fila = estado x ano x pregunta x estrato.
+  * Data_Value faltante en 14,461 filas (12.2%): pie de nota 'sample size is insufficient'.
+  * Sample_Size viene como texto con comas ('1,367') -> requiere conversion.
+  * Nombres con espacios sobrantes corregidos con trimws(): 'High_Confidence_Limit '.
+  * GeoLocation viene como texto '(lat, lon)' -> se separa en dos numericas.
+  * Age(years)/Education/Sex/Income/Race/Total son la MISMA informacion que
+    Stratification1, repartida en columnas casi vacias (formato disperso).
+
+Diccionario de preguntas (QuestionID) y anos disponibles:
+  Q018 [Fruits and Vegetables] Percent of adults who report consuming fruit less than one time daily
+       anos: 2017 2019 2021 2025
+  Q019 [Fruits and Vegetables] Percent of adults who report consuming vegetables less than one time daily
+       anos: 2017 2019 2021 2025
+  Q036 [Obesity / Weight Status] Percent of adults aged 18 years and older who have obesity
+       anos: 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025
+  Q037 [Obesity / Weight Status] Percent of adults aged 18 years and older who have an overweight classification
+       anos: 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025
+  Q043 [Physical Activity] Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physica
+       anos: 2011 2013 2015 2017 2019 2023
+  Q044 [Physical Activity] Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physica
+       anos: 2011 2013 2015 2017 2019 2023
+  Q045 [Physical Activity] Percent of adults who achieve more than 300 minutes a week of moderate-intensity aerobic physic
+       anos: 2011 2013 2015 2017 2019 2023
+  Q046 [Physical Activity] Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
+       anos: 2011 2013 2015 2017 2019 2023
+  Q047 [Physical Activity] Percent of adults who engage in no leisure-time physical activity
+       anos: 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025
+
+==========================================================================================
+2. SUBSETTING POR COLUMNAS
+==========================================================================================
+2a. Constantes (un solo valor): Datasource, Data_Value_Unit, Data_Value_Type, Data_Value_Footnote, Total, DataValueTypeID
+2b. Duplicadas de otra columna: YearEnd, Data_Value_Alt, Topic  (YearEnd==YearStart, Data_Value_Alt==Data_Value, Topic 1:1 con Class)
+2c. Estratos dispersos (redundantes con Stratification1): Total, Age(years), Education, Sex, Income, Race/Ethnicity
+2d. Codigos equivalentes a su texto (grepl 'ID$|Id1$|ID1$'): ClassID, TopicID, DataValueTypeID, StratificationCategoryId1, StratificationID1
+  -> [P1] Eliminar columnas constantes, duplicadas, dispersas y codigos: 118,580 filas x 13 columnas
+Columnas conservadas: YearStart, LocationAbbr, LocationDesc, Class, Data_Value, Data_Value_Footnote_Symbol, Low_Confidence_Limit, High_Confidence_Limit, Sample_Size, GeoLocation, QuestionID, StratificationCategory1, Stratification1
+
+==========================================================================================
+3. LIMPIEZA DE TIPOS
+==========================================================================================
+Sample_Size: texto con comas -> numerico. GeoLocation -> Latitud, Longitud.
+Nueva variable derivada: Ancho_IC = High_Confidence_Limit - Low_Confidence_Limit (precision).
+YearStart -> Anio.
+   Data_Value     Sample_Size        Ancho_IC         Latitud         Longitud      
+ Min.   : 0.90   Min.   :    50   Min.   : 0.500   Min.   :13.44   Min.   :-157.86  
+ 1st Qu.:24.80   1st Qu.:   483   1st Qu.: 5.000   1st Qu.:34.87   1st Qu.:-100.37  
+ Median :31.80   Median :  1062   Median : 7.500   Median :39.33   Median : -87.81  
+ Mean   :31.82   Mean   :  3583   Mean   : 9.416   Mean   :38.41   Mean   : -87.95  
+ 3rd Qu.:37.50   3rd Qu.:  2373   3rd Qu.:11.300   3rd Qu.:43.24   3rd Qu.: -77.03  
+ Max.   :85.30   Max.   :476876   Max.   :67.700   Max.   :64.85   Max.   : 144.79  
+ NAs    :14461   NAs    :14461    NAs    :14461    NAs    :2156    NAs    :2156     
+  -> [P2] Conversion de tipos y variables derivadas: 118,580 filas x 15 columnas
+
+==========================================================================================
+4. SUBSETTING POR FILAS
+==========================================================================================
+4a. Filas sin Data_Value por pie de nota: - -> 13214; ~ -> 1247
+  -> [P3] Quitar filas sin valor (suprimidas por muestra insuficiente): 104,119 filas x 14 columnas
+4b. Se excluyen: US (agregado nacional, duplicaria la informacion de los estados) y
+    GU, PR, VI (territorios con muchos faltantes y contexto distinto).
+  -> [P4] Solo 50 estados + DC: 98,673 filas x 14 columnas
+4c. Filtro de calidad: 8023 filas con Ancho_IC > 20 puntos (p90 del registro = 18.4).
+  -> [P5] Quitar estimaciones imprecisas (IC > 20): 90,650 filas x 14 columnas
+
+==========================================================================================
+5. VISTA MINABLE (estado x ano) PARA CLASIFICAR EL NIVEL DE OBESIDAD
+==========================================================================================
+  -> [P6] Estrato 'Total' (nivel estatal): 3,881 filas x 14 columnas
+  -> [P7] Preguntas de obesidad (Q036) y actividad fisica (Q043-Q047): 2,726 filas x 14 columnas
+    Q037 (sobrepeso) se excluye: es otro resultado de peso, no un predictor (fuga de informacion).
+5c. Anos comunes a Q036 y Q043-Q047 (intersect de split por pregunta): 2011, 2013, 2015, 2017, 2019, 2023
+  -> [P8] Anos con todas las preguntas: 1,818 filas x 14 columnas
+  -> [P9] Pivoteo largo -> ancho (reshape): 303 filas x 9 columnas
+5e. Esperadas 306 combinaciones estado-ano (51 x 6); faltan 3 por completo: NJ 2019, KY 2023, PA 2023
+    (el CDC no publico esos estado-ano: sin la clase no se puede imputar -> quedan fuera)
+    Filas con algun indicador faltante tras el filtro de calidad: 0
+  -> [P10] Eliminar estado-ano incompletos: 303 filas x 9 columnas
+5f. Clase: nivel_obesidad = Baja (<30), Media [30,35), Alta (>=35):
+
+ Baja Media  Alta 
+  142   113    48 
+      Nivel
+Anio   Baja Media Alta
+  2011   39    12    0
+  2013   31    18    2
+  2015   26    21    4
+  2017   22    22    7
+  2019   15    23   12
+  2023    9    17   23
+
+5g. Atipicos por regla de Tukey (1.5*IQR):
+  obesidad               limites [17.5, 42.9]  atipicos: ninguno
+  aerobica_150           limites [35.6, 70.3]  atipicos: ninguno
+  aerobica150_y_fuerza   limites [10.9, 32.5]  atipicos: AK-2023, AZ-2023, CO-2023, DC-2023, NH-2023, UT-2023, VT-2023
+  aerobica_300           limites [17.8, 48.5]  atipicos: ME-2023, MT-2023, OR-2023
+  fuerza_2dias           limites [19.0, 45.2]  atipicos: DC-2023, WV-2013
+  inactividad            limites [14.8, 35.8]  atipicos: MS-2011, MS-2013, MS-2015, MS-2019, TN-2013
+  Se conservan: son mediciones validas de estados reales (p. ej., DC o CO con alta actividad).
+
+5h. Normalizacion min-max [0,1] de los predictores (vista_minable_normalizada.csv).
+
+Correlacion de cada predictor con el % de obesidad:
+                       [,1]
+aerobica_150         -0.317
+aerobica150_y_fuerza -0.154
+aerobica_300         -0.144
+fuerza_2dias         -0.031
+inactividad           0.589
+Anio                  0.479
+
+Resumen de la vista minable:
+      Anio         obesidad      aerobica_150   aerobica150_y_fuerza  aerobica_300   fuerza_2dias    inactividad   
+ Min.   :2011   Min.   :20.20   Min.   :36.30   Min.   :12.2         Min.   :20.6   Min.   :18.60   Min.   :15.20  
+ 1st Qu.:2013   1st Qu.:27.00   1st Qu.:48.60   1st Qu.:19.0         1st Qu.:29.3   1st Qu.:28.80   1st Qu.:22.70  
+ Median :2015   Median :30.10   Median :52.40   Median :21.6         Median :33.0   Median :31.50   Median :25.50  
+ Mean   :2016   Mean   :30.26   Mean   :52.65   Mean   :22.2         Mean   :33.6   Mean   :32.32   Mean   :25.74  
+ 3rd Qu.:2019   3rd Qu.:33.35   3rd Qu.:57.30   3rd Qu.:24.4         3rd Qu.:37.0   3rd Qu.:35.35   3rd Qu.:27.95  
+ Max.   :2023   Max.   :41.20   Max.   :67.80   Max.   :38.3         Max.   :50.6   Max.   :49.10   Max.   :38.10  
+ nivel_obesidad
+ Baja :142     
+ Media:113     
+ Alta : 48     
+               
+               
+               
+
+==========================================================================================
+6. SUBCONJUNTOS DESCRIPTIVOS: PERFIL SOCIOECONOMICO DE LA OBESIDAD
+==========================================================================================
+  -> [P11] Obesidad 2025, todos los estratos: 1,113 filas x 5 columnas
+Mediana entre estados del % de obesidad en 2025 por estrato:
+  Income:
+     Less than $15,000                     36.5 %   (36 estados)
+     $15,000 - $24,999                     39.8 %   (45 estados)
+     $25,000 - $34,999                     37.6 %   (47 estados)
+     $35,000 - $49,999                     35.4 %   (47 estados)
+     $50,000 - $74,999                     35.9 %   (48 estados)
+     $75,000 or greater                    34.2 %   (48 estados)
+     Data not reported                     30.9 %   (48 estados)
+  Education:
+     Less than high school                 37.0 %   (44 estados)
+     High school graduate                  35.1 %   (48 estados)
+     Some college or technical school      37.7 %   (48 estados)
+     College graduate                      28.6 %   (48 estados)
+  Age (years):
+     18 - 24                               19.9 %   (48 estados)
+     25 - 34                               33.7 %   (48 estados)
+     35 - 44                               38.0 %   (48 estados)
+     45 - 54                               41.0 %   (48 estados)
+     55 - 64                               38.5 %   (48 estados)
+     65 or older                           30.9 %   (48 estados)
+  Sex:
+     Female                                34.7 %   (48 estados)
+     Male                                  33.2 %   (48 estados)
+  Race/Ethnicity:
+     Hispanic                              36.3 %   (40 estados)
+     NH American Indian/Alaska Native      43.0 %   (7 estados)
+     NH Hawaiian/Pacific Islander          55.3 %   (2 estados)
+     Non-Hispanic 2 or more races          34.6 %   (19 estados)
+     Non-Hispanic Asian                    13.5 %   (23 estados)
+     Non-Hispanic Black                    43.8 %   (33 estados)
+     Non-Hispanic Other                    21.6 %   (2 estados)
+     Non-Hispanic White                    32.2 %   (48 estados)
+
+Top 5 estados con mayor obesidad en 2025: AL 39.7%, ND 39.1%, KY 38.8%, OK 38.1%, TN 37.9%
+Top 5 con menor obesidad en 2025:      MA 27.0%, NJ 27.0%, HI 26.4%, CO 25.7%, DC 24.2%
+
+==========================================================================================
+7. COMPROBACION DE LA VISTA MINABLE (muestreo aleatorio 70/30 + arbol rpart)
+==========================================================================================
+  -> [P12] Muestra de entrenamiento (70 %): 212 filas x 10 columnas
+  -> [P13] Muestra de prueba (30 %): 91 filas x 10 columnas
+n= 212 
+
+node), split, n, loss, yval, (yprob)
+      * denotes terminal node
+
+ 1) root 212 113 Baja (0.46698113 0.36792453 0.16509434)  
+   2) inactividad< 27.25 153  60 Baja (0.60784314 0.31372549 0.07843137)  
+     4) Anio< 2014 52   4 Baja (0.92307692 0.07692308 0.00000000) *
+     5) Anio>=2014 101  56 Baja (0.44554455 0.43564356 0.11881188)  
+      10) aerobica_150>=50.85 85  42 Baja (0.50588235 0.36470588 0.12941176)  
+        20) Anio< 2021 55  18 Baja (0.67272727 0.30909091 0.01818182)  
+          40) fuerza_2dias>=30.9 44  11 Baja (0.75000000 0.22727273 0.02272727) *
+          41) fuerza_2dias< 30.9 11   4 Media (0.36363636 0.63636364 0.00000000) *
+        21) Anio>=2021 30  16 Media (0.20000000 0.46666667 0.33333333)  
+          42) aerobica150_y_fuerza>=30.7 17   7 Media (0.35294118 0.58823529 0.05882353) *
+          43) aerobica150_y_fuerza< 30.7 13   4 Alta (0.00000000 0.30769231 0.69230769) *
+      11) aerobica_150< 50.85 16   3 Media (0.12500000 0.81250000 0.06250000) *
+   3) inactividad>=27.25 59  29 Media (0.10169492 0.50847458 0.38983051)  
+     6) inactividad< 31.1 32  10 Media (0.15625000 0.68750000 0.15625000) *
+     7) inactividad>=31.1 27   9 Alta (0.03703704 0.29629630 0.66666667)  
+      14) Anio< 2014 10   3 Media (0.10000000 0.70000000 0.20000000) *
+      15) Anio>=2014 17   1 Alta (0.00000000 0.05882353 0.94117647) *
+Exactitud en prueba: 71.4%  (clase mayoritaria 'Baja' = 47.3%)
+       Prediccion
+Real    Baja Media Alta
+  Baja    34     8    1
+  Media    6    24    5
+  Alta     0     6    7
+Importancia de variables:
+aerobica150_y_fuerza         fuerza_2dias          inactividad         aerobica_150                 Anio 
+                31.4                 29.3                 28.8                 28.1                 26.1 
+        aerobica_300 
+                22.1 
+
+==========================================================================================
+8. BITACORA DEL TRATAMIENTO
+==========================================================================================
+ paso operacion                                                    
+ P0   Carga del archivo original                                   
+ P1   Eliminar columnas constantes, duplicadas, dispersas y codigos
+ P2   Conversion de tipos y variables derivadas                    
+ P3   Quitar filas sin valor (suprimidas por muestra insuficiente) 
+ P4   Solo 50 estados + DC                                         
+ P5   Quitar estimaciones imprecisas (IC > 20)                     
+ P6   Estrato 'Total' (nivel estatal)                              
+ P7   Preguntas de obesidad (Q036) y actividad fisica (Q043-Q047)  
+ P8   Anos con todas las preguntas                                 
+ P9   Pivoteo largo -> ancho (reshape)                             
+ P10  Eliminar estado-ano incompletos                              
+ P11  Obesidad 2025, todos los estratos                            
+ P12  Muestra de entrenamiento (70 %)                              
+ P13  Muestra de prueba (30 %)                                     
+ subsetting                                                       filas  columnas
+ -                                                                118580 33      
+ d[, -which(names %in% fuera)]                                    118580 13      
+ d$col <- ...                                                     118580 15      
+ subset(d, !is.na(Data_Value))                                    104119 14      
+ d[!(LocationAbbr %in% excluir), ]                                 98673 14      
+ d[-which(Ancho_IC > 20), ]                                        90650 14      
+ d[StratificationCategory1 == 'Total', ]                            3881 14      
+ grepl('Obesity|Physical Activity', Class) & QuestionID != 'Q037'   2726 14      
+ tot[Anio %in% anos_pa, ]                                           1818 14      
+ reshape(direction = 'wide')                                         303  9      
+ ancho[complete.cases(ancho), ]                                      303  9      
+ subset(d, QuestionID=='Q036' & Anio==ultimo, select=...)           1113  5      
+ ancho[sample(n, 0.7n), ]                                            212 10      
+ ancho[-idx, ]                                                        91 10      
+
+Archivos en /Users/alexis_reyna/MyCode/Said/1851265_MC_TSCI3/P2_export_Tratamiento/salidas: bitacora_tratamiento.csv, export_limpio_largo.csv, fig1_tendencia_obesidad.png, fig2_inactividad_vs_obesidad.png, fig3_obesidad_ingreso_escolaridad.png, obesidad_2025_estratos_detalle.csv, obesidad_por_estrato_2025.csv, perfil_columnas.csv, vista_minable_normalizada.csv, vista_minable.csv

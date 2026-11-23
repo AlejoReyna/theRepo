@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml>
+  <net id="red" type="http://www.pnml.org/version-2009/grammar/ptnet">
+    <page id="p">
+      <place id="ini"><name><text>ini</text></name><initialMarking><text>1</text></initialMarking></place>
+      <place id="p1"><name><text>p1</text></name></place>
+      <place id="p2"><name><text>p2</text></name></place>
+      <place id="p3"><name><text>p3</text></name></place>
+      <place id="p4"><name><text>p4</text></name></place>
+      <place id="p5"><name><text>p5</text></name></place>
+      <place id="p6"><name><text>p6</text></name></place>
+      <place id="p7"><name><text>p7</text></name></place>
+      <place id="p8"><name><text>p8</text></name></place>
+      <place id="p9"><name><text>p9</text></name></place>
+      <place id="p10"><name><text>p10</text></name></place>
+      <place id="p11"><name><text>p11</text></name></place>
+      <place id="fin"><name><text>fin</text></name></place>
+      <transition id="a"><name><text>solicitud recibida</text></name></transition>
+      <arc id="ini-a" source="ini" target="a"/>
+      <arc id="a-p1" source="a" target="p1"/>
+      <arc id="a-p2" source="a" target="p2"/>
+      <transition id="b"><name><text>identidad validada</text></name></transition>
+      <arc id="p1-b" source="p1" target="b"/>
+      <arc id="b-p3" source="b" target="p3"/>
+      <transition id="c"><name><text>documentos verificados</text></name></transition>
+      <arc id="p2-c" source="p2" target="c"/>
+      <arc id="c-p4" source="c" target="p4"/>
+      <transition id="τ1"><name><text>τ1</text></name><toolspecific tool="ProM" version="6.4" activity="$invisible$"/></transition>
+      <arc id="p3-τ1" source="p3" target="τ1"/>
+      <arc id="p4-τ1" source="p4" target="τ1"/>
+      <arc id="τ1-p5" source="τ1" target="p5"/>
+      <transition id="d"><name><text>corrección solicitada</text></name></transition>
+      <arc id="p5-d" source="p5" target="d"/>
+      <arc id="d-p6" source="d" target="p6"/>
+      <transition id="c′"><name><text>documentos verificados</text></name></transition>
+      <arc id="p6-c′" source="p6" target="c′"/>
+      <arc id="c′-p5" source="c′" target="p5"/>
+      <transition id="e"><name><text>cita programada</text></name></transition>
+      <arc id="p5-e" source="p5" target="e"/>
+      <arc id="e-p7" source="e" target="p7"/>
+      <transition id="f"><name><text>entrevista realizada</text></name></transition>
+      <arc id="p7-f" source="p7" target="f"/>
+      <arc id="f-p8" source="f" target="p8"/>
+      <transition id="τ2"><name><text>τ2</text></name><toolspecific tool="ProM" version="6.4" activity="$invisible$"/></transition>
+      <arc id="p8-τ2" source="p8" target="τ2"/>
+      <arc id="τ2-p9" source="τ2" target="p9"/>
+      <transition id="g"><name><text>orientación brindada</text></name></transition>
+      <arc id="p8-g" source="p8" target="g"/>
+      <arc id="g-p9" source="g" target="p9"/>
+      <transition id="h"><name><text>expediente integrado</text></name></transition>
+      <arc id="p9-h" source="p9" target="h"/>
+      <arc id="h-p10" source="h" target="p10"/>
+      <transition id="i"><name><text>autorización emitida</text></name></transition>
+      <arc id="p10-i" source="p10" target="i"/>
+      <arc id="i-p11" source="i" target="p11"/>
+      <transition id="j"><name><text>cierre registrado</text></name></transition>
+      <arc id="p11-j" source="p11" target="j"/>
+      <arc id="j-fin" source="j" target="fin"/>
+    </page>
+    <finalmarkings><marking><place idref="fin"><text>1</text></place></marking></finalmarkings>
+  </net>
+</pnml>

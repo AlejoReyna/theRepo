@@ -1,0 +1,11 @@
+"categoria","termino","coef"
+"medio","(Intercept)",-1.26410588889828
+"alto","(Intercept)",-4.67219271597437
+"medio","recamaras",-0.190047340983956
+"alto","recamaras",-0.29607047654932
+"medio","baños",0.286497353551292
+"alto","baños",0.356798196682689
+"medio","m2_construcción",0.00275432722658648
+"alto","m2_construcción",0.00811732137620185
+"medio","m2_terreno",-2.06620234618768e-05
+"alto","m2_terreno",-8.66952523499514e-06

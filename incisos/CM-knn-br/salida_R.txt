@@ -1,0 +1,22 @@
+[1] alto alto alto alto bajo
+Levels: alto bajo
+[1] "Matriz de Confusión:"
+      pred
+real   alto bajo
+  alto   83   43
+  bajo   43   81
+[1] "\nOtras Métricas:"
+         Sensitivity          Specificity       Pos Pred Value       Neg Pred Value            Precision               Recall                   F1           Prevalence       Detection Rate 
+        0.6587301587         0.6532258065         0.6587301587         0.6532258065         0.6587301587         0.6587301587         0.6587301587         0.5040000000         0.3320000000 
+Detection Prevalence    Balanced Accuracy 
+        0.5040000000         0.6559779826 
+[1] "\nAccuracy: 0.656"
+[1] "Matriz de Confusión (caret: filas = predicción, columnas = real):"
+      real
+pred   alto bajo
+  alto   83   43
+  bajo   43   81
+         Sensitivity          Specificity       Pos Pred Value       Neg Pred Value            Precision               Recall                   F1           Prevalence       Detection Rate 
+        0.6587301587         0.6532258065         0.6587301587         0.6532258065         0.6587301587         0.6587301587         0.6587301587         0.5040000000         0.3320000000 
+Detection Prevalence    Balanced Accuracy 
+        0.5040000000         0.6559779826 
