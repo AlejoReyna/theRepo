@@ -1,10 +1,9 @@
-# TSCI3 — Minería de Datos (UANL FIME)
 
-Sistema agéntico de skills, oráculos independientes y empaquetado reproducible para **Tópicos Selectos de Ciencias de la Ingeniería III**.
+Sistema agéntico de skills, oráculos independientes y empaquetado reproducible para minería de datos.
 
 ---
 
-## Para humanos
+## Para humanos (nosotros, el equipo Amarillo)
 
 ### Requisitos
 - **Python 3** con entorno `.venv/` (`openpyxl`, `python-docx`, `pymupdf`)
